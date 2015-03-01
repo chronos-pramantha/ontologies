@@ -13,24 +13,28 @@ from contexts import ONTOLOGIES
 app = Flask(__name__)
 
 
-@app.route("/", methods=['GET'])
-def hello():
-    payload = str({
-        "chronos": host + "/chronos/ontology",
-        "sensors": host + "/sensors/ontology",
-        "astronomy": host + "/astronomy/ontology",
-        "engineering": host + "/engineering/ontology"
-    })
-    return Response(response=payload, content_type='application/ld+json; charset=utf-8')
-
-
 @app.route("/<name>/ontology/", methods=['GET'])
 def index(name):
     name = name.lower()
-    if name in ONTOLOGIES.keys():
+    if name and name in ONTOLOGIES.keys():
+        #
+        # serve name/ontology
+        #
         ontology = get_or_set(name)
         res = Response(response=str(ontology), content_type='application/ld+json; charset=utf-8')
         print(res)
+        return res
+    elif not name:
+        #
+        # back to root
+        #
+        payload = {
+            "chronos": host + "/chronos/ontology",
+            "sensors": host + "/sensors/ontology",
+            "astronomy": host + "/astronomy/ontology",
+            "engineering": host + "/engineering/ontology"
+        }
+        res = Response(response=str(payload), content_type='application/ld+json; charset=utf-8')
         return res
     return not_found()
 
