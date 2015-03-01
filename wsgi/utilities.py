@@ -43,13 +43,14 @@ def get_or_set(nm, obj=None):
             with open(str(spath), "r", encoding="utf8") as jsonld:
                 defines = json.loads(jsonld.read())['defines']
                 print('http://pramantha.eu/' + nm + '/ontology/' + obj)
-                for d in defines:
-                    if '@id' in d:
-                        if d['@id'] == 'http://pramantha.eu/' + nm + '/ontology/' + obj:
-                            d["@context"] = ONTOLOGIES[nm][2]
-                            CACHE[obj] = d
-                            return CACHE[obj]
-                return None
+            for d in defines:
+                if '@id' in d:
+                    if d['@id'] == 'http://pramantha.eu/' + nm + '/ontology/' + obj:
+                        d["@context"] = ONTOLOGIES[nm][2]
+                        CACHE[obj] = d
+                        result = CACHE[obj]
+                        break
+        return result
 
 
 
