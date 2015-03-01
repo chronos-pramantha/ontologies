@@ -46,6 +46,7 @@ def get_or_set(nm, obj=None):
                 for d in defines:
                     if '@id' in d:
                         if d['@id'] == 'http://pramantha.eu/' + nm + '/ontology/' + obj:
+                            d["@context"] = ONTOLOGIES[nm][2]
                             CACHE[obj] = d
                             return CACHE[obj]
                 return None

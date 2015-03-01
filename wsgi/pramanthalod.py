@@ -23,18 +23,6 @@ def index(name):
         res = Response(response=str(ontology), content_type='application/ld+json; charset=utf-8')
         print(res)
         return res
-    elif not name:
-        #
-        # back to root
-        #
-        payload = {
-            "chronos": host + "/chronos/ontology",
-            "sensors": host + "/sensors/ontology",
-            "astronomy": host + "/astronomy/ontology",
-            "engineering": host + "/engineering/ontology"
-        }
-        res = Response(response=str(payload), content_type='application/ld+json; charset=utf-8')
-        return res
     return not_found()
 
 
@@ -53,9 +41,8 @@ def not_found(e=None):
             'status': 404,
             'message': 'Not Found: ' + request.url,
     }
-    resp = jsonify(message)
-    resp.status_code = 404
-
+    resp = Response(response=str(message), content_type='application/ld+json; charset=utf-8')
+    # resp.status_code = 404
     return resp
 
 

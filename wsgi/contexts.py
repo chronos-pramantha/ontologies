@@ -1,16 +1,6 @@
 __author__ = 'lorenzo'
 
 
-ONTOLOGIES = dict(
-    {
-        "chronos": ["a generic ontology for space activities", "ChronosOntology.json"],
-        "sensors": ["an ontology for detectors, device that use some kind of sensor", "SpaceSensor_json-ld_v2.json"],
-        "astronomy": ["an ontology for astronomical objects", "Astronomy.json"],
-        "engineering": ["an ontology for engineering concepts", "Engineering.json"]
-    }
-
-)
-
 CHRONOS_CONTEXT = dict(
     {
         "rdf"    : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -59,4 +49,14 @@ ENGINEERING_CONTEXT = dict(
         "owl"        : "http://www.w3.org/2002/07/owl#",
         "dbpedia"    : "http://dbpedia.org/ontology/"
     }
+)
+
+ONTOLOGIES = dict(
+    {
+        "chronos": ["a generic ontology for space activities", "ChronosOntology.json", CHRONOS_CONTEXT],
+        "sensors": ["an ontology for detectors, device that use some kind of sensor", "SpaceSensor_json-ld_v2.json", SENSORS_CONTEXT],
+        "astronomy": ["an ontology for astronomical objects", "Astronomy.json", ASTRONOMY_CONTEXT],
+        "engineering": ["an ontology for engineering concepts", "Engineering.json", ENGINEERING_CONTEXT]
+    }
+
 )
