@@ -4,7 +4,7 @@ import os
 
 
 from flask import Flask
-from flask import request, jsonify
+from flask import request, jsonify, Response
 
 from utilities import get_or_set
 from contexts import ONTOLOGIES
@@ -15,12 +15,13 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET'])
 def hello():
-    return jsonify({
+    payload = str({
         "chronos": host + "/chronos/ontology",
         "sensors": host + "/sensors/ontology",
         "astronomy": host + "/astronomy/ontology",
         "engineering": host + "/engineering/ontology"
     })
+    return Response(response=payload, content_type='application/ld+json; charset=utf-8')
 
 
 @app.route("/<name>/ontology/", methods=['GET'])
@@ -28,7 +29,9 @@ def index(name):
     name = name.lower()
     if name in ONTOLOGIES.keys():
         ontology = get_or_set(name)
-        return jsonify(ontology)
+        res = Response(response=str(ontology), content_type='application/ld+json; charset=utf-8')
+        print(res)
+        return res
     return not_found()
 
 
@@ -37,7 +40,7 @@ def chronos(name, object):
     name = name.lower()
     if name in ONTOLOGIES.keys():
         obj = get_or_set(name, object)
-        return jsonify(obj)
+        return Response(response=str(obj), content_type='application/ld+json; charset=utf-8')
     return not_found()
 
 
