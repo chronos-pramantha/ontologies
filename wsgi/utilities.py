@@ -2,15 +2,18 @@ __author__ = 'lorenzo'
 
 import os
 import platform
+
 import simplejson as json
 
-from contexts import ONTOLOGIES
+from wsgi.contexts import ONTOLOGIES
+
 
 CACHE = {}
 
 
 def get_o_path():
     path = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.abspath(os.path.join(path, os.pardir))
     if platform.system() == 'Linux' or platform.system() == 'Darwin':
         ''' linux path '''
         path += '/SensorOntology/'

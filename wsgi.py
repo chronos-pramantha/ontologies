@@ -1,4 +1,3 @@
 #!/usr/bin/env python
 
-from pramanthalod import app as application
-
+from wsgi.pramanthalod import app as application
