@@ -4,6 +4,7 @@ import os
 
 from flask import Flask
 from flask import request, jsonify, Response
+import simplejson as json
 
 from wsgi.utilities import get_or_set
 from wsgi.contexts import ONTOLOGIES
@@ -13,7 +14,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return jsonify(
+    res = jsonify(
         {
             "chronos": ["a generic ontology for space activities", "/chronos/ontology"],
             "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors/ontology"],
@@ -23,6 +24,7 @@ def hello():
             "subsystems": ["an ontology for subsystems in a spacecraft", "SubSystems.json", "/subsystems/ontology"]
         }
     )
+    return res
 
 
 @app.route("/<name>/ontology/", methods=['GET'])
@@ -39,11 +41,11 @@ def index(name):
     return wrong_uri()
 
 
-@app.route("/<name>/ontology/<object>", methods=['GET'])
-def chronos(name, object):
+@app.route("/<name>/ontology/<obj>", methods=['GET'])
+def chronos(name, obj):
     name = name.lower()
     if name in ONTOLOGIES.keys():
-        obj = get_or_set(name, object)
+        obj = get_or_set(name, obj)
         return Response(response=str(obj), content_type='application/ld+json; charset=utf-8')
     return wrong_object()
 

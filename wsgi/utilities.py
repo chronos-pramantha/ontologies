@@ -35,7 +35,7 @@ def get_or_set(nm, obj=None):
             with open(str(spath), "r", encoding="utf8") as jsonld:
                 CACHE[nm] = json.loads(jsonld.read())
                 ontology = CACHE[nm]
-        return ontology
+        return json.dumps(ontology)
     else:
         if obj in CACHE.keys() and CACHE[obj]:
             result = CACHE[obj]
@@ -50,7 +50,7 @@ def get_or_set(nm, obj=None):
                         CACHE[obj] = d
                         result = CACHE[obj]
                         break
-        return result
+        return json.dumps(result)
 
 
 
