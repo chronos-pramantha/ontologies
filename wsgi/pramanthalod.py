@@ -74,7 +74,7 @@ def wrong_object(e=None):
 if __name__ == "__main__":
     if 'OPENSHIFT_DATA_DIR' in os.environ:
         #store = os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'newsletter.save')
-        host = "http://pramantha.eu"
+        host = "http://ontology.projectchronos.eu/"
         app.config['DEBUG'] = False
     else:
         #store = os.path.join(os.path.dirname(__file__), 'newsletter.save')
