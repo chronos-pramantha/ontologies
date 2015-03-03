@@ -16,12 +16,6 @@
 
     "defines": [
         {
-            "@id": "http://ontology.projectchronos.eu/engineering/Spacecraft",
-            "owl:sameAs": "http://umbel.org/umbel/rc/Spacecraft",
-            "@type": "http://www.w3.org/2002/07/owl#Class",
-            "rdfs:label": "Each instance of spacecraft is a transportation device either deployed entirely in outer space, or one whose trajectories leave the atmosphere of the planet it's launched from, in order to orbit the planet or to travel beyond the planet's gravitational field."
-        },
-        {
             "@id": "http://ontology.projectchronos.eu/engineering/Satellite_Device",
             "owl:sameAs" : "http://umbel.org/umbel/rc/Satellite_Device",
             "@type": "http://www.w3.org/2002/07/owl#Class",

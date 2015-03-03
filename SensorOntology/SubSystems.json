@@ -199,8 +199,9 @@
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Detector",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
@@ -271,8 +272,9 @@
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -281,7 +283,7 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft"
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -330,8 +332,9 @@
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -340,7 +343,7 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Bus_Spacecraft"
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -391,8 +394,9 @@
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -401,7 +405,7 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Bus_Spacecraft"
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -444,19 +448,28 @@
 
         },
         {
-            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_ThermalPassive",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
-                    "owl:hasValue" : "http://umbel.org/umbel/rc/ShieldingSomething"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Bus_Spacecraft"
-                },
+                    "owl:hasValue" : "http://dbpedia.org/resource/Process_control"
+                }
+            ],
+
+            "skos:prefLabel": "Spacecraft_ThermalPassive",
+            "rdfs:label": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .",
+            "rdfs:comment": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events"
+
+        },
+
+        {
+            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal_PassiveDevice",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
@@ -474,25 +487,16 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_ThermalPassive",
-            "rdfs:label": "Artifacts or rigid devices used to protect and shield the spacecraft from radiations and/or micrometeoroids.",
-            "rdfs:comment": "Shields and shells."
+            "skos:prefLabel": "Spacecraft_Thermal_PassiveDevice",
+            "rdfs:label": "Device of of class Thermal that does NOT consume energy from the spacecraft power source.",
+            "rdfs:comment": "They are passive because they mostly transform radiation into heating/cooling "
 
         },
         {
-            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_ThermalActive",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal_ActiveDevice",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
-                    "owl:hasValue" : "http://dbpedia.org/resource/rc/Temperature_control"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Bus_Spacecraft"
-                },
+                "http://ontology.projectchronos.eu/spacecraft/Spacecraft_Thermal",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
@@ -510,15 +514,16 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_ThermalActive",
-            "rdfs:label": "A set of subsystems that actively keeps constant the temperature of other devices.",
-            "rdfs:comment": "Complex devices-subsystems used to protect sensors or electronic devices from over/under-heating."
+            "skos:prefLabel": "Spacecraft_Thermal_ActiveDevice",
+            "rdfs:label": "Device that of class Thermal that consumes energy from the spacecraft power source.",
+            "rdfs:comment": "Complex devices-subsystems used to protect sensors or electronic devices from over/under-heating, like refrigeration absorption."
 
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Structure",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -527,7 +532,7 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Bus_Spacecraft"
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -557,8 +562,9 @@
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -570,7 +576,7 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft"
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -654,8 +660,9 @@
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -667,7 +674,7 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft"
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -723,8 +730,9 @@
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS",
-            "@type" : "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+            "@type" :"http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
+                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -736,7 +744,7 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft"
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
