@@ -18,10 +18,10 @@ def hello():
         {
             "chronos": ["a generic ontology for space activities", "/chronos/ontology"],
             "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors/ontology"],
-            "astronomy": ["an ontology for astronomical objects", "Astronomy.json", "/astronomy/ontology"],
-            "engineering": ["an ontology for engineering concepts", "Engineering.json", "/engineering/ontology"],
-            "spacecraft": ["an ontology for a spacecraft and its systems", "Spacecraft.json", "/spacecraft/ontology"],
-            "subsystems": ["an ontology for subsystems in a spacecraft", "SubSystems.json", "/subsystems/ontology"]
+            "astronomy": ["an ontology for astronomical objects", "/astronomy/ontology"],
+            "engineering": ["an ontology for engineering concepts", "/engineering/ontology"],
+            "spacecraft": ["an ontology for a spacecraft and its systems", "/spacecraft/ontology"],
+            "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems/ontology"]
         }
     )
     return res
