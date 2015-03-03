@@ -68,9 +68,14 @@
             "@id": "http://ontology.projectchronos.eu/spacecraft/Payload_Spacecraft",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft"
+                "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft",
+                {
+                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
+                }
             ],
-            "rdfs:label": "The set of the detectors that the spacecraft carries.",
+            "rdfs:label": "The set of the detectors and their supporting devices.",
             "rdfs:comment": "The set of devices that the spacecraft carries for scientific purposes.",
             "skos:prefLabel": "Payload_Spacecraft"
         },
