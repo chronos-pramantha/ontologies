@@ -14,7 +14,7 @@
     "@type": "http://www.w3.org/2002/07/owl#Ontology",
     "defines": [
         {
-            "@id": "http://pramantha.eu/chronos/ontology/relKeyword",
+            "@id": "http://pramantha.eu/chronos/chronos/ontology/relKeyword",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "rdfs:label": "is related to a keyword Concept",
             "rdfs:comment": "subject-document is in a semantic relation with the object-keyword",

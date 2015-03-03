@@ -37,7 +37,7 @@
                                                 }
                                             ],
 
-                        "rdfs:comment"    : "1) [Detector detects some PhysicalEntity] : Detectors are described as objects detecting some physical entity: elementary particles, light, atoms, cosimc dust, etc.  2) [Detector measures some PhysicalQuantity] : Detection of any physical entity entails that some physical quantity of the detected particle is measured: mass, charge, spin, velocity,... 3) [Detector hasWorkingPrinciple some DetectorWorkingPrinciple] : Detection is possible due to physical principles exploited ad hoc. For example, ionisation of charged particles within a solid state detector, used as a reversely biased diode, or electron emission due to the photoelectric effect. 4) [Detector hasOutput some PhysicalQuantity] : Detectors produce as output some physical quantity, most usually time-varying voltages, which are then read by the the readout electronics.",
+                        "rdfs:comment"    : "1) [Detector detects some PhysicalEntity] : Detectors are described as objects detecting some physical entity: elementary particles, light, atoms, cosimc dust, etc.  2) [Detector measures some PhysicalQuantity] : Detection of any physical entity entails that some physical quantity of the detected particle is measured: mass, charge, spin, velocity,... 3) [Detector hasWorkingPrinciple some DetectorWorkingPrinciple] : Detection is possible due to physical principles exploited ad hoc. For example, ionisation of charged particles within a solid state detector, used as a reversely biased diode, or electron emission due to the photoelectric effect. 4) [Detector hasOutput some PhysicalQuantity] : Detectors produce as output some physical quantity, most usually time-varying voltages, which are then read by the the readout electronics. 5) Detector can be a subsystem in a spacecraft, to be deployed in orbit.",
                         "rdfs:label"      : "Detector",
                         "owl:sameAs"      : "http://dbpedia.org/resource/Sensor"
                     },
@@ -577,7 +577,7 @@
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://pramantha.eu/sensors/ontology/PhysicalQuantity",
                         "rdfs:label"      : "Mass",
-                        "owl:sameAs"      : "http://dbpedia.org/resource/Mass"
+                        "owl:sameAs"      : ["http://umbel.org/umbel/rc/Mass", "http://dbpedia.org/resource/Mass", "http://schema.org/Mass"]
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/MeanLifeTime",
@@ -776,14 +776,14 @@
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://pramantha.eu/sensors/ontology/PhysicalQuantity",
                         "rdfs:label"      : "Time",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Time"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Time"
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/UltraViolet",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://pramantha.eu/sensors/ontology/EMSpectrum",
                         "rdfs:label"      : "UltraViolet",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Ultraviolet"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Ultraviolet"
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/UltravioletRadiometer",
@@ -797,7 +797,7 @@
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://pramantha.eu/sensors/ontology/PhysicalQuantity",
                         "rdfs:label"      : "Velocity",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Velocity"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Velocity"
 
                     },
                     {
@@ -805,35 +805,35 @@
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://pramantha.eu/sensors/ontology/PhysicalQuantity",
                         "rdfs:label"      : "Volume",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Volume"
+                        "owl:sameAs"      : ["http://umbel.org/umbel/rc/Volume", "http://dbpedia.org/resource/Volume"]
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/Wavelength",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://pramantha.eu/sensors/ontology/PhysicalQuantity",
                         "rdfs:label"      : "Wavelength",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Wavelength"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Wavelength"
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/X-Rays",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://pramantha.eu/sensors/ontology/EMSpectrum",
                         "rdfs:label"      : "X-ray",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/X-ray"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/X-ray"
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/Ion",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" :  "http://pramantha.eu/sensors/ontology/Atom",
                         "rdfs:label"      : "Ion",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Ion"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Ion"
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/Isotope",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://pramantha.eu/sensors/ontology/Atom",
                         "rdfs:label"      : "Isotope",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Isotope"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Isotope"
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/Electron",
@@ -842,7 +842,7 @@
                                               "http://pramantha.eu/sensors/ontology/Particle"
                                           ],
                         "rdfs:label"      : "Electron",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Electron"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Electron"
                     },
                     {
                         "@id"             : "http://www.w3.org/2002/07/owl#Neutrino",
@@ -851,7 +851,7 @@
                                               "http://pramantha.eu/sensors/ontology/Particle"
                                           ],
                         "rdfs:label"      : "Neutrino",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Neutrino"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Neutrino"
                     },
                     {
                         "@id"             : "http://pramantha.eu/sensors/ontology/Neutron",
@@ -860,7 +860,7 @@
                                               "http://pramantha.eu/sensors/ontology/Particle"
                                           ],
                         "rdfs:label"      : "Neutron",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Neutron"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Neutron"
 
                     },
                     {
@@ -870,7 +870,7 @@
                                               "http://pramantha.eu/sensors/ontology/Particle"
                                           ],
                         "rdfs:label"      : "Photon",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Photon"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Photon"
 
                     },
                     {
@@ -880,7 +880,7 @@
                                               "http://pramantha.eu/sensors/ontology/Particle"
                                           ],
                         "rdfs:label"      : "Proton",
-                        "rdfs:sameAs"     : "http://pramantha.eu/dbpediadocs/Proton"
+                        "owl:sameAs"     : "http://pramantha.eu/dbpediadocs/Proton"
 
                     },
                     {

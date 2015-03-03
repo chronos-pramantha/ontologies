@@ -11,6 +11,19 @@ from wsgi.contexts import ONTOLOGIES
 
 app = Flask(__name__)
 
+@app.route("/")
+def hello():
+    return jsonify(
+        {
+            "chronos": ["a generic ontology for space activities", "/chronos/ontology"],
+            "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors/ontology"],
+            "astronomy": ["an ontology for astronomical objects", "Astronomy.json", "/astronomy/ontology"],
+            "engineering": ["an ontology for engineering concepts", "Engineering.json", "/engineering/ontology"],
+            "spacecraft": ["an ontology for a spacecraft and its systems", "Spacecraft.json", "/spacecraft/ontology"],
+            "subsystems": ["an ontology for subsystems in a spacecraft", "SubSystems.json", "/subsystems/ontology"]
+        }
+    )
+
 
 @app.route("/<name>/ontology/", methods=['GET'])
 def index(name):
@@ -23,7 +36,7 @@ def index(name):
         res = Response(response=str(ontology), content_type='application/ld+json; charset=utf-8')
         print(res)
         return res
-    return not_found()
+    return wrong_uri()
 
 
 @app.route("/<name>/ontology/<object>", methods=['GET'])
@@ -32,14 +45,24 @@ def chronos(name, object):
     if name in ONTOLOGIES.keys():
         obj = get_or_set(name, object)
         return Response(response=str(obj), content_type='application/ld+json; charset=utf-8')
-    return not_found()
+    return wrong_object()
 
 
 @app.errorhandler(404)
-def not_found(e=None):
+def wrong_uri(e=None):
     message = {
             'status': 404,
-            'message': 'Not Found: ' + request.url,
+            'message': 'Not one of Pramantha LOD URI: ' + request.url,
+    }
+    resp = Response(response=str(message), content_type='application/ld+json; charset=utf-8')
+    # resp.status_code = 404
+    return resp
+
+@app.errorhandler(404)
+def wrong_object(e=None):
+    message = {
+            'status': 404,
+            'message': 'Object not in the ontology: ' + request.url,
     }
     resp = Response(response=str(message), content_type='application/ld+json; charset=utf-8')
     # resp.status_code = 404
