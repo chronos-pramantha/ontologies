@@ -16,12 +16,12 @@ app = Flask(__name__)
 def hello():
     res = jsonify(
         {
-            "chronos": ["a generic ontology for space activities", "/chronos/ontology"],
-            "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors/ontology"],
-            "astronomy": ["an ontology for astronomical objects", "/astronomy/ontology"],
-            "engineering": ["an ontology for engineering concepts", "/engineering/ontology"],
-            "spacecraft": ["an ontology for a spacecraft and its systems", "/spacecraft/ontology"],
-            "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems/ontology"]
+            "chronos": ["a generic ontology for space activities", "/chronos"],
+            "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors"],
+            "astronomy": ["an ontology for astronomical objects", "/astronomy"],
+            "engineering": ["an ontology for engineering concepts", "/engineering"],
+            "spacecraft": ["an ontology for a spacecraft and its systems", "/spacecraft"],
+            "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems"]
         }
     )
     return res
