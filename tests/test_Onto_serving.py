@@ -21,6 +21,7 @@ class TestOntologiesService(unittest.TestCase):
             elif int(response.status) == 301:
                 u = response.getheader('Location')
                 p = urlparse(u).path[1:urlparse(u).path[1].find('/')]
+                print(p)
                 check_url(p, u)
             else:
                 assert False
@@ -35,8 +36,8 @@ class TestOntologiesService(unittest.TestCase):
                 response = conn.getresponse()
                 return test_reponse(conn, response)
 
-            url = "pramantha.eu"
-            query = "/" + name + "/ontology"
+            url = "ontology.projectchronos.eu"
+            query = "/" + name
             print(url, query)
             conn = http.client.HTTPConnection(url)
             conn.request("GET", query)

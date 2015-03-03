@@ -486,7 +486,7 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://pramantha.eu/subsytems/ontology/function",
-                    "owl:hasValue" : "http://umbel.org/umbel/rc/ShieldingSomething"
+                    "owl:hasValue" : "http://dbpedia.org/resource/rc/Temperature_control"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
