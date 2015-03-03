@@ -27,7 +27,7 @@ def hello():
     return res
 
 
-@app.route("/<name>/ontology/", methods=['GET'])
+@app.route("/<name>/", methods=['GET'])
 def index(name):
     name = name.lower()
     if name and name in ONTOLOGIES.keys():
@@ -41,7 +41,7 @@ def index(name):
     return wrong_uri()
 
 
-@app.route("/<name>/ontology/<obj>", methods=['GET'])
+@app.route("/<name>/<obj>/", methods=['GET'])
 def chronos(name, obj):
     name = name.lower()
     if name in ONTOLOGIES.keys():
