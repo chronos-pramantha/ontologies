@@ -213,12 +213,12 @@
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:minCardinality" : 1
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/embedSensor",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/embedSensor",
                     "owl:minCardinality" : 1
                 },
                 {
@@ -275,7 +275,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : "http://umbel.org/umbel/rc/ProjectilePropelling"
                 },
                 {
@@ -334,7 +334,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : "http://umbel.org/umbel/rc/ElectricalPowerGeneration"
                 },
                 {
@@ -395,7 +395,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : "http://dbpedia.org/resource/rc/Energy_storage"
                 },
                 {
@@ -449,7 +449,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : "http://umbel.org/umbel/rc/ShieldingSomething"
                 },
                 {
@@ -485,7 +485,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : "http://dbpedia.org/resource/rc/Temperature_control"
                 },
                 {
@@ -521,7 +521,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : "http://dbpedia.org/resource/Structural_system"
                 },
                 {
@@ -561,7 +561,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : [
                         "http://umbel.org/umbel/rc/InformationTransferEvent",
                         "http://dbpedia.org/resource/Electronic_data_processing"
@@ -658,7 +658,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : [
                         "http://dbpedia.org/resource/Transmitting",
                         "http://umbel.org/umbel/rc/Receiving"
@@ -727,7 +727,7 @@
             "rdfs:subClassOf" : [
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/ontology/function",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : [
                         "http://dbpedia.org/resource/Flight_dynamics_(spacecraft)",
                         "http://dbpedia.org/resource/Attitude_control"

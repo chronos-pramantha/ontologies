@@ -37,15 +37,11 @@ def get_or_set(nm, obj=None):
                 ontology = CACHE[nm]
         return json.dumps(ontology)
     else:
-        print(nm, obj)
-        print(spath)
         if obj in CACHE.keys() and CACHE[obj]:
-            print("CACHE")
             result = CACHE[obj]
         else:
             result = None
             with open(str(spath), "r", encoding="utf8") as jsonld:
-                print("NO CACHE")
                 defines = json.loads(jsonld.read())['defines']
                 print('http://ontology.projectchronos.eu/' + nm + '/' + obj)
             for d in defines:
