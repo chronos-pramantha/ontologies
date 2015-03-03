@@ -1,8 +1,8 @@
 {
     "@context": {
-        "@base": "http://pramantha.eu/engineering/ontology",
-        "engineering": "http://pramantha.eu/engineering/ontology/",
-        "device": "http://pramantha.eu/devices/ontology",
+        "@base": "http://ontology.projectchronos.eu/engineering",
+        "engineering": "http://ontology.projectchronos.eu/engineering/",
+        "device": "http://ontology.projectchronos.eu/devices/ontology",
         "schema": "https://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -16,13 +16,13 @@
 
     "defines": [
         {
-            "@id": "http://pramantha.eu/engineering/ontology/Spacecraft",
+            "@id": "http://ontology.projectchronos.eu/engineering/Spacecraft",
             "owl:sameAs": "http://umbel.org/umbel/rc/Spacecraft",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "Each instance of spacecraft is a transportation device either deployed entirely in outer space, or one whose trajectories leave the atmosphere of the planet it's launched from, in order to orbit the planet or to travel beyond the planet's gravitational field."
         },
         {
-            "@id": "http://pramantha.eu/engineering/ontology/Satellite_Device",
+            "@id": "http://ontology.projectchronos.eu/engineering/Satellite_Device",
             "owl:sameAs" : "http://umbel.org/umbel/rc/Satellite_Device",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "an artificial satellite",
@@ -32,7 +32,7 @@
             ]
         },
         {
-            "@id": "http://pramantha.eu/engineering/ontology/GroundToOrbitVehicle",
+            "@id": "http://ontology.projectchronos.eu/engineering/GroundToOrbitVehicle",
             "owl:sameAs" : "http://umbel.org/umbel/rc/GroundToOrbitVehicle",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "a rocket or any transportation vehicle that can reach orbit",
@@ -43,14 +43,14 @@
             ]
         },
         {
-            "@id": "http://pramantha.eu/engineering/ontology/InformationGatheringDevice",
+            "@id": "http://ontology.projectchronos.eu/engineering/InformationGatheringDevice",
             "owl:sameAs" : "http://umbel.org/umbel/rc/InformationGatheringDevice",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "device typically used in instances of gathering information.",
             "rdfs:comment": "a document representing a information gathering device"
         },
         {
-            "@id": "http://pramantha.eu/engineering/ontology/AstronomicalSatellite",
+            "@id": "http://ontology.projectchronos.eu/engineering/AstronomicalSatellite",
             "owl:sameAs" : "http://umbel.org/umbel/rc/AstronomicalSatellite",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "an artificial satellite",
@@ -61,7 +61,7 @@
             ]
         },
         {
-            "@id": "http://pramantha.eu/engineering/ontology/WeatherSatellite",
+            "@id": "http://ontology.projectchronos.eu/engineering/WeatherSatellite",
             "owl:sameAs" : "http://umbel.org/umbel/rc/WeatherSatellite",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "an satellite collecting data on the weather of the heavenly body which it orbits",
@@ -72,7 +72,7 @@
             ]
         },
         {
-            "@id": "http://pramantha.eu/engineering/ontology/EarthRemoteSensingSatellite",
+            "@id": "http://ontology.projectchronos.eu/engineering/EarthRemoteSensingSatellite",
             "owl:sameAs" : "http://umbel.org/umbel/rc/EarthRemoteSensingSatellite",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "an artificial satellite",
@@ -82,7 +82,7 @@
             ]
         },
         {
-            "@id": "http://pramantha.eu/engineering/ontology/SpaceProbe",
+            "@id": "http://ontology.projectchronos.eu/engineering/SpaceProbe",
             "owl:sameAs" : "http://umbel.org/umbel/rc/SpaceProbe",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "These are unmanned vehicles which are sent to other bodies in the Solar system for the purpose gathering data. Sometimes a separate vehicle (probe or lander) is launched from the main vehicle, the smaller vehicle usually being referred to as a probe. In these cases, both vehicle would be SpaceProbes in the present sense.",

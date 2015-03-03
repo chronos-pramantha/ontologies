@@ -1,7 +1,7 @@
 {
     "@context": {
-        "@base"  : "http://pramantha.eu/chronos/ontology",
-        "chronos": "http://pramantha.eu/chronos/ontology/",
+        "@base"  : "http://ontology.projectchronos.eu/chronos",
+        "chronos": "http://ontology.projectchronos.eu/chronos/",
         "schema" : "https://schema.org/",
         "skos"   : "http://www.w3.org/2004/02/skos/core#",
         "rdf"    : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -14,100 +14,100 @@
     "@type": "http://www.w3.org/2002/07/owl#Ontology",
     "defines": [
         {
-            "@id": "http://pramantha.eu/chronos/chronos/ontology/relKeyword",
+            "@id": "http://ontology.projectchronos.eu/chronos/relKeyword",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "rdfs:label": "is related to a keyword Concept",
             "rdfs:comment": "subject-document is in a semantic relation with the object-keyword",
-            "rdfs:domain": "http://pramantha.eu/chronos/ontology/dbpediadoc",
-            "rdfs:range": "http://pramantha.eu/chronos/ontology/keyword"
+            "rdfs:domain": "http://ontology.projectchronos.eu/chronos/dbpediadoc",
+            "rdfs:range": "http://ontology.projectchronos.eu/chronos/keyword"
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/relMission",
+            "@id": "http://ontology.projectchronos.eu/chronos/relMission",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "rdfs:label": "is related to a space mission or a space launch",
             "rdfs:comment": "subject-document is historically or technically related to a space mission",
-            "rdfs:domain": ["http://pramantha.eu/chronos/ontology/dbpediadoc", "http://pramantha.eu/chronos/ontology/webpage", "http://pramantha.eu/chronos/ontology/event"],
-            "rdfs:range": ["http://pramantha.eu/chronos/ontology/mission", "http://pramantha.eu/chronos/ontology/launch"]
+            "rdfs:domain": ["http://ontology.projectchronos.eu/chronos/dbpediadoc", "http://ontology.projectchronos.eu/chronos/webpage", "http://ontology.projectchronos.eu/chronos/event"],
+            "rdfs:range": ["http://ontology.projectchronos.eu/chronos/mission", "http://ontology.projectchronos.eu/chronos/launch"]
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/relEvent",
+            "@id": "http://ontology.projectchronos.eu/chronos/relEvent",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "rdfs:label": "is a document related to an event",
             "rdfs:comment": "subject-document is semantically related with an event or happening",
-            "rdfs:domain": "http://pramantha.eu/chronos/ontology/dbpediadoc",
-            "rdfs:range": "http://pramantha.eu/chronos/ontology/event"
+            "rdfs:domain": "http://ontology.projectchronos.eu/chronos/dbpediadoc",
+            "rdfs:range": "http://ontology.projectchronos.eu/chronos/event"
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/relTarget",
+            "@id": "http://ontology.projectchronos.eu/chronos/relTarget",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "rdfs:label": "is a document related to a celestial body named",
             "rdfs:comment": "subject-document is semantically related to a celestial body",
-            "rdfs:domain": ["http://pramantha.eu/chronos/ontology/dbpediadoc", "http://pramantha.eu/chronos/ontology/launch", "http://pramantha.eu/chronos/ontology/mission", "http://pramantha.eu/chronos/ontology/webpage"],
-            "rdfs:range": ["http://dbpedia.org/chronos/ontology/Planet", "http://dbpedia.org/chronos/ontology/Satellite", "http://dbpedia.org/chronos/ontology/Asteroid", "http://dbpedia.org/chronos/ontology/CelestialBody"]
+            "rdfs:domain": ["http://ontology.projectchronos.eu/chronos/dbpediadoc", "http://ontology.projectchronos.eu/chronos/launch", "http://ontology.projectchronos.eu/chronos/mission", "http://ontology.projectchronos.eu/chronos/webpage"],
+            "rdfs:range": ["http://dbpedia.org/chronos/Planet", "http://dbpedia.org/chronos/Satellite", "http://dbpedia.org/chronos/Asteroid", "http://dbpedia.org/chronos/CelestialBody"]
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/payload",
+            "@id": "http://ontology.projectchronos.eu/chronos/payload",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "rdfs:label": "is a mission that carries the payload named",
             "rdfs:comment": "subject-document is a mission or a launch carrying the object-document",
-            "rdfs:domain": ["http://pramantha.eu/chronos/ontology/launch", "http://pramantha.eu/chronos/ontology/mission"],
-            "rdfs:range": ["http://pramantha.eu/sensors/ontology/Detector"]
+            "rdfs:domain": ["http://ontology.projectchronos.eu/chronos/launch", "http://ontology.projectchronos.eu/chronos/mission"],
+            "rdfs:range": ["http://ontology.projectchronos.eu/sensors/Detector"]
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/relatedMatch",
+            "@id": "http://ontology.projectchronos.eu/chronos/relatedMatch",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "rdfs:label": "is a DBpedia document with an high level of semantical relation with",
             "rdfs:comment": "a DBpedia document highly semantically related to another of the same kind",
-            "rdfs:domain": "http://pramantha.eu/chronos/ontology/dbpediadoc",
-            "rdfs:range": "http://pramantha.eu/chronos/ontology/dbpediadoc"
+            "rdfs:domain": "http://ontology.projectchronos.eu/chronos/dbpediadoc",
+            "rdfs:range": "http://ontology.projectchronos.eu/chronos/dbpediadoc"
         },
         {
             "@id": "https://schema.org/about",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "rdfs:domain": "http://pramantha.eu/chronos/ontology/webpage",
-            "rdfs:range": "http://pramantha.eu/chronos/ontology/keyword"
+            "rdfs:domain": "http://ontology.projectchronos.eu/chronos/webpage",
+            "rdfs:range": "http://ontology.projectchronos.eu/chronos/keyword"
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/keyword",
+            "@id": "http://ontology.projectchronos.eu/chronos/keyword",
             "@type": "http://www.w3.org/2004/02/skos/core#Concept",
             "rdfs:label": "NASA-STI keyword",
             "rdfs:comment": "a keyword representing a Concept in the NASA-STI taxonomy"
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/dbpediadoc",
+            "@id": "http://ontology.projectchronos.eu/chronos/dbpediadoc",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "data taken from a DBpedia page",
             "rdfs:comment": "a document representing a wikipedia page information"
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/launch",
+            "@id": "http://ontology.projectchronos.eu/chronos/launch",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "owl:sameAs": "http://umbel.org/umbel/rc/GroundToOrbitVehicle",
             "rdfs:label": "a space launch that took place in the past",
             "rdfs:comment": "a document representing a space launch taken from wikipedia page"
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/mission",
+            "@id": "http://ontology.projectchronos.eu/chronos/mission",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "owl:sameAs": "http://dbpedia.org/ontology/SpaceMission",
             "rdfs:label": "a space mission",
             "rdfs:comment": "a document representing a space mission from Chronos legacy"
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/event",
+            "@id": "http://ontology.projectchronos.eu/chronos/event",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "owl:sameAs": "http://umbel.org/umbel/rc/Event",
             "rdfs:label": "an event or happening related with a space mission",
             "rdfs:comment": "a document representing an event or happening from Chronos legacy"
         },
                 {
-            "@id": "http://pramantha.eu/chronos/ontology/webpage",
+            "@id": "http://ontology.projectchronos.eu/chronos/webpage",
             "@type": "https://schema.org/CreativeWork",
             "rdfs:label": "a crawled webpage",
             "rdfs:comment": "a document representing a webpage"
         },
         {
-            "@id": "http://pramantha.eu/chronos/ontology/group",
+            "@id": "http://ontology.projectchronos.eu/chronos/group",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral",
             "rdfs:label": "can be queried as a member of this group",
             "rdfs:comment": "a string assigning the document to a set or a Class in the datastore, useful for fast querying"

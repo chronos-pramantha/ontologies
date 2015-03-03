@@ -1,8 +1,8 @@
 {
     "@context": {
-       "engineering": "http://pramantha.eu/engineering/ontology/",
-       "@base": "http://pramantha.eu/spacecraft/ontology",
-       "spacecraft": "http://pramantha.eu/spacecraft/ontology/",
+       "engineering": "http://ontology.projectchronos.eu/engineering/",
+       "@base": "http://ontology.projectchronos.eu/spacecraft",
+       "spacecraft": "http://ontology.projectchronos.eu/spacecraft/",
        "schema": "https://schema.org/",
        "skos": "http://www.w3.org/2004/02/skos/core#",
        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -14,40 +14,40 @@
     "@id": "",
     "@type" : "http://www.w3.org/2002/07/owl#Ontology",
     "rdfs:label": "Objects and properties to describe systems and subsystems of devices and structures needed to fly a spacecraft, including structure and platform. Words separated by _ has to be read as separated concepts, camelCase in they are the same concepts (see umbel.org for this norm)",
-    "rdfs:comment": "A space vessel is described as made of two components: a set of devices called BUS and a set of one or more DETECTORS (see /sensors/ontology/Detector)",
+    "rdfs:comment": "A space vessel is described as made of two components: a set of devices called BUS and a set of one or more DETECTORS (see /sensors/Detector)",
 
 
     "defines": [
         {
-            "@id": "http://pramantha.eu/spacecraft/ontology/isSubsystemOf",
+            "@id": "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
             "@type" : [
                 "http://www.w3.org/2002/07/owl#ObjectProperty"
             ],
-            "owl:inverseOf": "http://pramantha.eu/spacecraft/ontology/hasSubSystem",
+            "owl:inverseOf": "http://ontology.projectchronos.eu/spacecraft/hasSubSystem",
             "skos:prefLabel": "isSubsystemOf"
         },
         {
-            "@id": "http://pramantha.eu/spacecraft/ontology/hasSubSystem",
-            "owl:inverseOf": "http://pramantha.eu/spacecraft/ontology/isSubsystemOf",
+            "@id": "http://ontology.projectchronos.eu/spacecraft/hasSubSystem",
+            "owl:inverseOf": "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
             "@type" : [
                 "http://www.w3.org/2002/07/owl#ObjectProperty"
             ],
             "skos:prefLabel": "hasSubSystem"
         },
         {
-            "@id": "http://pramantha.eu/spacecraft/ontology/Subsystem_Spacecraft",
+            "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
                 "http://dbpedia.org/ontology/Device",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://pramantha.eu/spacecraft/ontology/isDeployedIn",
-                    "owl:hasValue" : "http://pramantha.eu/engineering/ontology/Spacecraft"
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isDeployedIn",
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/engineering/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://pramantha.eu/spacecraft/ontology/isSubsystemOf",
-                    "owl:hasValue" : "http://pramantha.eu/spacecraft/ontology/SystemOfDevices_Spacecraft"
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft"
                 }
             ],
             "rdfs:label": "A device that is deployed into a spacecraft and works outside Earth lower atmosphere",
@@ -55,19 +55,19 @@
             "skos:prefLabel": "Subsystem_Spacecraft"
         },
         {
-            "@id": "http://pramantha.eu/spacecraft/ontology/SystemOfDevices_Spacecraft",
+            "@id": "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
                 "http://umbel.org/umbel/rc/SystemOfDevices",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://pramantha.eu/spacecraft/ontology/isDeployedIn",
-                    "owl:hasValue" : "http://pramantha.eu/engineering/ontology/Spacecraft"
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isDeployedIn",
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/engineering/Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://pramantha.eu/spacecraft/ontology/isSubsystemOf",
-                    "owl:hasValue" : "http://pramantha.eu/engineering/ontology/Spacecraft"
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/engineering/Spacecraft"
                 }
             ],
             "rdfs:label": "A system of devices that work as a network into a spacecraft, that refers to all of the parts and connections between parts of a spacecraft.",
@@ -75,33 +75,33 @@
             "skos:prefLabel": "System_Spacecraft"
         },
         {
-            "@id": "http://pramantha.eu/spacecraft/ontology/Bus_Spacecraft",
+            "@id": "http://ontology.projectchronos.eu/spacecraft/Bus_Spacecraft",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://pramantha.eu/spacecraft/ontology/SystemOfDevices_Spacecraft",
+                "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://pramantha.eu/spacecraft/ontology/subSystemType",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/subSystemType",
                     "owl:hasValue" : "http://umbel.org/umbel/rc/SolidTangibleArtifact"
                 }
             ],
-            "spacecraft:isSubsystemOf" : "http://pramantha.eu/engineering/ontology/Spacecraft",
+            "spacecraft:isSubsystemOf" : "http://ontology.projectchronos.eu/engineering/Spacecraft",
             "rdfs:label": "The set of artifacts and subsystems from which the structure is built and give protection to spacecraft's systems.",
             "rdfs:comment": "System of artifacts and devices, used to contain spacecraft's subsystems and carry its instrumentation.",
             "skos:prefLabel": "Bus_Spacecraft"
         },
         {
-            "@id": "http://pramantha.eu/spacecraft/ontology/Payload_Spacecraft",
+            "@id": "http://ontology.projectchronos.eu/spacecraft/Payload_Spacecraft",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://pramantha.eu/spacecraft/ontology/SystemOfDevices_Spacecraft"
+                "http://ontology.projectchronos.eu/spacecraft/SystemOfDevices_Spacecraft"
             ],
             "rdfs:label": "The set of the detectors that the spacecraft carries.",
             "rdfs:comment": "The set of devices that the spacecraft carries for scientific purposes.",
             "skos:prefLabel": "Payload_Spacecraft"
         },
         {
-            "@id": "http://pramantha.eu/spacecraft/ontology/isDeployedIn",
+            "@id": "http://ontology.projectchronos.eu/spacecraft/isDeployedIn",
             "@type" : [
                       "http://www.w3.org/2002/07/owl#AsymmetricProperty",
                       "http://www.w3.org/2002/07/owl#ObjectProperty"
