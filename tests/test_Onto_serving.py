@@ -36,9 +36,8 @@ class TestOntologiesService(unittest.TestCase):
                 return test_reponse(conn, response)
 
             url = "pramantha.eu"
-            print(url, name)
             query = "/" + name + "/ontology"
-            print(query)
+            print(url, query)
             conn = http.client.HTTPConnection(url)
             conn.request("GET", query)
             response = conn.getresponse()
