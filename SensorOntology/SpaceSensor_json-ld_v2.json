@@ -884,6 +884,7 @@
 
                     },
                     {
+                        "@id"         : "",
                         "@type"       : "http://www.w3.org/2002/07/owl#AllDisjointProperties",
                         "owl:members" : [
                                             "http://ontology.projectchronos.eu/sensors/detects",

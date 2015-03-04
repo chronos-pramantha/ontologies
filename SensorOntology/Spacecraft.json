@@ -42,11 +42,11 @@
             "skos:prefLabel": "isSubsystemOf"
         },
         {
-            "@id": "http://ontology.projectchronos.eu/spacecraft/isComponent",
+            "@id": "http://ontology.projectchronos.eu/spacecraft/isComponentOf",
             "@type" : [
                 "http://www.w3.org/2002/07/owl#ObjectProperty"
             ],
-            "skos:prefLabel": "isComponent"
+            "skos:prefLabel": "isComponentOf"
         },
         {
             "@id": "http://ontology.projectchronos.eu/spacecraft/hasSubSystem",
@@ -76,7 +76,7 @@
             "@id": "http://ontology.projectchronos.eu/spacecraft/Payload_Spacecraft",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                "http://umbel.org/umbel/rc/SystemOfDevices",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/embedSensor",
@@ -85,7 +85,8 @@
             ],
             "rdfs:label": "The set of the detectors and their supporting devices.",
             "rdfs:comment": "The set of devices that the spacecraft carries for scientific purposes.",
-            "skos:prefLabel": "Payload_Spacecraft"
+            "skos:prefLabel": "Payload_Spacecraft",
+            "spacecraft:isComponent": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
             "@id" : "http://ontology.projectchronos.eu/subsystems/embedSensor",

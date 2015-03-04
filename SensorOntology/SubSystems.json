@@ -192,8 +192,8 @@
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/isComponent",
-                     "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Payload_Spacecraft"
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/isComponentOf",
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Payload_Spacecraft"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
