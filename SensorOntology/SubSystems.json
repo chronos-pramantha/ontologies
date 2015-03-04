@@ -459,7 +459,7 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_ThermalPassive",
+            "skos:prefLabel": "Spacecraft_Thermal",
             "rdfs:label": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .",
             "rdfs:comment": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events"
 
