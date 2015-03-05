@@ -210,11 +210,6 @@
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMinAmpere",
                     "owl:minCardinality" : 1
                 },
@@ -226,16 +221,6 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVoltage",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasPower",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
                     "owl:minCardinality" : 1
                 }
             ],
@@ -261,21 +246,6 @@
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/typeOfPropellant",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasPower",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
                     "owl:minCardinality" : 1
                 },
                 {
@@ -317,21 +287,6 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
                     "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasPower",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
-                    "owl:minCardinality" : 1
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -379,16 +334,6 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
                     "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
-                    "owl:minCardinality" : 1
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -444,16 +389,6 @@
                 "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal",
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/subSystemType",
                     "owl:hasValue" : "http://umbel.org/umbel/rc/PhysicalDevice"
                 }
@@ -469,16 +404,6 @@
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
                 "http://ontology.projectchronos.eu/spacecraft/Spacecraft_Thermal",
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
-                    "owl:minCardinality" : 1
-                },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/subSystemType",
@@ -505,11 +430,6 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
                     "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
-                    "owl:minCardinality" : 1
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -553,17 +473,7 @@
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVoltage",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
                     "owl:minCardinality" : 1
                 },
                 {
@@ -632,103 +542,6 @@
             "rdfs:comment": "The DH system shall: Enable HK and science data flow – Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) – Attitude data – Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data – Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression."
         },
         {
-            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CommandAndTelemetry",
-            "@type" : "http://www.w3.org/2002/07/owl#Class",
-            "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
-                    "owl:hasValue" : [
-                        "http://dbpedia.org/resource/Process_Control"
-                    ]
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVoltage",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMaxClock",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMinClock",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasDataStorage",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasDataStorageExternal",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasRAM",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMinTemperature",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMaxTemperature",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/subSystemType",
-                    "owl:hasValue" : "http://umbel.org/umbel/rc/Computer_hardware"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
-                    "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion"
-                    ]
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
-                    "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS"
-                    ]
-                }
-            ],
-
-            "skos:prefLabel": "Spacecraft_CommandAndTelemetry",
-            "rdfs:label": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.",
-            "rdfs:comment": "Complex devices-subsystems used for collecting energy."
-        },
-        {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
@@ -745,21 +558,6 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
                     "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasPower",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
-                    "owl:minCardinality" : 1
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -808,28 +606,9 @@
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : [
                         "http://dbpedia.org/resource/Flight_dynamics_(spacecraft)",
-                        "http://dbpedia.org/resource/Attitude_control"
+                        "http://dbpedia.org/resource/Attitude_control",
+                        "http://dbpedia.org/resource/Process_control"
                     ]
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/spacecraft/isSubsystemOf",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasVolume",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasPower",
-                    "owl:minCardinality" : 1
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasMass",
-                    "owl:minCardinality" : 1
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -852,21 +631,48 @@
                     "owl:hasValue" : [
                       "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
                     ]
-                },
-                {
-                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
-                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
-                    "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
-                    ]
                 }
             ],
 
             "skos:prefLabel": "Spacecraft_AODCS",
             "rdfs:label": "Attitude and Orbit Determination Control",
             "rdfs:comment": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics."
+        },
+        {
+            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_Active",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf": [
+                "http://ontology.projectchronos.eu/spacecraft/Spacecraft_AODCS",
+                {
+                      "@type" : "http://www.w3.org/2002/07/owl#Restriction",
+                      "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
+                      "owl:hasValue" : [
+                        "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                        "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
+                        "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                      ]
+                }
+            ],
+            "skos:prefLabel": "Spacecraft_AODCS_Active",
+            "rdfs:label": "AODCS that do not use any power from the spacecraft power to work.",
+            "rdfs:comment": "Do NOT use any additional power from the spacecraft generator"
+        },
+        {
+            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_Passive",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf": [
+              "http://ontology.projectchronos.eu/spacecraft/Spacecraft_AODCS",
+              {
+                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
+                    "owl:hasValue" : [
+                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                    ]
+              }
+            ],
+            "skos:prefLabel": "Spacecraft_AODCS_Passive",
+            "rdfs:label": "AODCS that do not use any power from the spacecraft power to work.",
+            "rdfs:comment": "DO use any additional power from the spacecraft generator"
         }
   ]
 }

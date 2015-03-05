@@ -62,12 +62,6 @@
             "rdfs:range": "http://ontology.projectchronos.eu/chronos/dbpediadoc"
         },
         {
-            "@id": "https://schema.org/about",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "rdfs:domain": "http://ontology.projectchronos.eu/chronos/webpage",
-            "rdfs:range": "http://ontology.projectchronos.eu/chronos/keyword"
-        },
-        {
             "@id": "http://ontology.projectchronos.eu/chronos/keyword",
             "@type": "http://www.w3.org/2004/02/skos/core#Concept",
             "rdfs:label": "NASA-STI keyword",
