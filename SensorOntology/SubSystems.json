@@ -639,7 +639,7 @@
             "rdfs:comment": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics."
         },
         {
-            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_Active",
+            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_ActiveDevice",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf": [
                 "http://ontology.projectchronos.eu/spacecraft/Spacecraft_AODCS",
@@ -658,7 +658,7 @@
             "rdfs:comment": "Do NOT use any additional power from the spacecraft generator"
         },
         {
-            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_Passive",
+            "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_PassiveDevice",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf": [
               "http://ontology.projectchronos.eu/spacecraft/Spacecraft_AODCS",
@@ -670,7 +670,7 @@
                     ]
               }
             ],
-            "skos:prefLabel": "Spacecraft_AODCS_Passive",
+            "skos:prefLabel": "Spacecraft_AODCS_PassiveDevice",
             "rdfs:label": "AODCS that do not use any power from the spacecraft power to work.",
             "rdfs:comment": "DO use any additional power from the spacecraft generator"
         }
