@@ -18,19 +18,17 @@
          {
            "@id" : "http://ontology.projectchronos.eu/subsystems/manufacturer",
            "@type" : [
-                "http://www.w3.org/2002/07/owl#ObjectProperty"
+                { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
            ]
          },
          {
             "@id" : "http://ontology.projectchronos.eu/subsystems/function",
             "@type" : [
-                "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-                "http://www.w3.org/2002/07/owl#IrreflexiveProperty",
-                "http://www.w3.org/2002/07/owl#ObjectProperty"
+                { "@id": "http://www.w3.org/2002/07/owl#AsymmetricProperty" },
+                { "@id": "http://www.w3.org/2002/07/owl#IrreflexiveProperty" },
+                { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
             ],
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdfs:comment" : "The function and the objective what the device performs or make possible",
             "rdf:label" : "what the device is used for",
             "skos:prefLabel" : "function",
@@ -39,143 +37,117 @@
         {
             "@id" : "http://ontology.projectchronos.eu/subsystems/unitOfMeasure",
             "@type" : [
-                "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-                "http://www.w3.org/2002/07/owl#IrreflexiveProperty",
-                "http://www.w3.org/2002/07/owl#ObjectProperty"
+                { "@id": "http://www.w3.org/2002/07/owl#AsymmetricProperty" },
+                { "@id": "http://www.w3.org/2002/07/owl#IrreflexiveProperty" },
+                { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
             ],
-            "owl:sameAs": ["http://umbel.org/umbel/rc/UnitOfMeasure", "http://dbpedia.org/resource/Units_of_measurement"],
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
-            "rdf:range" : [
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
-            ],
+            "owl:sameAs": { "@id": "http://umbel.org/umbel/rc/UnitOfMeasure", "http://dbpedia.org/resource/Units_of_measurement" },
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" },
             "rdfs:comment" : "Property to set the unit of measure used by a physical value",
             "skos:prefLabel" : "unitOfMeasure"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/subSystemType",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdfs:label": "A property that references the subsystem to the kind of the devices it holds.",
             "rdfs:comment": "Every subsystem contains an homogeneous group of devices.",
             "skos:prefLabel": "subSystemType"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/isStandard",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdfs:label": "A property that references the standard platform for which the subsystem has been designed.",
             "rdfs:comment": "There are many different standards that imply quantitative and qualitative differences",
             "skos:prefLabel": "isStandard"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasVolume",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://www.w3.org/2001/XMLSchema#float" },
+            "skos:exactMatch": [
+                { "@id": "http://umbel.org/umbel/rc/Volume" }, 
+                { "@id": "http://dbpedia.org/resource/Volume" }
             ],
-            "rdf:range" : [
-                "http://www.w3.org/2001/XMLSchema#float"
-            ],
-            "skos:exactMatch": ["http://umbel.org/umbel/rc/Volume", "http://dbpedia.org/resource/Volume"],
             "skos:prefLabel": "hasVolume"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasMinAmpere",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://www.w3.org/2001/XMLSchema#float" },
+            "skos:exactMatch": [
+                { "@id": "http://umbel.org/umbel/rc/Ampere" }, 
+                { "@id": "http://dbpedia.org/resource/Ampere" }
             ],
-            "rdf:range" : [
-                "http://www.w3.org/2001/XMLSchema#float"
-            ],
-            "skos:exactMatch": ["http://umbel.org/umbel/rc/Ampere", "http://dbpedia.org/resource/Ampere"],
             "skos:prefLabel": "hasMinAmpere"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasMaxAmpere",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://www.w3.org/2001/XMLSchema#float" },
+            "skos:exactMatch": [
+                { "@id": "http://umbel.org/umbel/rc/Ampere" }, 
+                { "@id": "http://dbpedia.org/resource/Ampere" }
             ],
-            "rdf:range" : [
-                "http://www.w3.org/2001/XMLSchema#float"
-            ],
-            "skos:exactMatch": ["http://umbel.org/umbel/rc/Ampere", "http://dbpedia.org/resource/Ampere"],
             "skos:prefLabel": "hasMaxAmpere"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasMass",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://www.w3.org/2001/XMLSchema#float" },
+            "skos:exactMatch": [
+                { "@id": "http://umbel.org/umbel/rc/Mass" }, 
+                { "@id": "http://dbpedia.org/resource/Mass" }, 
+                { "@id": "http://schema.org/Mass" }
             ],
-            "rdf:range" : [
-                "http://www.w3.org/2001/XMLSchema#float"
-            ],
-            "skos:exactMatch": ["http://umbel.org/umbel/rc/Mass", "http://dbpedia.org/resource/Mass", "http://schema.org/Mass"],
             "skos:prefLabel": "hasMass"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasPower",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://www.w3.org/2001/XMLSchema#float" },
+            "skos:exactMatch": [
+                { "@id": "http://umbel.org/umbel/rc/Power" }, 
+                { "@id": "http://dbpedia.org/resource/Power_(physics)"}
             ],
-            "rdf:range" : [
-                "http://www.w3.org/2001/XMLSchema#float"
-            ],
-            "skos:exactMatch": ["http://umbel.org/umbel/rc/Power", "http://dbpedia.org/resource/Power_(physics)"],
             "skos:prefLabel": "hasPower"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasSpecificImpulse",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
-            "rdf:range" : [
-                "http://www.w3.org/2001/XMLSchema#float"
-            ],
-            "skos:exactMatch": ["http://dbpedia.org/resource/Specific_impulse"],
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://www.w3.org/2001/XMLSchema#float" },
+            "skos:exactMatch": { "@id": "http://dbpedia.org/resource/Specific_impulse" },
             "skos:prefLabel": "hasSpecificImpulse"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasMonetaryValue",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://www.w3.org/2001/XMLSchema#float" },
+            "skos:exactMatch": [
+                { "@id": "http://dbpedia.org/resource/Price" }, 
+                { "@id": "http://umbel.org/umbel/rc/MonetaryValue" }, 
+                { "@id": "http://schema.org/PriceSpecification" }
             ],
-            "rdf:range" : [
-                "http://www.w3.org/2001/XMLSchema#float"
-            ],
-            "skos:exactMatch": ["http://dbpedia.org/resource/Price", "http://umbel.org/umbel/rc/MonetaryValue", "http://schema.org/PriceSpecification"],
             "skos:prefLabel": "hasMonetaryValue",
             "rdfs:comment": "Amount of money it can be bought for, or an esteem of value."
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
-            "rdf:range" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "skos:prefLabel": "hasWireInWith",
             "rdfs:comment": "This device receive input from another device"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
-            "rdf:range" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft"
-            ],
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
+            "rdf:range" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "skos:prefLabel": "hasWireOutWith",
             "rdfs:comment": "This device send output to another device"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/typeOfPropellant",
-            "rdf:domain" : [
-                "http://ontology.projectchronos.eu/spacecraft/Spacecraft_Propulsion"
-            ],
+            "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Spacecraft_Propulsion" },
             "skos:prefLabel": "typeOfPropellant",
             "rdfs:comment": "Type of fueling used by a spacecraft rocket engine"
         },
@@ -183,8 +155,8 @@
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Detector",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://umbel.org/umbel/rc/Sensor_Device",
-                "http://ontology.projectchronos.eu/spacecraft/SubSystems_Spacecraft",
+                { "@id": "http://umbel.org/umbel/rc/Sensor_Device" },
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/SubSystems_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/objective",
@@ -199,8 +171,8 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
                     ]
                 },
                 {
@@ -226,13 +198,14 @@
             ],
             "rdfs:label": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere",
             "rdfs:comment": "Any scientific instrument carried by a space probe or an artificial satellite",
-            "skos:prefLabel": "Spacecraft_Detector"
+            "skos:prefLabel": "Spacecraft_Detector",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Payload_Spacecraft"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -262,22 +235,23 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
                     ]
                 }
             ],
 
             "skos:prefLabel": "Spacecraft_Propulsion",
             "rdfs:label": "The set of subsystems needed to make a spacecraft moving in space.",
-            "rdfs:comment": "Complex devices-subsystems used for impelling (processes of applying a force which results in translational motion) a spacecraft, in the specific http://umbel.org/umbel/rc/ProjectilePropelling"
+            "rdfs:comment": "Complex devices-subsystems used for impelling (processes of applying a force which results in translational motion) a spacecraft, in the specific http://umbel.org/umbel/rc/ProjectilePropelling",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
 
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -307,24 +281,25 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal"
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" },
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" },
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS" },
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion" },
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal" }
                     ]
                 }
             ],
 
             "skos:prefLabel": "Spacecraft_PrimaryPower",
             "rdfs:label": "The set of subsystems needed to make a spacecraft to collect energy to operate.",
-            "rdfs:comment": "Complex devices-subsystems used for collecting energy."
+            "rdfs:comment": "Complex devices-subsystems used for collecting energy.",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -344,31 +319,32 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower"
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" }
                     ]
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication"
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" }
                     ]
                 }
             ],
 
             "skos:prefLabel": "Spacecraft_BackupPower",
             "rdfs:label": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.",
-            "rdfs:comment": "Complex devices-subsystems used for storing energy."
+            "rdfs:comment": "Complex devices-subsystems used for storing energy.",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
 
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -386,7 +362,7 @@
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal_PassiveDevice",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal",
+                { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/subSystemType",
@@ -396,18 +372,27 @@
 
             "skos:prefLabel": "Spacecraft_Thermal_PassiveDevice",
             "rdfs:label": "Device of of class Thermal that does NOT consume energy from the spacecraft power source.",
-            "rdfs:comment": "They are passive because they mostly transform radiation into heating/cooling "
+            "rdfs:comment": "They are passive because they mostly transform radiation into heating/cooling ",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
 
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal_ActiveDevice",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Spacecraft_Thermal",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Spacecraft_Thermal" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/subSystemType",
                     "owl:hasValue" : "http://umbel.org/umbel/rc/PoweredDevice"
+                },
+                {
+                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
+                    "owl:hasValue" : [
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower" }
+                    ]
                 }
             ],
 
@@ -420,7 +405,7 @@
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Structure",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
@@ -450,20 +435,21 @@
 
             "skos:prefLabel": "Spacecraft_Structure",
             "rdfs:label": "Artifacts or rigid devices used to create a supporting structure for all the others devices.",
-            "rdfs:comment": "It's the skeleton and framework of the spacecraft."
+            "rdfs:comment": "It's the skeleton and framework of the spacecraft.",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : [
-                        "http://umbel.org/umbel/rc/InformationTransferEvent",
-                        "http://dbpedia.org/resource/Electronic_data_processing",
-                        "http://dbpedia.org/resource/Process_control"
+                        { "@id": "http://umbel.org/umbel/rc/InformationTransferEvent" },
+                        { "@id": "http://dbpedia.org/resource/Electronic_data_processing" },
+                        { "@id": "http://dbpedia.org/resource/Process_control" }
                     ]
                 },
                 {
@@ -520,38 +506,39 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion"
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion" }
                     ]
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS"
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS" }
                     ]
                 }
             ],
 
             "skos:prefLabel": "Spacecraft_CDH",
             "rdfs:label": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.",
-            "rdfs:comment": "The DH system shall: Enable HK and science data flow – Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) – Attitude data – Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data – Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression."
+            "rdfs:comment": "The DH system shall: Enable HK and science data flow – Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) – Attitude data – Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data – Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression.",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : [
-                        "http://dbpedia.org/resource/Transmitting",
-                        "http://umbel.org/umbel/rc/Receiving"
+                        { "@id": "http://dbpedia.org/resource/Transmitting" },
+                        { "@id": "http://umbel.org/umbel/rc/Receiving" }
                     ]
                 },
                 {
@@ -578,36 +565,37 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                        "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
                     ]
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
                     ]
                 }
             ],
 
             "skos:prefLabel": "Spacecraft_Communication",
             "rdfs:label": "It handles communication from/to ground base or other spacecraft.",
-            "rdfs:comment": "Complex devices-subsystems used for transmitting/receiving radio waves."
+            "rdfs:comment": "Complex devices-subsystems used for transmitting/receiving radio waves.",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS",
             "@type" :"http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
-                "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsytems/function",
                     "owl:hasValue" : [
-                        "http://dbpedia.org/resource/Flight_dynamics_(spacecraft)",
-                        "http://dbpedia.org/resource/Attitude_control",
-                        "http://dbpedia.org/resource/Process_control"
+                        { "@id": "http://dbpedia.org/resource/Flight_dynamics_(spacecraft)" },
+                        { "@id": "http://dbpedia.org/resource/Attitude_control" },
+                        { "@id": "http://dbpedia.org/resource/Process_control" }
                     ]
                 },
                 {
@@ -629,27 +617,28 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
                     ]
                 }
             ],
 
             "skos:prefLabel": "Spacecraft_AODCS",
             "rdfs:label": "Attitude and Orbit Determination Control",
-            "rdfs:comment": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics."
+            "rdfs:comment": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics.",
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_ActiveDevice",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf": [
-                "http://ontology.projectchronos.eu/spacecraft/Spacecraft_AODCS",
+                { "@id": "http://ontology.projectchronos.eu/spacecraft/Spacecraft_AODCS" },
                 {
                       "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                       "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                       "owl:hasValue" : [
-                        "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
-                        "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
-                        "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower" },
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
                       ]
                 }
             ],
@@ -661,12 +650,12 @@
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_PassiveDevice",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf": [
-              "http://ontology.projectchronos.eu/spacecraft/Spacecraft_AODCS",
+              { "@id": "http://ontology.projectchronos.eu/spacecraft/Spacecraft_AODCS" },
               {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH"
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
                     ]
               }
             ],

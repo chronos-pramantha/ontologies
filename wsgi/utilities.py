@@ -42,11 +42,11 @@ def get_or_set(nm, obj=None):
         else:
             result = None
             with open(str(spath), "r", encoding="utf8") as jsonld:
-                defines = json.loads(jsonld.read())['defines']
-                print('http://ontology.projectchronos.eu/' + nm + '/' + obj)
+                defines = json.loads(jsonld.read())["defines"]
+                print("http://ontology.projectchronos.eu/" + nm + "/" + obj)
             for d in defines:
-                if '@id' in d:
-                    if d['@id'] == 'http://ontology.projectchronos.eu/' + nm + '/' + obj:
+                if "@id" in d:
+                    if d["@id"] == "http://ontology.projectchronos.eu/" + nm + "/" + obj:
                         d["@context"] = ONTOLOGIES[nm][2]
                         CACHE[obj] = d
                         result = CACHE[obj]

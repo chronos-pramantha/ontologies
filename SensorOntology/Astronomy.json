@@ -14,63 +14,78 @@
     "@type": "http://www.w3.org/2002/07/owl#Ontology",
     "defines": [
         {
-            "@id": "http://ontology.projectchronos.eu/astronomy/AstronomicalObservatory",
-            "owl:sameAs" : "http://umbel.org/umbel/rc/AstronomicalObservatory",
+            "@id": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject",
             "@type": "http://www.w3.org/2002/07/owl#Class",
-            "rdfs:label": "an astronomical observatory",
-            "rdfs:comment": "a document representing an astronomical observatory"
+            "owl:sameAs": "http://umbel.org/umbel/rc/AstronomicalObject",
+            "rdf:comment": "an astronomical body (from a natural satellite size up) or a group of astronomical body"
         },
         {
-            "@id": "http://ontology.projectchronos.eu/astronomy/CelestialBody",
-            "owl:sameAs": "http://dbpedia.org/ontology/CelestialBody",
+            "@id": "http://ontology.projectchronos.eu/astronomy/Planetary_system",
             "@type": "http://www.w3.org/2002/07/owl#Class",
-            "rdfs:label": "a single celestial body",
-            "rdfs:comment": "a document representing a generic celestial body"
+            "owl:sameAs": "http://dbpedia.org/resource/Planetary_system",
+            "rdfs:subClassOf": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject"
+        },
+        {       
+            "@id": "http://ontology.projectchronos.eu/astronomy/Star",
+            "owl:sameAs" : "http://umbel.org/umbel/rc/Star",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:label": "a star",
+            "rdfs:comment": "a star",
+            "rdfs:subClassOf": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject"
         },
         {
             "@id": "http://ontology.projectchronos.eu/astronomy/PlanetaryBody",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "a general planet shaped body",
-            "rdfs:comment": "a document representing a general planet-shaped body"
+            "rdfs:comment": "a document representing a general planet-shaped body or natural satellite"
         },
         {
-            "@id": "http://ontology.projectchronos.eu/astronomy/Planet",
-            "owl:sameAs" : "http://dbpedia.org/resource/Planet",
-            "@type": "http://www.w3.org/2002/07/owl#Class",
-            "rdfs:label": "a planet",
-            "rdfs:comment": "a document representing a planet"
+            "@id": "http://ontology.projectchronos.eu/astronomy/orbiting",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty", 
+            "rdf:domain": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject",
+            "rdf:range": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject",
+            "rdfs:comment": "this property describe the generic astronomical object-object gravitational interaction"
         },
         {
-            "@id": "http://ontology.projectchronos.eu/astronomy/Satellite",
-            "owl:sameAs": "http://dbpedia.org/ontology/Satellite",
-            "@type": "http://www.w3.org/2002/07/owl#Class",
-            "rdfs:label": "a natural satellite",
-            "rdfs:comment": "a document representing a natural satellite"
+            "@id": "http://ontology.projectchronos.eu/astronomy/orbitsPlanet",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty", 
+            "rdf:domain": "http://ontology.projectchronos.eu/astronomy/Natural_satellite",
+            "rdf:range": [
+                "http://ontology.projectchronos.eu/astronomy/PlanetaryBody",
+                "http://ontology.projectchronos.eu/astronomy/Dwarf_planet",
+            ],
+            "rdfs:comment": "this property describe the Moon-Planet gravitational interaction"
         },
         {
             "@id": "http://ontology.projectchronos.eu/astronomy/Asteroid",
             "owl:sameAs": "http://dbpedia.org/ontology/Asteroid",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "an asteroid",
-            "rdfs:comment": "a document representing an asteroid"
+            "rdfs:comment": "a document representing an asteroid",
+            "rdfs:sameAs": { "@id": "http://umbel.org/umbel/rc/SubplanetaryStellarOrbiter" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/astronomy/Meteoroid",
             "owl:sameAs": "http://umbel.org/umbel/rc/Meteoroid",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "an meteoroid",
-            "rdfs:comment": "a document representing a meteoroid"
+            "rdfs:comment": "a document representing a meteoroid",
+            "rdfs:sameAs": { "@id": "http://umbel.org/umbel/rc/SubplanetaryStellarOrbiter" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/astronomy/Comet",
             "owl:sameAs": "http://umbel.org/umbel/rc/Comet",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "a comet",
-            "rdfs:comment": "a document representing a comet"
+            "rdfs:comment": "a document representing a comet",
+            "rdfs:sameAs": { "@id": "http://umbel.org/umbel/rc/SubplanetaryStellarOrbiter" }
         },
         {
-            "@id": "http://ontology.projectchronos.eu/astronomy/MoonOfAPlanet",
-            "owl:sameAs": "http://umbel.org/umbel/rc/MoonOfAPlanet",
+            "@id": "http://ontology.projectchronos.eu/astronomy/Natural_satellite",
+            "owl:sameAs": [
+                "http://umbel.org/umbel/rc/MoonOfAPlanet",
+                "http://dbpedia.org/resource/Natural_satellite"
+            ],
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "a natural satellite or moon",
             "rdfs:comment": "a document representing a natural satellite or moon"
@@ -96,11 +111,28 @@
             "rdfs:comment": "a document representing an icy body"
         },
         {
+            "@id": "http://ontology.projectchronos.eu/astronomy/Ice_giant",
+            "owl:sameAs": "http://dbpedia.org/resource/Ice_giant",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf": { "@id": "http://ontology.projectchronos.eu/astronomy/GasGiant" },
+            "rdfs:label": "a gas giant with less helium/hydrogen and more 'ices'",
+            "rdfs:comment": "Uranus and Neputne subclass"
+        },
+        {
             "@id": "http://ontology.projectchronos.eu/astronomy/GasGiant",
             "@owl:sameAs": "http://umbel.org/umbel/rc/GasGiant",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "a Jovian planet",
             "rdfs:comment": "a document representing a Jovian planet"
+        },
+        {
+            "@id": "http://ontology.projectchronos.eu/astronomy/DwarfPlanet",
+            "@owl:sameAs": "http://dbpedia.org/resource/Dwarf_planet",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:label": "a trans-neptunian object with planet-like size",
+            "rdfs:comment": "a trans-neptunian object with planet-like size",
+            "rdfs:subClassOf" : { "@id": "http://umbel.org/umbel/rc/SubplanetaryStellarOrbiter" },
+            "astronomy:orbiting": { "@id": "http://ontology.projectchronos.eu/astronomy/Sun" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/astronomy/RockyPlanetaryBody",
@@ -124,11 +156,18 @@
             "rdfs:comment": "a document representing a non-solid planet"
         },
         {
-            "@id": "http://ontology.projectchronos.eu/astronomy/Star",
-            "owl:sameAs" : "http://umbel.org/umbel/rc/Star",
+            "@id": "http://ontology.projectchronos.eu/astronomy/AstronomicalObservatory",
+            "owl:sameAs" : "http://umbel.org/umbel/rc/AstronomicalObservatory",
             "@type": "http://www.w3.org/2002/07/owl#Class",
-            "rdfs:label": "a star",
-            "rdfs:comment": "a star"
+            "rdfs:label": "an astronomical observatory",
+            "rdfs:comment": "a document representing an astronomical observatory"
+        },
+        {
+            "@id": "http://ontology.projectchronos.eu/astronomy/CelestialBody",
+            "owl:sameAs": "http://dbpedia.org/ontology/CelestialBody",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:label": "a single celestial body",
+            "rdfs:comment": "a document representing a generic celestial body"
         }
     ]
 

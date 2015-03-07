@@ -19,6 +19,7 @@ def hello():
             "chronos": ["a generic ontology for space activities", "/chronos"],
             "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors"],
             "astronomy": ["an ontology for astronomical objects", "/astronomy"],
+            "solarsystem" : ["an ontology for astronomical objects in the solar system"],
             "engineering": ["an ontology for engineering concepts", "/engineering"],
             "spacecraft": ["an ontology for a spacecraft and its systems", "/spacecraft"],
             "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems"]
@@ -35,7 +36,7 @@ def index(name):
         # serve name/ontology
         #
         ontology = get_or_set(name)
-        res = Response(response=str(ontology), content_type='application/ld+json; charset=utf-8')
+        res = Response(response=str(ontology), content_type="application/ld+json; charset=utf-8")
         print(res)
         return res
     return wrong_uri()
@@ -46,27 +47,27 @@ def chronos(name, obj):
     name = name.lower()
     if name in ONTOLOGIES.keys():
         obj = get_or_set(name, obj)
-        return Response(response=str(obj), content_type='application/ld+json; charset=utf-8')
+        return Response(response=str(obj), content_type="application/ld+json; charset=utf-8")
     return wrong_object()
 
 
 @app.errorhandler(404)
 def wrong_uri(e=None):
     message = {
-            'status': 404,
-            'message': 'Not one of Pramantha LOD URI: ' + request.url,
+            "status": 404,
+            "message": "Not one of Pramantha LOD URI: " + request.url,
     }
-    resp = Response(response=str(message), content_type='application/ld+json; charset=utf-8')
+    resp = Response(response=str(message), content_type="application/ld+json; charset=utf-8")
     # resp.status_code = 404
     return resp
 
 @app.errorhandler(404)
 def wrong_object(e=None):
     message = {
-            'status': 404,
-            'message': 'Object not in the ontology: ' + request.url,
+            "status": 404,
+            "message": "Object not in the ontology: " + request.url,
     }
-    resp = Response(response=str(message), content_type='application/ld+json; charset=utf-8')
+    resp = Response(response=str(message), content_type="application/ld+json; charset=utf-8")
     # resp.status_code = 404
     return resp
 
