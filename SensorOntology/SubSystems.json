@@ -41,7 +41,10 @@
                 { "@id": "http://www.w3.org/2002/07/owl#IrreflexiveProperty" },
                 { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
             ],
-            "owl:sameAs": { "@id": "http://umbel.org/umbel/rc/UnitOfMeasure", "http://dbpedia.org/resource/Units_of_measurement" },
+            "owl:sameAs": [
+                { "@id": "http://umbel.org/umbel/rc/UnitOfMeasure"}, 
+                { "@id": "http://dbpedia.org/resource/Units_of_measurement" }
+            ],
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdf:range" : { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" },
             "rdfs:comment" : "Property to set the unit of measure used by a physical value",
