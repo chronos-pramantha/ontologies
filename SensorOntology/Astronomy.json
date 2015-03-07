@@ -52,7 +52,7 @@
             "rdf:domain": "http://ontology.projectchronos.eu/astronomy/Natural_satellite",
             "rdf:range": [
                 "http://ontology.projectchronos.eu/astronomy/PlanetaryBody",
-                "http://ontology.projectchronos.eu/astronomy/Dwarf_planet",
+                "http://ontology.projectchronos.eu/astronomy/DwarfPlanet"
             ],
             "rdfs:comment": "this property describe the Moon-Planet gravitational interaction"
         },
