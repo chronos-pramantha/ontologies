@@ -26,9 +26,6 @@
             "@id": "http://ontology.projectchronos.eu/solarsystem/Mercury",
             "@type": [
                 {
-                    "@id": "http://ontology.projectchronos.eu/astronomy/PlanetaryBody"
-                },
-                {
                     "@id": "http://ontology.projectchronos.eu/astronomy/TerrestrialPlanet"
                 },
                 {
@@ -48,9 +45,6 @@
             "@id": "http://ontology.projectchronos.eu/solarsystem/Venus",
             "@type": [
                 {
-                    "@id": "http://ontology.projectchronos.eu/astronomy/PlanetaryBody"
-                },
-                {
                     "@id": "http://ontology.projectchronos.eu/astronomy/TerrestrialPlanet"
                 },
                 {
@@ -69,9 +63,6 @@
         {
             "@id": "http://ontology.projectchronos.eu/solarsystem/Earth",
             "@type": [
-                {
-                    "@id": "http://ontology.projectchronos.eu/astronomy/PlanetaryBody"
-                },
                 {
                     "@id": "http://ontology.projectchronos.eu/astronomy/TerrestrialPlanet"
                 },
@@ -107,9 +98,6 @@
         {
             "@id": "http://ontology.projectchronos.eu/solarsystem/Mars",
             "@type": [
-                {
-                    "@id": "http://ontology.projectchronos.eu/astronomy/PlanetaryBody"
-                },
                 {
                     "@id": "http://ontology.projectchronos.eu/astronomy/TerrestrialPlanet"
                 },
@@ -162,9 +150,6 @@
             "@id": "http://ontology.projectchronos.eu/solarsystem/Jupiter",
             "@type": [
                 {
-                    "@id": "http://ontology.projectchronos.eu/solarsystem/PlanetaryBody"
-                },
-                {
                     "@id": "http://ontology.projectchronos.eu/astronomy/GasGiant"
                 }
             ],
@@ -203,7 +188,9 @@
                 }
             ],
             "owl:sameAs": [
-                "http://dbpedia.org/resource/Adrastea_(moon)"
+                {
+                    "@id":  "http://dbpedia.org/resource/Adrastea_(moon)"
+                }
             ],
             "astronomy:orbitsPlanet": "http://ontology.projectchronos.eu/astronomy/Jupiter"
         },
@@ -421,9 +408,6 @@
             "@id": "http://ontology.projectchronos.eu/solarsystem/Saturn",
             "@type": [
                 {
-                    "@id": "http://ontology.projectchronos.eu/astronomy/PlanetaryBody"
-                },
-                {
                     "@id": "http://ontology.projectchronos.eu/astronomy/GasGiant"
                 }
             ],
@@ -545,10 +529,10 @@
             "@id": "http://ontology.projectchronos.eu/solarsystem/Uranus",
             "@type": [
                 {
-                    "@id": "http://ontology.projectchronos.eu/astronomy/PlanetaryBody"
+                    "@id": "http://ontology.projectchronos.eu/astronomy/GasGiant"
                 },
                 {
-                    "@id": "http://ontology.projectchronos.eu/astronomy/GasGiant"
+                    "@id": "http://ontology.projectchronos.eu/astronomy/Ice_giant"
                 }
             ],
             "owl:sameAs": [
@@ -834,10 +818,10 @@
             "@id": "http://ontology.projectchronos.eu/solarsystem/Neptune",
             "@type": [
                 {
-                    "@id": "http://ontology.projectchronos.eu/astronomy/PlanetaryBody"
-                },
-                {
                     "@id": "http://ontology.projectchronos.eu/astronomy/Ice_giant"
+                },
+                {       
+                    "@id": "http://ontology.projectchronos.eu/astronomy/GasGiant"
                 }
             ],
             "owl:sameAs": [
@@ -1061,7 +1045,9 @@
         },
         {
             "@id": "http://ontology.projectchronos.eu/solarsystem/Ceres",
-            "@type": "http://ontology.projectchronos.eu/astronomy/DwarfPlanet",
+            "@type": {
+                "@id": "http://ontology.projectchronos.eu/astronomy/DwarfPlanet"
+            },
             "owl:sameAs": [
                 "http://dbpedia.org/resource/Ceres_(dwarf_planet)"
             ]
