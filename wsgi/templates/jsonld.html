@@ -1,19 +1,7 @@
-<HTML>
-<head>
-    <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/w3c-unofficial"></link>
-    <style>
-        body {
-            background-image: none;
-        }
-        .footer {
-            font-size:11px;
-            text-align:center;
-        }
-    </style>
-</head>
+{% extends "base.html" %}
 
-<body>
-<h1>{{ name.upper() }} Ontology</h1>
+{% block body %}
+<h1 class="title">{{ name.upper() }} Ontology</h1>
 
 <p><b>description</b>: {{title['label']}}</p> 
 <p><b>comment</b>: {{title['comment']}}</p>
@@ -25,27 +13,28 @@
 {% endfor %}
 </ul>
 
-<h2>Properties</h2>
-
-{% for p in properties %}
-    <ul>
-        <li><a href="{{title['name']+p['label']}}">{{p['label']}}</a></li>
-        <pre>{{p['dump']}}</pre>
-    </ul>
-{% endfor %}
 
 
-<h2>Classes</h2>
-<ul>
+{% if properties|length == 0 %}
+{% else %}
+<div class="example">
+    <h1 class="example-head">Properties</h1>
+</div>
+    {% for p in properties %}
+            <div class="example-title">{{p['label']}} (<a href="{{title['name']+p['label']}}">endpoint</a>)</div>
+            <div class="example">
+                <pre class="example">{{p['dump']}}</pre>
+            </div>
+    {% endfor %}
+{% endif %}
+
+<div class="example border-grey">
+    <h1 class="example-head">Classes</h1>
+</div>
+
 {% for c in classes %}
-        <li><a href="{{title['name']+c['label']}}">{{c['label']}}</a></li>
-        <pre>{{c['dump']}}</pre>
+        <div class="example-title text-grey">{{c['label']}} (<a href="{{title['name']+c['label']}}">endpoint</a>)</div>
+        <div class="example border-grey"><pre class="example">{{c['dump']}}</pre></div>
 {% endfor %}
-</ul>
 
-<p class="footer">
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Project Chronos Ontology</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://projectchronos.org" property="cc:attributionName" rel="cc:attributionURL">http://projectchronos.org</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://ontology.projectchronos.eu" rel="dct:source">http://ontology.projectchronos.eu</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://pramantha.net" rel="cc:morePermissions">http://pramantha.net</a>.
-</p>
-<p class="footer">CSS supplied by: <a href="http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231">w3.org</a>. Thanks for the make of the Web as a standard!</p>
-</body>
-</HTML>
+{% endblock %}
