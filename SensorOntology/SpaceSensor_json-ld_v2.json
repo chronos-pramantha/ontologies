@@ -113,7 +113,7 @@
                     },
                     {
                         "@id"         : "http://ontology.projectchronos.eu/sensors/isResearchedBy",
-                        "@type"       : "http://ontology.projectchronos.eu/sensors/ObjectProperty",
+                        "@type"       : "http://www.w3.org/2002/07/owl#ObjectProperty",
                         "rdfs:comment": "A relation between FieldOfResearch and Detector. For every field of research given detectors are used. For Example, to look for pollutants in the Atmosphere (Earth Observation) spectrometers are used. To investigate the surface of celestial bodies ( Solar System Studies) spectrometers are used, but also dust detectors, ecc... THIS PROPRTY IS UNDER EVOLUTION.",
                         "rdfs:range"  : "http://ontology.projectchronos.eu/sensors/Sensor",
                         "rdfs:domain" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
