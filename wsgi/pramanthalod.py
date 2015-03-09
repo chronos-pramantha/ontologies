@@ -22,25 +22,7 @@ else:
     host = "http://127.0.0.1:5000/"
     app.config['DEBUG'] = True
 
-@app.route("/documentation/<name>", methods=['GET'])
-def documentation(name):
-    name = name.lower()
-    if name and name in ONTOLOGIES.keys():
-        if request.method == 'GET':
-            ontology = json.loads(get_or_set(name))
-            title = { "label": ontology['rdfs:label'], 
-                      "comment": ontology['rdfs:comment'],
-                      "name": host+name+"/" }
-            context = ontology['@context']
-            content = ontology['defines']
-            classes, properties = classes_and_properties(content)
 
-            return render_template('jsonld.html', title=title, name=name, context=context, 
-                                    classes=classes, properties=properties, host=host)
-    return wrong_uri()
-        
-
-@app.route("/", methods=['GET'])
 def hello():
     res =  {
             "chronos": ["a generic ontology for space activities semantically linked to Wikipedia documents", "/chronos", "/documentation/chronos"],
@@ -54,6 +36,29 @@ def hello():
     return render_template('index.html', content=res)
 
 
+@app.route('/documentation/', defaults={'name': 'index'})
+@app.route("/documentation/<name>", methods=['GET'])
+def documentation(name):
+    name = name.lower()
+    if name == 'index':
+        return hello()   
+    elif name and name in ONTOLOGIES.keys():
+        if request.method == 'GET':
+            ontology = json.loads(get_or_set(name))
+            title = { "label": ontology['rdfs:label'], 
+                      "comment": ontology['rdfs:comment'],
+                      "name": host+name+"/" }
+            context = ontology['@context']
+            content = ontology['defines']
+            classes, properties = classes_and_properties(content)
+
+            return render_template('jsonld.html', title=title, name=name, context=context, 
+                                    classes=classes, properties=properties, host=host)
+    else:
+        return wrong_uri()
+
+
+@app.route('/', defaults={'name': 'documentation'})
 @app.route("/<name>/", methods=['GET'])
 def index(name):
     name = name.lower()
@@ -67,7 +72,8 @@ def index(name):
         return res
     elif name == 'documentation':
         return redirect(url_for('documentation'))
-    return wrong_uri()
+    else:
+        return wrong_uri()
 
 
 @app.route("/<name>/<obj>/", methods=['GET'])
@@ -83,7 +89,7 @@ def chronos(name, obj):
 def wrong_uri(e=None):
     message = {
             "status": 404,
-            "message": "Not one of Pramantha LOD URI: " + request.url,
+            "message": "Not one of Project Chronos LOD URI: " + request.url,
     }
     resp = Response(response=str(message), content_type="application/ld+json; charset=utf-8")
     # resp.status_code = 404
