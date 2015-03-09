@@ -11,10 +11,16 @@ from wsgi.contexts import ONTOLOGIES
 from wsgi.utilities import classes_and_properties
 
 
-app = Flask(__name__)
-app.config['DEBUG'] = True
-host = None
 
+app = Flask(__name__)
+if 'OPENSHIFT_DATA_DIR' in os.environ:
+    #store = os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'newsletter.save')
+    host = "http://ontology.projectchronos.eu/"
+    app.config['DEBUG'] = False
+else:
+    #store = os.path.join(os.path.dirname(__file__), 'newsletter.save')
+    host = "http://127.0.0.1:5000/"
+    app.config['DEBUG'] = True
 
 @app.route("/documentation/<name>", methods=['GET'])
 def documentation(name):
@@ -95,14 +101,5 @@ def wrong_object(e=None):
 
 
 if __name__ == "__main__":
-    if 'OPENSHIFT_DATA_DIR' in os.environ:
-        #store = os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'newsletter.save')
-        host = "http://ontology.projectchronos.eu/"
-        #app.config['DEBUG'] = False
-    else:
-        #store = os.path.join(os.path.dirname(__file__), 'newsletter.save')
-        host = "http://127.0.0.1:5000/"
-        #app.config['DEBUG'] = True
-
     app.config.from_object('config')
     app.run()
