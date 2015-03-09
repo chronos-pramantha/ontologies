@@ -8,11 +8,11 @@
 
 <ul>
 {% for k, v in content.items() %}
-     <li>{{ k }}: <span style="font-style:italic;"><a href="{{ v[1] }}">endpoint</a> <a href="{{ v[2] }}">documentation</a></span> {{ v[0] }} </li>
+     <li>{{ k.title() }} Ontology: <span style="font-style:italic;"><a href="{{ v[1] }}">endpoint</a> <a href="{{ v[2] }}">documentation</a></span> {{ v[0] }} </li>
 {% endfor %}
 </ul>
 
-<p style="font-size:11px;">
+<p style="font-size:11px;text-align:right;">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Project Chronos Ontology</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://projectchronos.org" property="cc:attributionName" rel="cc:attributionURL">http://projectchronos.org</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://ontology.projectchronos.eu" rel="dct:source">http://ontology.projectchronos.eu</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://pramantha.net" rel="cc:morePermissions">http://pramantha.net</a>.
 </p>
 
