@@ -30,7 +30,8 @@
                 }
             ],
             "@type": "http://www.w3.org/2002/07/owl#Class",
-            "rdfs:label": "Each instance of spacecraft is a transportation device either deployed entirely in outer space, or one whose trajectories leave the atmosphere of the planet it's launched from, in order to orbit the planet or to travel beyond the planet's gravitational field.",
+            "rdfs:label": "Spacecraft",
+            "skos:prefLabel": "Each instance of spacecraft is a transportation device either deployed entirely in outer space, or one whose trajectories leave the atmosphere of the planet it's launched from, in order to orbit the planet or to travel beyond the planet's gravitational field.",
             "rdfs:comment": "In this set of ontologies a spacecraft is described as a system of devices, a vessel made by different subsystems."
         },
         {
@@ -39,14 +40,16 @@
                 "http://www.w3.org/2002/07/owl#ObjectProperty"
             ],
             "owl:inverseOf": "http://ontology.projectchronos.eu/spacecraft/hasSubSystem",
-            "skos:prefLabel": "isSubsystemOf"
+            "skos:prefLabel": "subject is a device or a system of devices that is subsystem of a wider system or device",
+            "rdfs:label": "isSubsystemOf"
         },
         {
             "@id": "http://ontology.projectchronos.eu/spacecraft/isComponentOf",
             "@type" : [
                 "http://www.w3.org/2002/07/owl#ObjectProperty"
             ],
-            "skos:prefLabel": "isComponentOf"
+            "skos:prefLabel": "the subject is a member of a wider artifact, that is a set of artifacts",
+            "rdfs:label": "isComponentOf"
         },
         {
             "@id": "http://ontology.projectchronos.eu/spacecraft/hasSubSystem",
@@ -54,7 +57,7 @@
             "@type" : [
                 "http://www.w3.org/2002/07/owl#ObjectProperty"
             ],
-            "skos:prefLabel": "hasSubSystem"
+            "rdfs:label": "hasSubSystem"
         },
         {
             "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft",
@@ -82,9 +85,9 @@
                     "owl:minCardinality" : 1
                 }
             ],
-            "rdfs:label": "A device that is deployed into a spacecraft and works outside Earth lower atmosphere",
+            "skos:prefLabel": "A device that is deployed into a spacecraft and works outside Earth lower atmosphere",
             "rdfs:comment": "A Device is an artifact with a relatively rigid, set shape, designed for a specific use or to perform a specific function",
-            "skos:prefLabel": "Subsystem_Spacecraft",
+            "rdfs:label": "Subsystem_Spacecraft",
             "spacecraft:isComponent": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
@@ -98,8 +101,8 @@
                     "owl:minCardinality" : 1
                 }
             ],
-            "rdfs:label": "The set of the detectors and their supporting devices.",
-            "rdfs:comment": "The set of devices that the spacecraft carries for scientific purposes.",
+            "rdfs:label": "Payload_Spacecraft",
+            "rdfs:comment": "The set of devices that the spacecraft carries for scientific purposes, with their supporting (readout) devices.",
             "skos:prefLabel": "Payload_Spacecraft",
             "spacecraft:isComponent": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
@@ -117,8 +120,8 @@
                 "http://ontology.projectchronos.eu/sensors/Detector"
             ],
             "rdfs:comment" : "It is a payload",
-            "rdfs:label" : "a subsystem that holds a sensor",
-            "skos:prefLabel" : "embedSensor",
+            "rdfs:label" : "embedSensor", 
+            "skos:prefLabel" : "a subsystem that holds a sensor",
             "skos:altLabel" : "holds a sensor"
         },
         {
@@ -130,8 +133,8 @@
             "rdf:range": [
 
             ],
-            "rdfs:label": "the environment in which a device or a system of devices is designed to work",
-            "skos:prefLabel": "isDeployedIn"
+            "rdfs:label": "isDeployedIn",
+            "skos:prefLabel": "the environment in which a device or a system of devices is designed to work"
         }
 
 ]

@@ -19,7 +19,8 @@
            "@id" : "http://ontology.projectchronos.eu/subsystems/manufacturer",
            "@type" : [
                 { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
-           ]
+           ],
+           "rdfs:label": "manufacturer"
          },
          {
             "@id" : "http://ontology.projectchronos.eu/subsystems/function",
@@ -31,7 +32,7 @@
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdfs:comment" : "The function and the objective what the device performs or make possible",
             "rdf:label" : "what the device is used for",
-            "skos:prefLabel" : "function",
+            "rdfs:label" : "function",
             "skos:altLabel" : "is used for"
         },
         {
@@ -48,21 +49,24 @@
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdf:range" : { "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" },
             "rdfs:comment" : "Property to set the unit of measure used by a physical value",
-            "skos:prefLabel" : "unitOfMeasure"
+            "rdfs:label" : "unitOfMeasure"
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/subSystemType",
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
-            "rdfs:label": "A property that references the subsystem to the kind of the devices it holds.",
+            "skos:prefLabel": "A property that references the subsystem to the kind of the devices it holds.",
             "rdfs:comment": "Every subsystem contains an homogeneous group of devices.",
-            "skos:prefLabel": "subSystemType"
+            "rdfs:label": "subSystemType",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/isStandard",
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
-            "rdfs:label": "A property that references the standard platform for which the subsystem has been designed.",
+            "skos:prefLabel": "A property that references the standard platform for which the subsystem has been designed.",
             "rdfs:comment": "There are many different standards that imply quantitative and qualitative differences",
-            "skos:prefLabel": "isStandard"
+            "rdfs:label": "isStandard",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
+
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasVolume",
@@ -72,7 +76,8 @@
                 { "@id": "http://umbel.org/umbel/rc/Volume" }, 
                 { "@id": "http://dbpedia.org/resource/Volume" }
             ],
-            "skos:prefLabel": "hasVolume"
+            "rdfs:label": "hasVolume",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasMinAmpere",
@@ -82,7 +87,8 @@
                 { "@id": "http://umbel.org/umbel/rc/Ampere" }, 
                 { "@id": "http://dbpedia.org/resource/Ampere" }
             ],
-            "skos:prefLabel": "hasMinAmpere"
+            "rdfs:label": "hasMinAmpere",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasMaxAmpere",
@@ -92,7 +98,8 @@
                 { "@id": "http://umbel.org/umbel/rc/Ampere" }, 
                 { "@id": "http://dbpedia.org/resource/Ampere" }
             ],
-            "skos:prefLabel": "hasMaxAmpere"
+            "rdfs:label": "hasMaxAmpere",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasMass",
@@ -103,7 +110,8 @@
                 { "@id": "http://dbpedia.org/resource/Mass" }, 
                 { "@id": "http://schema.org/Mass" }
             ],
-            "skos:prefLabel": "hasMass"
+            "rdfs:label": "hasMass",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasPower",
@@ -113,14 +121,16 @@
                 { "@id": "http://umbel.org/umbel/rc/Power" }, 
                 { "@id": "http://dbpedia.org/resource/Power_(physics)"}
             ],
-            "skos:prefLabel": "hasPower"
+            "rdfs:label": "hasPower",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasSpecificImpulse",
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdf:range" : { "@id": "http://www.w3.org/2001/XMLSchema#float" },
             "skos:exactMatch": { "@id": "http://dbpedia.org/resource/Specific_impulse" },
-            "skos:prefLabel": "hasSpecificImpulse"
+            "rdfs:label": "hasSpecificImpulse",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasMonetaryValue",
@@ -131,28 +141,32 @@
                 { "@id": "http://umbel.org/umbel/rc/MonetaryValue" }, 
                 { "@id": "http://schema.org/PriceSpecification" }
             ],
-            "skos:prefLabel": "hasMonetaryValue",
-            "rdfs:comment": "Amount of money it can be bought for, or an esteem of value."
+            "rdfs:label": "hasMonetaryValue",
+            "rdfs:comment": "Amount of money it can be bought for, or an esteem of value.",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdf:range" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
-            "skos:prefLabel": "hasWireInWith",
-            "rdfs:comment": "This device receive input from another device"
+            "rdfs:label": "hasWireInWith",
+            "rdfs:comment": "This device receive input from another device",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
             "rdf:range" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Subsystem_Spacecraft" },
-            "skos:prefLabel": "hasWireOutWith",
-            "rdfs:comment": "This device send output to another device"
+            "rdfs:label": "hasWireOutWith",
+            "rdfs:comment": "This device send output to another device",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/typeOfPropellant",
             "rdf:domain" : { "@id": "http://ontology.projectchronos.eu/spacecraft/Spacecraft_Propulsion" },
-            "skos:prefLabel": "typeOfPropellant",
-            "rdfs:comment": "Type of fueling used by a spacecraft rocket engine"
+            "rdfs:label": "typeOfPropellant",
+            "rdfs:comment": "Type of fueling used by a spacecraft rocket engine",
+            "@type" : { "@id": "http://www.w3.org/2002/07/owl#ObjectProperty" }
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Detector",
@@ -199,9 +213,9 @@
                     "owl:minCardinality" : 1
                 }
             ],
-            "rdfs:label": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere",
-            "rdfs:comment": "Any scientific instrument carried by a space probe or an artificial satellite",
-            "skos:prefLabel": "Spacecraft_Detector",
+            "rdfs:label": "Spacecraft_Detector",
+            "rdfs:comment": "A space detector is a sensor supported by another device that let it collect data, that is deployed into a spacecraft and works outside Earth lower atmosphere",
+            "skos:prefLabel": "Any scientific instrument carried by a space probe or an artificial satellite",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Payload_Spacecraft"
         },
         {
@@ -244,8 +258,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_Propulsion",
-            "rdfs:label": "The set of subsystems needed to make a spacecraft moving in space.",
+            "skos:prefLabel": "The set of subsystems needed to make a spacecraft moving in space",
+            "rdfs:label": "Spacecraft_Propulsion.",
             "rdfs:comment": "Complex devices-subsystems used for impelling (processes of applying a force which results in translational motion) a spacecraft, in the specific http://umbel.org/umbel/rc/ProjectilePropelling",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
 
@@ -293,8 +307,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_PrimaryPower",
-            "rdfs:label": "The set of subsystems needed to make a spacecraft to collect energy to operate.",
+            "skos:prefLabel": "The set of subsystems needed to make a spacecraft to collect energy to operate",
+            "rdfs:label": "Spacecraft_PrimaryPower.",
             "rdfs:comment": "Complex devices-subsystems used for collecting energy.",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
@@ -337,8 +351,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_BackupPower",
-            "rdfs:label": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.",
+            "rdfs:label": "Spacecraft_BackupPower",
+            "skos:prefLabel": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.",
             "rdfs:comment": "Complex devices-subsystems used for storing energy.",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
 
@@ -355,8 +369,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_Thermal",
-            "rdfs:label": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .",
+            "rdfs:label": "Spacecraft_Thermal",
+            "skos:prefLabel": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .",
             "rdfs:comment": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events"
 
         },
@@ -373,8 +387,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_Thermal_PassiveDevice",
-            "rdfs:label": "Device of of class Thermal that does NOT consume energy from the spacecraft power source.",
+            "rdfs:label": "Spacecraft_Thermal_PassiveDevice",
+            "skos:prefLabel": "Device of of class Thermal that does NOT consume energy from the spacecraft power source.",
             "rdfs:comment": "They are passive because they mostly transform radiation into heating/cooling ",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
 
@@ -399,8 +413,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_Thermal_ActiveDevice",
-            "rdfs:label": "Device that of class Thermal that consumes energy from the spacecraft power source.",
+            "rdfs:label": "Spacecraft_Thermal_ActiveDevice",
+            "skos:prefLabel": "Device that of class Thermal that consumes energy from the spacecraft power source.",
             "rdfs:comment": "Complex devices-subsystems used to protect sensors or electronic devices from over/under-heating, like refrigeration absorption."
 
         },
@@ -436,8 +450,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_Structure",
-            "rdfs:label": "Artifacts or rigid devices used to create a supporting structure for all the others devices.",
+            "rdfs:label": "Spacecraft_Structure",
+            "skos:prefLabel": "Artifacts or rigid devices used to create a supporting structure for all the others devices.",
             "rdfs:comment": "It's the skeleton and framework of the spacecraft.",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
@@ -526,8 +540,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_CDH",
-            "rdfs:label": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.",
+            "rdfs:label": "Spacecraft_CDH",
+            "skos:prefLabel": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.",
             "rdfs:comment": "The DH system shall: Enable HK and science data flow – Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) – Attitude data – Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data – Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression.",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
@@ -582,8 +596,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_Communication",
-            "rdfs:label": "It handles communication from/to ground base or other spacecraft.",
+            "rdfs:label": "Spacecraft_Communication",
+            "skos:prefLabel": "It handles communication from/to ground base or other spacecraft.",
             "rdfs:comment": "Complex devices-subsystems used for transmitting/receiving radio waves.",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
@@ -625,8 +639,8 @@
                 }
             ],
 
-            "skos:prefLabel": "Spacecraft_AODCS",
-            "rdfs:label": "Attitude and Orbit Determination Control",
+            "rdfs:label": "Spacecraft_AODCS",
+            "skos:prefLabel": "Attitude and Orbit Determination Control",
             "rdfs:comment": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics.",
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
@@ -645,8 +659,8 @@
                       ]
                 }
             ],
-            "skos:prefLabel": "Spacecraft_AODCS_Active",
-            "rdfs:label": "AODCS that do not use any power from the spacecraft power to work.",
+            "rdfs:label": "Spacecraft_AODCS_Active",
+            "skos:prefLabel": "AODCS that do not use any power from the spacecraft power to work.",
             "rdfs:comment": "Do NOT use any additional power from the spacecraft generator"
         },
         {
@@ -662,8 +676,8 @@
                     ]
               }
             ],
-            "skos:prefLabel": "Spacecraft_AODCS_PassiveDevice",
-            "rdfs:label": "AODCS that do not use any power from the spacecraft power to work.",
+            "rdfs:label": "Spacecraft_AODCS_PassiveDevice",
+            "skos:prefLabel": "AODCS that do not use any power from the spacecraft power to work.",
             "rdfs:comment": "DO use any additional power from the spacecraft generator"
         }
   ]

@@ -1,0 +1,33 @@
+<HTML>
+<body>
+<h1>{{ name.upper() }} Ontology</h1>
+
+
+
+<h2>Context</h2>
+<ul>
+{% for k, v in context.items() %}
+    <li>{{k}} : <span style="font-style:italic;"><a href="{{v}}">{{v}}</a></span></li>
+{% endfor %}
+</ul>
+
+<h2>Properties</h2>
+
+{% for p in properties %}
+    <ul>
+        <li>{{p['label']}}</li>
+        <pre>{{p['dump']}}</pre>
+    </ul>
+{% endfor %}
+
+
+<h2>Classes</h2>
+<ul>
+{% for c in classes %}
+        <li>{{c['label']}}</li>
+        <pre>{{c['dump']}}</pre>
+{% endfor %}
+</ul>
+
+</body>
+</HTML>

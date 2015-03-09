@@ -1,0 +1,11 @@
+<HTML>
+<body>
+
+<ul>
+{% for k, v in content.items() %}
+     <li><a href="{{ v[1] }}">{{ k }}</a>: {{ v[0] }} (<a href="{{ v[2] }}">doc</a>)</li>
+{% endfor %}
+</ul>
+
+</body>
+</HTML>
