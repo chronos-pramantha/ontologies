@@ -10,6 +10,8 @@
 
     "@id"    : "",
     "@type"  : "http://www.w3.org/2002/07/owl#Ontology",
+    "rdfs:label": "An ontology of sensors, to describe how they work",
+    "rdfs:comment": "a set of concepts to be used to describe sensors",
     "defines": [
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/Sensor",
@@ -50,7 +52,7 @@
                                         ],
                         "rdfs:comment"  : "A relation between Detector and PhysicalEntity. Detectors detect physical entities like particles, plasma, molecules, etc. For ex, spectrometers detect light. Magnetometers detect magnetic fields, which are part of the EM-field",
                         "rdf:range"     : "http://ontology.projectchronos.eu/sensors/PhysicalEntity",
-                        "rdf:label"     : "detects",
+                        "rdfs:label"     : "detects",
                         "skos:altLabel" : "to detect"
                     },
                     {
@@ -63,18 +65,17 @@
                         "rdfs:comment"  : "A relation between a Detector and a PhysicalEntity. The relation defines an \"active sensor\": if a sensor emits any particles or waves, which are backscattered and re-absorbed, then it is an \"active sensor\". The term \"emits\" implies therefore that the emitted physical entity is also reabsorbed by the same instrument. N.B. Active sensors should belong only to the family of instruments measuring properties of the electromagnetic spectrum. References for this assumption are: 1. http://www.nasa.gov/directorates/heo/scan/communications/outreach/funfacts/txt_passive_active.html#.VKA0MhAT1I; 2. http://www.seos-project.eu/modules/remotesensing/remotesensing-c02-p02.html",
                         "rdfs:domain"   : "http://ontology.projectchronos.eu/sensors/Sensor",
                         "rdfs:range"    : "http://ontology.projectchronos.eu/sensors/PhysicalEntity",
-                        "rdf:label"     : "emits",
+                        "rdfs:label"     : "emits",
                         "skos:altLabel" : "to emit"
                     },
                     {
                         "@id"          : "http://ontology.projectchronos.eu/sensors/hasFieldOfResearch",
                         "@type"        : "http://www.w3.org/2002/07/owl#ObjectProperty",
-                        "rdfs:label"   : "application",
                         "rdfs:comment" : "A relation between a Detector and FieldOfResearch. A detector is used for some research purpose, i.e. hasApplication in some FieldOfResearch. Examples of fields of research are: Determination of the elemental characteristics of a planet's surface; Dark Energy; Climate Change monitoring, etc...",
                         "rdfs:domain"  : "http://ontology.projectchronos.eu/sensors/Sensor",
                         "rdfs:range"   : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
                         "owl:inverseOf": "http://ontology.projectchronos.eu/sensors/isResearchedBy",
-                        "rdf:label"    : "hasFieldOfResearch"
+                        "rdfs:label"    : "hasFieldOfResearch"
                     },
                     {
                         "@id"         : "http://ontology.projectchronos.eu/sensors/hasOutput",
@@ -551,7 +552,7 @@
                         "@id"             : "http://ontology.projectchronos.eu/sensors/MagneticFieldStrength",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PhysicalQuantity",
-                        "rdfs:labela"     : "MagneticFieldStrength"
+                        "rdfs:label"     : "MagneticFieldStrength"
                     },
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/Magnetometer",
@@ -894,7 +895,8 @@
                                             "http://ontology.projectchronos.eu/sensors/isEmittedBy",
                                             "http://ontology.projectchronos.eu/sensors/isResearchedBy",
                                             "http://ontology.projectchronos.eu/sensors/measures"
-                                        ]
+                                        ],
+                        "skos:altLabel"      : "#AllDisjointsProperties"
                     }
                 ]
 }

@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(name='ChronosLOD',
-      version='0.1',
-      description='Chronos Ontologies',
+      version='0.2',
+      description='Chronos Ontologies Handler',
       author='lorenzo',
       author_email='lorenzo@projectchronos.org',
       url='http://www.python.org/sigs/distutils-sig/',

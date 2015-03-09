@@ -12,6 +12,8 @@
 
     "@id": "",
     "@type": "http://www.w3.org/2002/07/owl#Ontology",
+    "rdfs:label": "Generic astronomical concepts ",
+    "rdfs:comment": "a set of concepts to be used to describe astronomical objects",
     "defines": [
         {
             "@id": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject",

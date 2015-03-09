@@ -21,8 +21,9 @@ def documentation(name):
     if name and name in ONTOLOGIES.keys():
         if request.method == 'GET':
             ontology = json.loads(get_or_set(name))
-            title = {}
-            #title = { "label": ontology['rdfs:label'], "comment": ontology['rdfs:comment'] }
+            title = { "label": ontology['rdfs:label'], 
+                      "comment": ontology['rdfs:comment'],
+                      "name": host+name+"/" }
             context = ontology['@context']
             content = ontology['defines']
             classes, properties = classes_and_properties(content)

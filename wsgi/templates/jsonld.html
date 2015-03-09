@@ -2,7 +2,8 @@
 <body>
 <h1>{{ name.upper() }} Ontology</h1>
 
-
+<p><b>description</b>: {{title['label']}}</p> 
+<p><b>comment</b>: {{title['comment']}}</p>
 
 <h2>Context</h2>
 <ul>
@@ -15,7 +16,7 @@
 
 {% for p in properties %}
     <ul>
-        <li>{{p['label']}}</li>
+        <li><a href="{{title['name']+p['label']}}">{{p['label']}}</a></li>
         <pre>{{p['dump']}}</pre>
     </ul>
 {% endfor %}
@@ -24,7 +25,7 @@
 <h2>Classes</h2>
 <ul>
 {% for c in classes %}
-        <li>{{c['label']}}</li>
+        <li><a href="{{title['name']+c['label']}}">{{c['label']}}</a></li>
         <pre>{{c['dump']}}</pre>
 {% endfor %}
 </ul>

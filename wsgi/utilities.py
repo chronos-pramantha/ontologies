@@ -32,6 +32,9 @@ def classes_and_properties(defines):
             elif 'skos:altLabel' in c.keys():
                 label = c['skos:altLabel']
 
+        if label is None:
+            raise ValueError(str(c))
+
         if isinstance(c['@type'], list):
             if check_type_in_list(c['@type'], 'property'):
                 properties.append({ "label": label, "dump": json.dumps(c, indent=2) })
