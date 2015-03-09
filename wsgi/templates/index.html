@@ -1,14 +1,22 @@
 <HTML>
+<head>
+    <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/w3c-unofficial"></link>
+    <style>
+        body {
+            background-image: none;
+        }
+    </style>
+</head>
 <body>
 
 <h1>Project Chronos Ontology Repository</h1>
 
-<p>Project Chronos is glad to serve these ontologies from these endpoints</p>
+<p>Project Chronos is glad to serve these ontologies from these endpoints.</p>
 <p>These same ontologies are used to power <a href="http://pramantha.net">Pramantha APIs</a></p> 
 
 <ul>
 {% for k, v in content.items() %}
-     <li>{{ k.title() }} Ontology: <span style="font-style:italic;"><a href="{{ v[1] }}">endpoint</a> <a href="{{ v[2] }}">documentation</a></span> {{ v[0] }} </li>
+     <li>{{ k.title() }} Repository: <span style="font-style:italic;"><a href="{{ v[1] }}">endpoint</a> <a href="{{ v[2] }}">documentation</a></span> {{ v[0] }} </li>
 {% endfor %}
 </ul>
 
