@@ -506,61 +506,7 @@
                         "rdfs:comment" : "This is just a first sketch. To be expanded.",
                         "rdfs:label"   : "FieldOfResearch"
 
-                    },
-	 	            {   
-			            "@id"	          : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
-                        "rdfs:label"      : "PlanetaryScience"
-                    }, 	
-                    {   
-			            "@id"	          : "http://ontology.projectchronos.eu/sensors/AtmosphericScience",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
-                        "rdfs:label"      : "AtmosphericScience"
-                    },
-                    {	
-			            "@id"	          : "http://ontology.projectchronos.eu/sensors/Cosmology",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
-                        "rdfs:label"      : "Cosmology"
-                    },
-		            {
-  			            "@id"	          : "http://ontology.projectchronos.eu/sensors/ExtragalacticAstronomy",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
-                        "rdfs:label"      : "ExtragalacticAstronomy"
-		            },
-		            {
-			            "@id"	          : "http://ontology.projectchronos.eu/sensors/GalacticAstronomy",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
-                        "rdfs:label"      : "GalacticAstronomy"
-	 	    },
-		    {
-			"@id"	          : "http://ontology.projectchronos.eu/sensors/PlanetaryAstronomy",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
-                        "rdfs:label"      : "PlanetaryAstronomy"
-	 	    },
-		    {
-			 "@id"	          : "http://ontology.projectchronos.eu/sensors/PlanetaryGeology",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
-                        "rdfs:label"      : "PlanetaryGeology"
-	 	    }, 
-		    {
-			 "@id"	          : "http://ontology.projectchronos.eu/sensors/SolarAstronomy",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
-                        "rdfs:label"      : "SolarAstronomy"
-	 	    },
- 	            {
-			 "@id"	          : "http://ontology.projectchronos.eu/sensors/StellarAstronomy",
-                    	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
-                        "rdfs:label"      : "StellarAstronomy"
-	 	    },  
+                    },  
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/Force",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",

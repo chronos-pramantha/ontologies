@@ -176,6 +176,68 @@
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "rdfs:label": "CelestialBody",
             "rdfs:comment": "a document representing a generic celestial body"
+        },
+        {   
+            "@id"             : "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+            "rdfs:label"      : "PlanetaryScience",
+            "owl:sameAs"      : "http://dbpedia.org/resource/Planetary_science"
+        },  
+        {   
+            "@id"             : "http://ontology.projectchronos.eu/astronomy/AtmosphericScience",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
+            "rdfs:label"      : "AtmosphericScience",
+            "owl:sameAs"      : "http://umbel.org/umbel/rc/AtmosphericScience"
+        },
+        {   
+            "@id"             : "http://ontology.projectchronos.eu/astronomy/Cosmology",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+            "rdfs:label"      : "Cosmology",
+            "owl:sameAs"      : [
+                                    "http://umbel.org/umbel/rc/Cosmology",
+                                    "http://dbpedia.org/resource/Cosmology"
+                                ]
+        },
+        {
+            "@id"             : "http://ontology.projectchronos.eu/astronomy/ExtragalacticAstronomy",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+            "rdfs:label"      : "ExtragalacticAstronomy",
+            "owl:sameAs"      : "http://dbpedia.org/resource/Extragalactic_astronomy"
+        },
+        {
+            "@id"             : "http://ontology.projectchronos.eu/astronomy/GalacticAstronomy",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+            "rdfs:label"      : "GalacticAstronomy",
+            "owl:sameAs"      : "http://dbpedia.org/resource/Galactic_astronomy"
+        },
+        {
+            "@id"             : "http://ontology.projectchronos.eu/sensors/PlanetaryAstronomy",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
+            "rdfs:label"      : "PlanetaryAstronomy"
+        },
+        {
+            "@id"             : "http://ontology.projectchronos.eu/sensors/PlanetaryGeology",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
+            "rdfs:label"      : "PlanetaryGeology"
+        }, 
+        {
+            "@id"             : "http://ontology.projectchronos.eu/sensors/SolarAstronomy",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+            "rdfs:label"      : "SolarAstronomy"
+        },
+        {
+            "@id"            : "http://ontology.projectchronos.eu/sensors/StellarAstronomy",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+            "rdfs:label"      : "StellarAstronomy"
         }
     ]
 
