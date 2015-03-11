@@ -250,20 +250,20 @@
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/DetectorWorkingPrinciple",
                         "rdfs:label"      : "Diffraction"
                     },
-		    {
+		            {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/GeometricalOptics",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/DetectorWorkingPrinciple",
-                        "rdfs:comment"    : "Geometrical optics, or ray optics, describes light propagation in terms of rays. The ray in geometric optics is an abstraction, or instrument, useful in approximating the paths along which light propagates in certain classes of circumstances. The simplifying assumptions of geometrical optics include that light rays: \npropagate in rectilinear paths as they travel in a homogeneous medium \n bend, and in particular circumstances may split in two, at the interface between two dissimilar media \nfollow curved paths in a medium in which the refractive index changes \nmay be absorbed or reflected. \nGeometrical optics does not account for certain optical effects such as diffraction and interference. This simplification is useful in practice; it is an excellent approximation when the wavelength is small compared to the size of structures with which the light interacts. The techniques are particularly useful in describing geometrical aspects of imaging, including optical aberrations. [Source: http://en.wikipedia.org/wiki/Geometrical_optics]"
+                        "rdfs:comment"    : "Geometrical optics, or ray optics, describes light propagation in terms of rays. The ray in geometric optics is an abstraction, or instrument, useful in approximating the paths along which light propagates in certain classes of circumstances. The simplifying assumptions of geometrical optics include that light rays: \npropagate in rectilinear paths as they travel in a homogeneous medium \n bend, and in particular circumstances may split in two, at the interface between two dissimilar media \nfollow curved paths in a medium in which the refractive index changes \nmay be absorbed or reflected. \nGeometrical optics does not account for certain optical effects such as diffraction and interference. This simplification is useful in practice; it is an excellent approximation when the wavelength is small compared to the size of structures with which the light interacts. The techniques are particularly useful in describing geometrical aspects of imaging, including optical aberrations. [Source: http://en.wikipedia.org/wiki/Geometrical_optics]",
+                        "rdfs:label"      : "GeometricalOptics"
                     },
-		    {
+		            {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/AntennaTheory",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/DetectorWorkingPrinciple",
-                        "rdfs:comment"    : "An antenna (or aerial) is an electrical device which converts electric power into radio waves, and vice versa. It is usually used with a radio transmitter or radio receiver. In transmission, a radio transmitter supplies an electric current oscillating at radio frequency (i.e. a high frequency alternating current (AC)) to the antenna's terminals, and the antenna radiates the energy from the current as electromagnetic waves (radio waves). In reception, an antenna intercepts some of the power of an electromagnetic wave in order to produce a tiny voltage at its terminals, that is applied to a receiver to be amplified. [Source: http://en.wikipedia.org/wiki/Antenna_%28radio%29]"
+                        "rdfs:comment"    : "An antenna (or aerial) is an electrical device which converts electric power into radio waves, and vice versa. It is usually used with a radio transmitter or radio receiver. In transmission, a radio transmitter supplies an electric current oscillating at radio frequency (i.e. a high frequency alternating current (AC)) to the antenna's terminals, and the antenna radiates the energy from the current as electromagnetic waves (radio waves). In reception, an antenna intercepts some of the power of an electromagnetic wave in order to produce a tiny voltage at its terminals, that is applied to a receiver to be amplified. [Source: http://en.wikipedia.org/wiki/Antenna_%28radio%29]",
+                        "rdfs:label"      : "AntennaTheory"
                     },
-
- 
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/DustDetectors",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
@@ -507,50 +507,59 @@
                         "rdfs:label"   : "FieldOfResearch"
 
                     },
-	 	    {   
-			"@id"	          : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
+	 	            {   
+			            "@id"	          : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch"
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+                        "rdfs:label"      : "PlanetaryScience"
                     }, 	
                     {   
-			"@id"	          : "http://ontology.projectchronos.eu/sensors/AtmosphericScience",
+			            "@id"	          : "http://ontology.projectchronos.eu/sensors/AtmosphericScience",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience"
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
+                        "rdfs:label"      : "AtmosphericScience"
                     },
                     {	
-			"@id"	          : "http://ontology.projectchronos.eu/sensors/Cosmology",
+			            "@id"	          : "http://ontology.projectchronos.eu/sensors/Cosmology",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch"
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+                        "rdfs:label"      : "Cosmology"
                     },
-		    {
-  			"@id"	          : "http://ontology.projectchronos.eu/sensors/ExtragalacticAstronomy",
+		            {
+  			            "@id"	          : "http://ontology.projectchronos.eu/sensors/ExtragalacticAstronomy",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch"
-		    },
-		    {
-			"@id"	          : "http://ontology.projectchronos.eu/sensors/GalacticAstronomy",
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+                        "rdfs:label"      : "ExtragalacticAstronomy"
+		            },
+		            {
+			            "@id"	          : "http://ontology.projectchronos.eu/sensors/GalacticAstronomy",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch"
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+                        "rdfs:label"      : "GalacticAstronomy"
 	 	    },
 		    {
 			"@id"	          : "http://ontology.projectchronos.eu/sensors/PlanetaryAstronomy",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience"
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
+                        "rdfs:label"      : "PlanetaryAstronomy"
 	 	    },
 		    {
 			 "@id"	          : "http://ontology.projectchronos.eu/sensors/PlanetaryGeology",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience"
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PlanetaryScience",
+                        "rdfs:label"      : "PlanetaryGeology"
 	 	    }, 
 		    {
 			 "@id"	          : "http://ontology.projectchronos.eu/sensors/SolarAstronomy",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch"
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+                        "rdfs:label"      : "SolarAstronomy"
 	 	    },
  	            {
 			 "@id"	          : "http://ontology.projectchronos.eu/sensors/StellarAstronomy",
                     	"@type"	          : "http://www.w3.org/2002/07/owl#Class",
-                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch"
+                    	"rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+                        "rdfs:label"      : "StellarAstronomy"
 	 	    },  
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/Force",
