@@ -1,6 +1,6 @@
 {
     "@context": {
-        "@base": "http://ontology.projectchronos.eu/solasysytem",
+        "@base": "http://ontology.projectchronos.eu/solarsystem",
         "astronomy": "http://ontology.projectchronos.eu/astronomy/",
         "schema": "https://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
