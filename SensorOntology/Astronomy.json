@@ -177,6 +177,13 @@
             "rdfs:label": "CelestialBody",
             "rdfs:comment": "a document representing a generic celestial body"
         },
+        {
+            "@id": "http://ontology.projectchronos.eu/astronomy/Outer_space",
+            "owl:sameAs": "http://dbpedia.org/ontology/Outer_space",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:label": "Outer_space",
+            "rdfs:comment": "a document representing the open space outside atmosphere, from Low Earth Orbit to Extra Galactic Space"
+        },
         {   
             "@id"             : "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
             "@type"           : "http://www.w3.org/2002/07/owl#Class",
