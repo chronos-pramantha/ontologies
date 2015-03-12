@@ -8,7 +8,7 @@ def check_type_in_list(listed_types, looking_for):
     elif looking_for == 'class':
         look_for = "http://www.w3.org/2002/07/owl#Class"
     else:
-        raise BadAttribute('Wrong looking_for parameter')
+        raise AttributeError('Wrong looking_for parameter')
     
     for lst in listed_types:
         if isinstance(lst, dict):

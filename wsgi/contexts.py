@@ -1,5 +1,9 @@
 __author__ = 'lorenzo'
 
+#
+# Contexts for single objects and properties. Full ontology contexts are in the files
+#
+
 
 CHRONOS_CONTEXT = dict(
     {
@@ -24,10 +28,7 @@ SENSORS_CONTEXT = dict(
         "dbpedia": "http://dbpedia.org/property/",
         "owl"    : "http://www.w3.org/2002/07/owl#",
         "sensor" : "http://ontology.projectchronos.eu/sensors/",
-        "@base"  : "http://ontology.projectchronos.eu/sensors",
-        "defines": {
-            "@reverse": "rdfs:isDefinedBy"
-        }
+        "@base"  : "http://ontology.projectchronos.eu/sensors"
     }
 )
 
@@ -40,10 +41,7 @@ ASTRONOMY_CONTEXT = dict(
         "rdf"      : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"     : "http://www.w3.org/2000/01/rdf-schema#",
         "owl"      : "http://www.w3.org/2002/07/owl#",
-        "dbpedia"  : "http://dbpedia.org/ontology/",
-        "defines": {
-            "@reverse": "rdfs:isDefinedBy"
-        }
+        "dbpedia"  : "http://dbpedia.org/ontology/"
     }
 )
 
@@ -56,10 +54,7 @@ ENGINEERING_CONTEXT = dict(
         "rdf"        : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"       : "http://www.w3.org/2000/01/rdf-schema#",
         "owl"        : "http://www.w3.org/2002/07/owl#",
-        "dbpedia"    : "http://dbpedia.org/ontology/",
-        "defines": {
-            "@reverse": "rdfs:isDefinedBy"
-        }
+        "dbpedia"    : "http://dbpedia.org/ontology/"
     }
 )
 
@@ -73,10 +68,7 @@ SPACECRAFT_CONTEXT = dict(
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "dbpedia": "http://dbpedia.org/ontology/",
-        "defines": {
-            "@reverse": "rdfs:isDefinedBy"
-        }
+        "dbpedia": "http://dbpedia.org/ontology/"
     }
 )
 
@@ -90,23 +82,17 @@ SUBSYSTEMS_CONTEXT = dict(
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "dbpedia": "http://dbpedia.org/ontology/",
-        "xml": "http://www.w3.org/2001/XMLSchema#",
-        "defines": {
-            "@reverse": "rdfs:isDefinedBy"
-        }
+        "xml": "http://www.w3.org/2001/XMLSchema#"
     }
 )
 
 SOLARSYSTEM_CONTEXT = dict(
     {
-        "@base"    : "http://ontology.projectchronos.eu/solasysytem",
+        "@base"    : "http://ontology.projectchronos.eu/solarsystem",
         "astronomy": "http://ontology.projectchronos.eu/astronomy/",
         "rdf"      : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"     : "http://www.w3.org/2000/01/rdf-schema#",
-        "owl"      : "http://www.w3.org/2002/07/owl#",
-        "defines": {
-            "@reverse": "rdfs:isDefinedBy"
-        }
+        "owl"      : "http://www.w3.org/2002/07/owl#"
     }
 )
 
