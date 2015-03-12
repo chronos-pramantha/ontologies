@@ -1290,9 +1290,9 @@
             "owl:sameAs": [
                 "http://dbpedia.org/resource/Kuiper_belt"
             ],
-            "rdfs:subClassOf": "http://ontology.projectchronos.eu/solarsystem/Trans-Neptunian_object"
+            "rdfs:subClassOf": "http://ontology.projectchronos.eu/solarsystem/Trans-Neptunian_object",
             "rdfs:label": "Kuiper_belt",
-            "astronomy:orbits": "http://ontology.projectchronos.eu/solarsystem/Sun",
+            "astronomy:orbits": "http://ontology.projectchronos.eu/solarsystem/Sun"
         },
         {
             "@id": "http://ontology.projectchronos.eu/solarsystem/Oort_cloud",
@@ -1304,9 +1304,9 @@
             "owl:sameAs": [
                 "http://dbpedia.org/resource/Oort_cloud"
             ],
-            "rdfs:subClassOf": "http://ontology.projectchronos.eu/solarsystem/Trans-Neptunian_object"
+            "rdfs:subClassOf": "http://ontology.projectchronos.eu/solarsystem/Trans-Neptunian_object",
             "rdfs:label": "Oort_cloud",
-            "astronomy:orbits": "http://ontology.projectchronos.eu/solarsystem/Sun",
+            "astronomy:orbits": "http://ontology.projectchronos.eu/solarsystem/Sun"
         }
     ]
 }
