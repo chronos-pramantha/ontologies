@@ -9,7 +9,11 @@
 <h2>Context</h2>
 <ul>
 {% for k, v in context.items() %}
+    {% if v is mapping %}
+    <li>{{k}} : <pre style="font-style:italic;">{{v}}</pre></li>
+    {% else %}
     <li>{{k}} : <span style="font-style:italic;"><a href="{{v}}">{{v}}</a></span></li>
+    {% endif %}
 {% endfor %}
 </ul>
 

@@ -13,6 +13,7 @@ from wsgi.utilities import classes_and_properties
 
 
 app = Flask(__name__)
+app.config.from_object('config')
 if 'OPENSHIFT_DATA_DIR' in os.environ:
     #store = os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'newsletter.save')
     host = "http://ontology.projectchronos.eu/"
@@ -24,7 +25,7 @@ else:
 
 
 def hello():
-    res =  {
+    res = {
             "chronos": ["a generic ontology for space activities semantically linked to Wikipedia documents", "/chronos", "/documentation/chronos"],
             "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors", "/documentation/sensors"],
             "astronomy": ["an ontology for astronomical objects", "/astronomy", "/documentation/astronomy"],
@@ -32,7 +33,7 @@ def hello():
             "engineering": ["an ontology for engineering concepts", "/engineering", "/documentation/engineering"],
             "spacecraft": ["an ontology for a spacecraft and its systems", "/spacecraft", "/documentation/spacecraft"],
             "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems", "/documentation/subsystems"]
-        }
+    }
     return render_template('index.html', content=res)
 
 
@@ -107,5 +108,4 @@ def wrong_object(e=None):
 
 
 if __name__ == "__main__":
-    app.config.from_object('config')
     app.run()
