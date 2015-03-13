@@ -830,6 +830,15 @@
 
         },
         {
+            "@id": "http://ontology.projectchronos.eu/solarsystem/Vesta",
+            "@type": "http://ontology.projectchronos.eu/astronomy/DwarfPlanet",
+            "owl:sameAs": [
+                "http://dbpedia.org/resource/4_Vesta"
+            ],
+            "rdfs:label": "Vesta"
+
+        },
+        {
             "@id": "http://ontology.projectchronos.eu/solarsystem/Pluto",
             "@type": "http://ontology.projectchronos.eu/astronomy/DwarfPlanet",
             "owl:sameAs": [
