@@ -142,6 +142,7 @@
                         "rdfs:label"    : "measures",
                         "skos:altLabel" : "to measure"
                     },
+                    
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/CCD",
                         "owl:sameAs"      : "http://escience.rpi.edu/ontology/vsto/2/0/vsto.owl#CCD",
@@ -267,13 +268,63 @@
                         "rdfs:comment"    : "An antenna (or aerial) is an electrical device which converts electric power into radio waves, and vice versa. It is usually used with a radio transmitter or radio receiver. In transmission, a radio transmitter supplies an electric current oscillating at radio frequency (i.e. a high frequency alternating current (AC)) to the antenna's terminals, and the antenna radiates the energy from the current as electromagnetic waves (radio waves). In reception, an antenna intercepts some of the power of an electromagnetic wave in order to produce a tiny voltage at its terminals, that is applied to a receiver to be amplified. [Source: http://en.wikipedia.org/wiki/Antenna_%28radio%29]",
                         "rdfs:label"      : "AntennaTheory"
                     },
+                     
+                     {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/Ferromagnetism",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/DetectorWorkingPrinciple",
+                        "rdfs:label"      : "Ferromagnetism"
+                    },
                     {
-                        "@id"             : "http://ontology.projectchronos.eu/sensors/DustDetectors",
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/IonOptics",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/DetectorWorkingPrinciple",
+                        "rdfs:label"      : "IonOptics"
+                    },
+                    {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/SecondaryEmission",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/DetectorWorkingPrinciple",
+                        "rdfs:label"      : "Secondary Emission"
+                    },
+                    {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/ElectronEmission",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/SecondaryEmission",
+                        "rdfs:label"      : "Electron Emission"
+                    },
+                    {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/PhotoElectronEmission",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/ElectronEmission",
+                        "rdfs:label"      : "Photoelectron Emission"
+                    },
+                    {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/DustDetector",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/DirectSensingInstrument",
+                        "rdfs:label"      : "DustDetector",
+                        "skos:altLabel"   : "Dust Detector"
+                    },
+                    {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/ParticleDetector",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/Sensor",
-                        "rdfs:label"      : "DustDetectors",
-                        "skos:altLabel"   : "Dust Detectors"
-                    },
+                        "rdfs:label"      : "Particle Detector",
+                        "owl:sameAS"	  : "http://dbpedia.org/page/Particle_detector"
+                     },
+                     {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/SolidStateDetector",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/ParticleDetector",
+                        "rdfs:label"      : "Particle Detector",
+                     },
+                     {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/MicrochannelPlate",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/ParticleDetector",
+                        "rdfs:label"      : "Particle Detector",
+                     },
                     {
                         "@id"                 : "http://ontology.projectchronos.eu/sensors/EMFieldInstrument",
                         "@type"               : "http://www.w3.org/2002/07/owl#Class",
@@ -304,6 +355,13 @@
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/Sensor",
                         "rdfs:label"      : "MassSpectrometer",
                         "skos:altLabel"   : "Mass Spectrometer"
+                    },
+                    {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/TimeOfFlightMassSpectrometer",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/MassSpectrometer",
+                        "rdfs:label"      : "Time-of-Flight Mass Spectrometer",
+                        "skos:altLabel"   : "Time-of-Flight Mass Spectrometer"
                     },
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/OpticalInstrument",
@@ -491,6 +549,28 @@
                         "rdfs:label"      : "EnergyDensity",
                         "owl:sameAs"      : "http://dbpedia.org/resource/Energy_density"
                     },
+                    {
+                    	"@id"             : "http://ontology.projectchronos.eu/sensors/Voltage",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PhysicalQuantity",
+                        "rdfs:label"      : "Voltage",
+                        "owl:sameAs"      : "http://dbpedia.org/page/Voltage"                    
+                    },
+                    {                        
+                    	"@id"             : "http://ontology.projectchronos.eu/sensors/RadiantFlux",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PhysicalQuantity",
+                        "rdfs:label"      : "Radiant Flux",
+                        "owl:sameAs"      : "http://dbpedia.org/page/Radiant_flux"                    
+                    },
+                    {                        
+                    	"@id"             : "http://ontology.projectchronos.eu/sensors/ParticleFlux",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PhysicalQuantity",
+                        "rdfs:label"      : "Radiant Flux"                              
+                    },
+                    
+                    
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/ExtremeUltraViolet",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
@@ -807,6 +887,12 @@
                         "rdfs:label"      : "Time",
                         "owl:sameAs"     : "http://ontology.projectchronos.eu/dbpediadocs/Time"
                     },
+                    {
+                        "@id"             : "http://ontology.projectchronos.eu/sensors/TimeOfFlight",
+                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
+                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/Time",
+                        "rdfs:label"      : "Time of Flight",
+                     },
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/UltraViolet",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
