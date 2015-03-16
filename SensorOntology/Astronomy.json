@@ -194,6 +194,20 @@
             "rdfs:label"      : "EarthObservation",
             "owl:sameAs"      : "http://dbpedia.org/resource/Earth_observation"
         },
+        {
+            "@id"             : "http://ontology.projectchronos.eu/astronomy/SpacePhysics",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+            "rdfs:label"      : "SpacePhysics",
+            "owl:sameAs"      : "http://dbpedia.org/resource/Space_physics"
+        },
+        {
+            "@id"             : "http://ontology.projectchronos.eu/astronomy/SpaceWeather",
+            "@type"           : "http://www.w3.org/2002/07/owl#Class",
+            "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
+            "rdfs:label"      : "SpaceWeather",
+            "owl:sameAs"      : "http://dbpedia.org/resource/Space_weather"
+        },
         {   
             "@id"             : "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
             "@type"           : "http://www.w3.org/2002/07/owl#Class",

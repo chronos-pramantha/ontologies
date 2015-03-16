@@ -3,7 +3,7 @@
         "@id": "http://api.pramantha.net/data/sensors/CHIVA",
         "name": "CHIVA",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)",
-        "@type": "sensor:Sensor"
+        "@type": "http://ontology.projectchronos.eu/sensors/Sensor"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/CHIVA-P",
@@ -11,15 +11,15 @@
         "name": "CHIVA-P",
         "fullName": "ÇIVA-P",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)",
-        "@type": "sensor:CCD",
+        "@type": "http://ontology.projectchronos.eu/sensors/CCD",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/CHIVA",
-        "sensor:detects": "sensor:Visible",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Visible",
         "sensor:emits": "",
-        "sensor:hasFieldOfResearch": "astronomy:PlanetaryScience",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:PhotoElectronEmission",
+        "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/PhotoElectronEmission",
         "sensor:isTraversedBy": "Photons",
-        "sensor:measures": "sensor:Intensity"
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/Intensity"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/CHIVA-M",
@@ -27,13 +27,13 @@
         "name": "CHIVA-M",
         "fullName": "çiva-M",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)",
-        "@type": "sensor:Microscope",
+        "@type": "http://ontology.projectchronos.eu/sensors/Microscope",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/CHIVA",
-        "sensor:detects": "sensor:Visible",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Visible",
         "sensor:emits": "",
-        "sensor:hasFieldOfResearch": "astronomy:PlanetaryScience",
+        "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
         "sensor:hasOutput": "",
-        "sensor:hasWorkingPrinciple": "sensor:RayOptics",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/RayOptics",
         "sensor:isTraversedBy": "Photons",
         "sensor:measures": ""
     },
@@ -43,13 +43,16 @@
         "name": "CHIVA-M",
         "fullName": "çiva-M",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)",
-        "@type": "sensor:Spectrometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/Spectrometer",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/CHIVA",
-        "sensor:detects": "sensor:Infrared",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Infrared",
         "sensor:emits": "",
-        "sensor:hasFieldOfResearch": "astronomy:PlanetaryScience",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": ["sensor:RayOptics", "sensor:PhotonElectronEmission"],
+        "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": [
+            "http://ontology.projectchronos.eu/sensors/RayOptics",
+            "http://ontology.projectchronos.eu/sensors/PhotonElectronEmission"
+        ],
         "sensor:isTraversedBy": "Photons",
         "sensor:measures": ""
     },
@@ -59,14 +62,14 @@
         "name": "LORRI",
         "fullName": "LORRI",
         "chronos:relMission": "http://api.pramantha.net/data/mission/New_Horizons",
-        "@type": "sensor:CCD",
-        "sensor:detects": "sensor:Visible",
+        "@type": "http://ontology.projectchronos.eu/sensors/CCD",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Visible",
         "sensor:emits": "",
-        "sensor:hasFieldOfResearch": "astronomy:PlanetaryScience",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:PhotonElectronEmission",
+        "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/PhotonElectronEmission",
         "sensor:isTraversedBy": "Photons",
-        "sensor:measures": "sensor:Intensity"
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/Intensity"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/REX",
@@ -74,15 +77,15 @@
         "name": "REX",
         "fullName": "REX",
         "chronos:relMission": "http://api.pramantha.net/data/mission/New_Horizons",
-        "@type": "sensor:Radiometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/Radiometer",
         "subComponentOf": "",
-        "sensor:detects": "sensor:Radio",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Radio",
         "sensor:emits": "",
-        "sensor:hasFieldOfResearch": "astronomy:AtmosphericScience",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:AntennaTheory",
+        "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/AtmosphericScience",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/AntennaTheory",
         "sensor:isTraversedBy": "Photons",
-        "sensor:measures": "sensor:RadiantFlux"
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/RadiantFlux"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/SMAP-radiometer",
@@ -90,19 +93,19 @@
         "manufactoring": "http://api.pramantha.net/data/dbpediadocs/NASA",
         "name": "SMAP-radiometer",
         "fullName": "SMAP-radiometer",
-        "@type": "sensor:Radiometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/Radiometer",
         "subComponentOf": "",
-        "sensor:detects": "sensor:Radio L-Band",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Radio L-Band",
         "rdfs:comment": "Radiometer Frequency: 1.41 GHz",
         "sensor:emits": "",
-        "sensor:hasFieldOfResearch": "astronomy:EarthObservation",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:AntennaTheory",
-        "sensor:isTraversedBy": "sensor:Photons",
+        "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/EarthObservation",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/AntennaTheory",
+        "sensor:isTraversedBy": "http://ontology.projectchronos.eu/sensors/Photons",
         "sensor:measures": [
-            "sensor:RadiantFlux",
-            "sensor:Power",
-            "sensor:Temperature",
+            "http://ontology.projectchronos.eu/sensors/RadiantFlux",
+            "http://ontology.projectchronos.eu/sensors/Power",
+            "http://ontology.projectchronos.eu/sensors/Temperature",
             "Brightness"
         ]
     },
@@ -111,55 +114,54 @@
         "chronos:relMission": "http://api.pramantha.net/data/mission/Soil_Moisture_Active_Passive",
         "name": "SMAP-radar",
         "fullName": "SMAP-radar",
-        "@type": "sensor:Radar",
+        "@type": "http://ontology.projectchronos.eu/sensors/Radar",
         "subComponentOf": "",
         "sensor:detects": [
-            "sensor:EMSpectrum",
+            "http://ontology.projectchronos.eu/sensors/EMSpectrum",
             "Radio L-Band"
         ],
-        "sensor:emits": "sensor:RadioCentrimetric",
+        "sensor:emits": "http://ontology.projectchronos.eu/sensors/RadioCentrimetric",
         "rdfs:comment": "emits: 1.26 GHz, Non imaging (unfocused) synthetic aperture\n measures:surface backscatter crosssection for HH and VV polarizations\n research: Soil moisture, freezed or thawed soils",
-        "sensor:hasFieldOfResearch": "astronomy:EarthObservation",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:AntennaTheory",
+        "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/EarthObservation",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/AntennaTheory",
         "sensor:isTraversedBy": "",
-        "sensor:measures": "sensor:RadiantFlux"
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/RadiantFlux"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/MMS-payload",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
         "subsystems:manufacturer": "http://api.pramantha.net/data/dbpediadocs/NASA",
         "name": "MMS-detectors",
-        "chronos:relMission": "Magnetospheric_Multiscale_Mission",
-        "@type": "sensor:Sensor"
+        "@type": "http://ontology.projectchronos.eu/sensors/Sensor"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/FPI",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
         "name": "FPI",
         "fullName": "Fast Plasma Instrument",
-        "@type": "sensor:MassSpectrometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/MassSpectrometer",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
         "spacecraft:hasComponent": [
             "http://api.pramantha.net/data/sensors/DES",
             "http://api.pramantha.net/data/sensors/DIS"
         ],
         "sensor:detects": [
-            "sensor:Ion",
-            "sensor:Electron"
+            "http://ontology.projectchronos.eu/sensors/Ion",
+            "http://ontology.projectchronos.eu/sensors/Electron"
         ],
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": [
-            "sensor:SpacePhysics",
-            "sensor:SpaceWeather"
+            "http://ontology.projectchronos.eu/astronomy/SpacePhysics",
+            "http://ontology.projectchronos.eu/astronomy/SpaceWeather"
         ],
-        "sensor:hasOutput": "sensor:Voltage",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
         "sensor:hasWorkingPrinciple": ["sensor:IonOptics", "sensor:ElectronEmission"],
         "sensor:isTraversedBy": ["sensor:Ion", "sensor:Electron"],
         "sensor:measures": [
-            "sensor:ParticleFlux",
-            "sensor:Ion",
-            "sensor:Electron"
+            "http://ontology.projectchronos.eu/sensors/ParticleFlux",
+            "http://ontology.projectchronos.eu/sensors/Ion",
+            "http://ontology.projectchronos.eu/sensors/Electron"
         ],
         "rdfs:comment": "3D ion and electron flux distributions over the energy range ~10 eV to 30 keVwith an energy resolution of 20%. Electrons will be measured with a time resolution of 30 ms, ions with a time resolution 150 ms."
     },
@@ -168,34 +170,37 @@
         "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
         "name": "MMS-DES",
         "fullName": "Dual Electron Spectrometer (DES)",
-        "@type": "sensor:MassSpectrometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/MassSpectrometer",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/FPI",
-        "spacecraft:hasComponent": "sensor:MicroChannelPlate",
-        "sensor:detects": "sensor:Electron",
+        "spacecraft:hasComponent": "http://ontology.projectchronos.eu/sensors/MicroChannelPlate",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Electron",
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": "",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:ElectronEmission",
-        "sensor:isTraversedBy": "sensor:Electron",
-        "sensor:measures": ["sensor:ParticleFlux", "sensor:Electron"]
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/ElectronEmission",
+        "sensor:isTraversedBy": "http://ontology.projectchronos.eu/sensors/Electron",
+        "sensor:measures": [
+            "http://ontology.projectchronos.eu/sensors/ParticleFlux",
+            "http://ontology.projectchronos.eu/sensors/Electron"
+        ]
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/MMS-DIS",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
         "name": "MMS-DIS",
         "fullName": "Dual Ion Spectrometer (DIS)",
-        "@type": "sensor:MassSpectrometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/MassSpectrometer",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/FPI",
-        "spacecraft:hasComponent": "sensor:MicroChannelPlate",
-        "sensor:detects": "sensor:Ion",
+        "spacecraft:hasComponent": "http://ontology.projectchronos.eu/sensors/MicroChannelPlate",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Ion",
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": "",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:ElectronEmission",
-        "sensor:isTraversedBy": "sensor:Ion",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/ElectronEmission",
+        "sensor:isTraversedBy": "http://ontology.projectchronos.eu/sensors/Ion",
         "sensor:measures": [
-            "sensor:ParticleFlux",
-            "sensor:Ion"
+            "http://ontology.projectchronos.eu/sensors/ParticleFlux",
+            "http://ontology.projectchronos.eu/sensors/Ion"
         ]
     },
     {
@@ -203,47 +208,47 @@
         "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
         "name": "HPCA",
         "fullName": "Hot Plasma Composition Analyzer",
-        "@type": "sensor:TimeOfFlightMassSpectrometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/TimeOfFlightMassSpectrometer",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
-        "spacecraft:hasComponent": "sensor:MicroChannelPlate",
-        "sensor:detects": "sensor:Ion",
-        "sensor:emits": "sensor:Radio",
+        "spacecraft:hasComponent": "http://ontology.projectchronos.eu/sensors/MicroChannelPlate",
+        "sensor:detects": "http://ontology.projectchronos.eu/sensors/Ion",
+        "sensor:emits": "http://ontology.projectchronos.eu/sensors/Radio",
         "rdfs:comment": "emits: RF (radio frequency) Only internal for protection from protons\n measures: Measure minor ions such as oxygen and helium in regions of high flux. Energy range = ~10 eV to 30 keV; energy resolution = 20%; time resoluton = 15 s",
         "sensor:hasFieldOfResearch": [
-            "sensor:SpacePhysics",
-            "sensor:SpaceWeather"
+            "http://ontology.projectchronos.eu/astronomy/SpacePhysics",
+            "http://ontology.projectchronos.eu/astronomy/SpaceWeather"
         ],
-        "sensor:hasOutput": "sensor:Voltage",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
         "sensor:hasWorkingPrinciple": [
-            "sensor:IonOptics",
-            "sensor:ElectronsEmission"
+            "http://ontology.projectchronos.eu/sensors/IonOptics",
+            "http://ontology.projectchronos.eu/sensors/ElectronsEmission"
         ],
-        "sensor:isTraversedBy": "sensor:Ion",
-        "sensor:measures": "sensor:TimeOfFlight"
+        "sensor:isTraversedBy": "http://ontology.projectchronos.eu/sensors/Ion",
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/TimeOfFlight"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/FEEPS",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
         "name": "FEEPS",
         "fullName": "Fly's Eye Energetic Particle Sensor",
-        "@type": "sensor:SolidStateDetector",
+        "@type": "http://ontology.projectchronos.eu/sensors/SolidStateDetector",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
         "sensor:detects": [
-            "sensor:Ion",
-            "sensor:Electron"
+            "http://ontology.projectchronos.eu/sensors/Ion",
+            "http://ontology.projectchronos.eu/sensors/Electron"
         ],
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": [
-            "sensor:SpacePhysics",
-            "sensor:SpaceWeather"
+            "http://ontology.projectchronos.eu/astronomy/SpacePhysics",
+            "http://ontology.projectchronos.eu/sensors/:SpaceWeather"
         ],
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:ElectronsEmission",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/ElectronsEmission",
         "sensor:isTraversedBy": [
-            "sensor:Ion",
-            "sensor:Electron"
+            "http://ontology.projectchronos.eu/sensors/Ion",
+            "http://ontology.projectchronos.eu/sensors/Electron"
         ],
-        "sensor:measures": "sensor:Energy",
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/Energy",
         "rdfs:comment": "measures: 3D energetic ion and electron flux distributions over the energy ranges ~25 keV to 500 keV (electrons) and ~45 keV to 500 keV (ions). Time resolution = 10 s."
     },
     {
@@ -251,21 +256,21 @@
         "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
         "name": "AFG",
         "fullName": "Analog Fluxgate Magnetometer",
-        "@type": "sensor:Magnetometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/Magnetometer",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
         "sensor:detects": [
-            "sensor:MagneticField",
-            "sensor:ElectricCurrent"
+            "http://ontology.projectchronos.eu/sensors/MagneticField",
+            "http://ontology.projectchronos.eu/sensors/ElectricCurrent"
         ],
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": [
-            "sensor:SpacePhysics",
-            "sensor:SpaceWeather"
+            "http://ontology.projectchronos.eu/astronomy/SpacePhysics",
+            "http://ontology.projectchronos.eu/astronomy/SpaceWeather"
         ],
-        "sensor:hasOutput": "sensor:ElectricCurrent",
-        "sensor:hasWorkingPrinciple": "sensor:Ferromagnetism",
-        "sensor:isTraversedBy": "sensor:Photon",
-        "sensor:measures": "sensor:MagneticFieldStrength",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/ElectricCurrent",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/Ferromagnetism",
+        "sensor:isTraversedBy": "http://ontology.projectchronos.eu/sensors/Photon",
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/MagneticFieldStrength",
         "rdfs:comment": "measures: Measurements of the magnetic field and current in space. Analogic measurements."
     },
     {
@@ -273,21 +278,21 @@
         "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
         "name": "DFG",
         "fullName": "Digital Fluxgate Magnetometer",
-        "@type": "sensor:Magnetometer",
+        "@type": "http://ontology.projectchronos.eu/sensors/Magnetometer",
         "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
         "sensor:detects": [
-            "sensor:MagneticField",
-            "sensor:ElectricCurrent"
+            "http://ontology.projectchronos.eu/sensors/MagneticField",
+            "http://ontology.projectchronos.eu/sensors/ElectricCurrent"
         ],
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": [
             "sensor:SpacePhysics",
             "sensor:SpaceWeather"
         ],
-        "sensor:hasOutput": "sensor:ElectricCurrent",
-        "sensor:hasWorkingPrinciple": "sensor:Ferromagnetism",
-        "sensor:isTraversedBy": "sensor:Photon",
-        "sensor:measures": "sensor:MagneticFieldStrength",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/ElectricCurrent",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/Ferromagnetism",
+        "sensor:isTraversedBy": "http://ontology.projectchronos.eu/sensors/Photon",
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/MagneticFieldStrength",
         "rdfs:comment": "measures:Measurements of the magnetic field and current in space. Digital measurements."
     },
     {
@@ -295,16 +300,16 @@
         "name": "FC",
         "fullName": "Framing Camera",
         "chronos:relMission": "http://api.pramantha.net/data/mission/Dawn_(spacecraft)",
-        "@type": "sensor:CCD",
+        "@type": "http://ontology.projectchronos.eu/sensors/CCD",
         "sensor:detects": [
-            "sensor:NearInfrared",
-            "sensor:Visible"
+            "http://ontology.projectchronos.eu/sensors/NearInfrared",
+            "http://ontology.projectchronos.eu/sensors/Visible"
         ],
         "sensor:emits": "",
-        "sensor:hasFieldOfResearch": "astronomy:PlanetaryScience",
-        "sensor:hasOutput": "sensor:Voltage",
-        "sensor:hasWorkingPrinciple": "sensor:PhotoElectronEmission",
-        "sensor:isTraversedBy": "sensor:Photon",
-        "sensor:measures": "sensor:Intensity"
+        "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
+        "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
+        "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/PhotoElectronEmission",
+        "sensor:isTraversedBy": "http://ontology.projectchronos.eu/sensors/Photon",
+        "sensor:measures": "http://ontology.projectchronos.eu/sensors/Intensity"
     }
 ]
