@@ -317,13 +317,13 @@
                         "@id"             : "http://ontology.projectchronos.eu/sensors/SolidStateDetector",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/ParticleDetector",
-                        "rdfs:label"      : "Particle Detector",
+                        "rdfs:label"      : "Particle Detector"
                      },
                      {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/MicrochannelPlate",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/ParticleDetector",
-                        "rdfs:label"      : "Particle Detector",
+                        "rdfs:label"      : "Particle Detector"
                      },
                     {
                         "@id"                 : "http://ontology.projectchronos.eu/sensors/EMFieldInstrument",
@@ -884,7 +884,7 @@
                         "@id"             : "http://ontology.projectchronos.eu/sensors/TimeOfFlight",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/Time",
-                        "rdfs:label"      : "Time of Flight",
+                        "rdfs:label"      : "Time of Flight"
                      },
                     {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/UltraViolet",
