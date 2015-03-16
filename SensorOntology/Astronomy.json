@@ -188,7 +188,7 @@
             "rdfs:comment": "a document representing the open space outside atmosphere, from Low Earth Orbit to Extra Galactic Space"
         },
         {
-            "@id"             : "http://ontology.projectchronos.eu/sensors/EarthObservation",
+            "@id"             : "http://ontology.projectchronos.eu/astronomy/EarthObservation",
             "@type"           : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
             "rdfs:label"      : "EarthObservation",
