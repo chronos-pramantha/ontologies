@@ -495,13 +495,6 @@
                         "owl:sameAs"   : "http://dbpedia.org/resource/Electromagnetic_spectrum"
                     },
                     {
-                        "@id"             : "http://ontology.projectchronos.eu/sensors/EarthObservation",
-                        "@type"           : "http://www.w3.org/2002/07/owl#Class",
-                        "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/FieldOfResearch",
-                        "rdfs:label"      : "EarthObservation",
-                        "owl:sameAs"      : "http://dbpedia.org/resource/Earth_observation"
-                    },
-                    {
                         "@id"             : "http://ontology.projectchronos.eu/sensors/ElectricCharge",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/PhysicalQuantity",
