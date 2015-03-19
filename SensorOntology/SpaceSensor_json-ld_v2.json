@@ -323,7 +323,7 @@
                         "@id"             : "http://ontology.projectchronos.eu/sensors/MicrochannelPlate",
                         "@type"           : "http://www.w3.org/2002/07/owl#Class",
                         "rdfs:subClassOf" : "http://ontology.projectchronos.eu/sensors/ParticleDetector",
-                        "rdfs:label"      : "Particle Detector"
+                        "rdfs:label"      : "Microchannel Plate"
                      },
                     {
                         "@id"                 : "http://ontology.projectchronos.eu/sensors/EMFieldInstrument",
