@@ -29,9 +29,11 @@ def check_if_url(url):
     :return: boolean
     """
     check = urlparse(url)
-    #print(check)
+    print(check)
     #print(url)
     if not all([check.scheme, check.netloc]) or check.scheme not in ['http', 'https', 'ftp']:
         #print(Exception('wrong url'))
         return False
     return True
+
+

@@ -67,7 +67,9 @@ def iter_json(ordered_json, style):
             a += '</ul></td>'
             a += '</tr>'
         elif isinstance(v, str):
-            if check_if_url(v):
+            if k in ['dbpedia', 'wikiUrl']:
+                a = a + '<td><a target="_blank" href="' + str(v) + '">' + str(v) + '</a></td>'
+            elif check_if_url(v):
                 hash = encode_url(v)
                 a = a + '<td><a href="/chronosapi/' + str(hash) + '">' + str(v) + '</a></td>'
             else:
