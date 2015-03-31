@@ -63,7 +63,8 @@ def iter_json(ordered_json, style):
                 elif not isinstance(v[i], list):
                     iter_json(v[i], style)
                 else:
-                    a = a + '<li>' + ordered_json[i] + '</li>'
+                    print(v[i])
+                    a = a + '<li>' + str(v[i]) + '</li>'
             a += '</ul></td>'
             a += '</tr>'
         elif isinstance(v, str):
@@ -105,7 +106,6 @@ def html_convertor(ordered_json, style):
                 a = a + '<li>'+ str(ordered_json[i]) + '</li>'
             elif not isinstance(ordered_json[i], list):
                 html_convertor(ordered_json[i], style)
-
 
     return a
 
