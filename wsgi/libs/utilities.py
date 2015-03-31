@@ -18,6 +18,7 @@ def check_type_in_list(listed_types, looking_for):
             if look_for in lst:
                 return True
 
+
 def classes_and_properties(defines):
     """ create two arrays for properties and classes """
     classes, properties = [], []

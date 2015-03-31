@@ -9,7 +9,7 @@ import requests
 
 from wsgi.cache import get_or_set
 from wsgi.contexts import ONTOLOGIES
-from wsgi.utilities import classes_and_properties
+from wsgi.libs.utilities import classes_and_properties
 
 
 app = Flask(__name__)

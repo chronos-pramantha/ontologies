@@ -38,19 +38,4 @@ def check_if_url(url):
     return True
 
 
-def check_if_ontology_url(url):
-    """
-    Find out if a string is an url of an ontology
-    :param url: a string
-    :return: boolean
-    """
-    check = urlparse(url)
-    print(check)
-    #print(url)
-    if not all([check.scheme, check.netloc]) or check.scheme not in ['http', 'https', 'ftp']:
-        if url.find('ontology') == -1:
-            #print(Exception('wrong url'))
-            return False
-        return True
-    return False
 
