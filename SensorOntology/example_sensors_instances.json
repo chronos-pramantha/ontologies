@@ -1,18 +1,24 @@
 [
     {
-        "@id": "http://api.pramantha.net/data/sensors/CHIVA",
-        "name": "CHIVA",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)",
-        "@type": "http://ontology.projectchronos.eu/sensors/Sensor"
+        "@id": "http://api.pramantha.net/data/sensors/CHIVA-detector",
+        "name": "CHIVA-detector",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)"},
+        "@type": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Detector",
+        "spacecraft:embedSensor": [
+            "http://api.pramantha.net/data/sensors/CHIVA-P",
+            "http://api.pramantha.net/data/sensors/CHIVA-M1",
+            "http://api.pramantha.net/data/sensors/CHIVA-M2"
+        ],
+        "rdfs:comment": "this is a generic detector for a mission, look for more specific components that are part of this payload (spacecraft:isComponentOf)"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/CHIVA-P",
         "subsystems:manufacturer": "http://api.pramantha.net/data/dbpediadocs/European_Space_Agency",
         "name": "CHIVA-P",
         "fullName": "ÇIVA-P",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)"},
         "@type": "http://ontology.projectchronos.eu/sensors/CCD",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/CHIVA",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/CHIVA-detector"},
         "sensor:detects": "http://ontology.projectchronos.eu/sensors/Visible",
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
@@ -22,13 +28,13 @@
         "sensor:measures": "http://ontology.projectchronos.eu/sensors/Intensity"
     },
     {
-        "@id": "http://api.pramantha.net/data/sensors/CHIVA-M",
+        "@id": "http://api.pramantha.net/data/sensors/CHIVA-M1",
         "manufactoring": "http://api.pramantha.net/data/dbpediadocs/European_Space_Agency",
-        "name": "CHIVA-M",
-        "fullName": "çiva-M",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)",
+        "name": "CHIVA-M1",
+        "fullName": "çiva-M1",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)"},
         "@type": "http://ontology.projectchronos.eu/sensors/Microscope",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/CHIVA",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/CHIVA-detector"},
         "sensor:detects": "http://ontology.projectchronos.eu/sensors/Visible",
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
@@ -38,13 +44,13 @@
         "sensor:measures": ""
     },
     {
-        "@id": "http://api.pramantha.net/data/sensors/CHIVA-M",
+        "@id": "http://api.pramantha.net/data/sensors/CHIVA-M2",
         "subsystems:manufacturer": "http://api.pramantha.net/data/dbpediadocs/European_Space_Agency",
-        "name": "CHIVA-M",
-        "fullName": "çiva-M",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)",
+        "name": "CHIVA-M2",
+        "fullName": "çiva-M2",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Rosetta_(spacecraft)"},
         "@type": "http://ontology.projectchronos.eu/sensors/Spectrometer",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/CHIVA",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/CHIVA-detector"},
         "sensor:detects": "http://ontology.projectchronos.eu/sensors/Infrared",
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": "http://ontology.projectchronos.eu/astronomy/PlanetaryScience",
@@ -61,7 +67,7 @@
         "subsystems:manufacturer": "http://api.pramantha.net/data/dbpediadocs/NASA",
         "name": "LORRI",
         "fullName": "LORRI",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/New_Horizons",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/New_Horizons"},
         "@type": "http://ontology.projectchronos.eu/sensors/CCD",
         "sensor:detects": "http://ontology.projectchronos.eu/sensors/Visible",
         "sensor:emits": "",
@@ -76,7 +82,7 @@
         "subsystems:manufacturer": "http://api.pramantha.net/data/dbpediadocs/NASA",
         "name": "REX",
         "fullName": "REX",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/New_Horizons",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/New_Horizons"},
         "@type": "http://ontology.projectchronos.eu/sensors/Radiometer",
         "subComponentOf": "",
         "sensor:detects": "http://ontology.projectchronos.eu/sensors/Radio",
@@ -89,7 +95,7 @@
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/SMAP-radiometer",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Soil_Moisture_Active_Passive",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Soil_Moisture_Active_Passive"},
         "manufactoring": "http://api.pramantha.net/data/dbpediadocs/NASA",
         "name": "SMAP-radiometer",
         "fullName": "SMAP-radiometer",
@@ -111,7 +117,7 @@
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/SMAP-radar",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Soil_Moisture_Active_Passive",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Soil_Moisture_Active_Passive"},
         "name": "SMAP-radar",
         "fullName": "SMAP-radar",
         "@type": "http://ontology.projectchronos.eu/sensors/Radar",
@@ -129,19 +135,29 @@
         "sensor:measures": "http://ontology.projectchronos.eu/sensors/RadiantFlux"
     },
     {
-        "@id": "http://api.pramantha.net/data/sensors/MMS-payload",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
+        "@id": "http://api.pramantha.net/data/sensors/MMS-detector",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission"},
         "subsystems:manufacturer": "http://api.pramantha.net/data/dbpediadocs/NASA",
-        "name": "MMS-detectors",
-        "@type": "http://ontology.projectchronos.eu/sensors/Sensor"
+        "name": "MMS-detector",
+        "spacecraft:embedSensor": [
+            "http://api.pramantha.net/data/sensors/FPI",
+            "http://api.pramantha.net/data/sensors/MMS-DIS",
+            "http://api.pramantha.net/data/sensors/MMS-DES",
+            "http://api.pramantha.net/data/sensors/HPCA",
+            "http://api.pramantha.net/data/sensors/FEEPS",
+            "http://api.pramantha.net/data/sensors/AFG",
+            "http://api.pramantha.net/data/sensors/DFG"
+        ],
+        "@type": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Detector",
+        "rdfs:comment": "this is a generic detector for a mission, look for more specific components that are part of this payload (spacecraft:isComponentOf)"
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/FPI",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission"},
         "name": "FPI",
         "fullName": "Fast Plasma Instrument",
         "@type": "http://ontology.projectchronos.eu/sensors/MassSpectrometer",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/MMS-detector"},
         "spacecraft:hasComponent": [
             "http://api.pramantha.net/data/sensors/DES",
             "http://api.pramantha.net/data/sensors/DIS"
@@ -156,8 +172,14 @@
             "http://ontology.projectchronos.eu/astronomy/SpaceWeather"
         ],
         "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/Voltage",
-        "sensor:hasWorkingPrinciple": ["sensor:IonOptics", "sensor:ElectronEmission"],
-        "sensor:isTraversedBy": ["sensor:Ion", "sensor:Electron"],
+        "sensor:hasWorkingPrinciple": [
+            "http://ontology.projectchronos.eu/sensors/IonOptics",
+            "http://ontology.projectchronos.eu/sensors/ElectronEmission"
+        ],
+        "sensor:isTraversedBy": [
+            "http://ontology.projectchronos.eu/sensors/Ion",
+            "http://ontology.projectchronos.eu/sensors/Electron"
+        ],
         "sensor:measures": [
             "http://ontology.projectchronos.eu/sensors/ParticleFlux",
             "http://ontology.projectchronos.eu/sensors/Ion",
@@ -167,11 +189,11 @@
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/MMS-DES",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission"},
         "name": "MMS-DES",
         "fullName": "Dual Electron Spectrometer (DES)",
         "@type": "http://ontology.projectchronos.eu/sensors/MassSpectrometer",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/FPI",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/FPI"},
         "spacecraft:hasComponent": "http://ontology.projectchronos.eu/sensors/MicroChannelPlate",
         "sensor:detects": "http://ontology.projectchronos.eu/sensors/Electron",
         "sensor:emits": "",
@@ -186,11 +208,11 @@
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/MMS-DIS",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission"},
         "name": "MMS-DIS",
         "fullName": "Dual Ion Spectrometer (DIS)",
         "@type": "http://ontology.projectchronos.eu/sensors/MassSpectrometer",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/FPI",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/FPI"},
         "spacecraft:hasComponent": "http://ontology.projectchronos.eu/sensors/MicroChannelPlate",
         "sensor:detects": "http://ontology.projectchronos.eu/sensors/Ion",
         "sensor:emits": "",
@@ -205,11 +227,11 @@
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/HPCA",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission"},
         "name": "HPCA",
         "fullName": "Hot Plasma Composition Analyzer",
         "@type": "http://ontology.projectchronos.eu/sensors/TimeOfFlightMassSpectrometer",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/MMS-detector"},
         "spacecraft:hasComponent": "http://ontology.projectchronos.eu/sensors/MicroChannelPlate",
         "sensor:detects": "http://ontology.projectchronos.eu/sensors/Ion",
         "sensor:emits": "http://ontology.projectchronos.eu/sensors/Radio",
@@ -228,11 +250,11 @@
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/FEEPS",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission"},
         "name": "FEEPS",
         "fullName": "Fly's Eye Energetic Particle Sensor",
         "@type": "http://ontology.projectchronos.eu/sensors/SolidStateDetector",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/MMS-detector"},
         "sensor:detects": [
             "http://ontology.projectchronos.eu/sensors/Ion",
             "http://ontology.projectchronos.eu/sensors/Electron"
@@ -253,11 +275,11 @@
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/AFG",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission"},
         "name": "AFG",
         "fullName": "Analog Fluxgate Magnetometer",
         "@type": "http://ontology.projectchronos.eu/sensors/Magnetometer",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/MMS-detector"},
         "sensor:detects": [
             "http://ontology.projectchronos.eu/sensors/MagneticField",
             "http://ontology.projectchronos.eu/sensors/ElectricCurrent"
@@ -275,19 +297,19 @@
     },
     {
         "@id": "http://api.pramantha.net/data/sensors/DFG",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Magnetospheric_Multiscale_Mission"},
         "name": "DFG",
         "fullName": "Digital Fluxgate Magnetometer",
         "@type": "http://ontology.projectchronos.eu/sensors/Magnetometer",
-        "spacecraft:isComponentOf": "http://api.pramantha.net/data/sensors/MMS-payload",
+        "spacecraft:isComponentOf": {"@id": "http://api.pramantha.net/data/sensors/MMS-detector"},
         "sensor:detects": [
             "http://ontology.projectchronos.eu/sensors/MagneticField",
             "http://ontology.projectchronos.eu/sensors/ElectricCurrent"
         ],
         "sensor:emits": "",
         "sensor:hasFieldOfResearch": [
-            "sensor:SpacePhysics",
-            "sensor:SpaceWeather"
+            "http://ontology.projectchronos.eu/sensors/SpacePhysics",
+            "http://ontology.projectchronos.eu/sensors/SpaceWeather"
         ],
         "sensor:hasOutput": "http://ontology.projectchronos.eu/sensors/ElectricCurrent",
         "sensor:hasWorkingPrinciple": "http://ontology.projectchronos.eu/sensors/Ferromagnetism",
@@ -299,7 +321,7 @@
         "@id": "http://api.pramantha.net/data/sensors/Dawn-FC",
         "name": "FC",
         "fullName": "Framing Camera",
-        "chronos:relMission": "http://api.pramantha.net/data/mission/Dawn_(spacecraft)",
+        "chronos:relMission": {"@id": "http://api.pramantha.net/data/mission/Dawn_(spacecraft)"},
         "@type": "http://ontology.projectchronos.eu/sensors/CCD",
         "sensor:detects": [
             "http://ontology.projectchronos.eu/sensors/NearInfrared",
