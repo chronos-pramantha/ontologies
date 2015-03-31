@@ -16,7 +16,7 @@ import json
 from collections import OrderedDict
 from html.parser import HTMLParser
 
-from wsgi.libs.utils import encode_url, check_if_url
+from wsgi.libs.utils import encode_url, check_if_url, check_if_ontology_url
 
 a = ''
 
@@ -74,7 +74,7 @@ def iter_json(ordered_json, style):
             a += '</ul></td>'
             a += '</tr>'
         elif isinstance(v, str):
-            if k in ['dbpedia', 'wikiUrl']:
+            if k in ['dbpedia', 'wikiUrl', 'ontology']:
                 a = a + '<td><a target="_blank" href="' + str(v) + '">' + str(v) + '</a></td>'
             elif check_if_url(v):
                 hash = encode_url(v)
