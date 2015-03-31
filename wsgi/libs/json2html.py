@@ -64,10 +64,12 @@ def iter_json(ordered_json, style):
                         a = a + '<li>' + v[i] + '</li>'
                 elif isinstance(v[i], int) or isinstance(v, float):
                     a = a + '<li>' + str(v[i]) + '</li>'
+                elif v[i] is None:
+                    a = a + '<li>null</li>'
                 elif not isinstance(v[i], list):
                     iter_json(v[i], style)
                 else:
-                    print(v[i])
+                    #print(v[i])
                     a = a + '<li>' + str(v[i]) + '</li>'
             a += '</ul></td>'
             a += '</tr>'
@@ -98,6 +100,8 @@ def html_convertor(ordered_json, style):
 
     global a
     try:
+        if ordered_json is None:
+            return "None"
         for k, v in ordered_json.items():
             pass
         iter_json(ordered_json, style)

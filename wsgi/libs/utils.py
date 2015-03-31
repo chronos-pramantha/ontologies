@@ -25,11 +25,12 @@ def decode_url(enc):
 def check_if_url(url):
     """
     Find out if a string is an url or not
+    http://stackoverflow.com/questions/827557/how-do-you-validate-a-url-with-a-regular-expression-in-python
     :param url: a string
     :return: boolean
     """
     check = urlparse(url)
-    print(check)
+    #print(check)
     #print(url)
     if not all([check.scheme, check.netloc]) or check.scheme not in ['http', 'https', 'ftp']:
         #print(Exception('wrong url'))
