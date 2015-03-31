@@ -3,10 +3,9 @@ __author__ = 'lorenzo'
 import os
 
 from flask import Flask
-from flask import request, jsonify, Response, redirect, url_for, render_template
+from flask import request, Response, redirect, url_for, render_template
 import simplejson as json
 import requests
-from base64 import b64encode, b64decode
 
 from wsgi.cache import get_or_set
 from wsgi.contexts import ONTOLOGIES
@@ -127,12 +126,12 @@ def chronosapi(url):
     else:
         url = decode_url(str(url))
 
-    print(url)
+    #print(url)
 
     if not check_if_url(url):
         raise Exception('wrong url')
     jsonld = requests.get(url).text
-    print(jsonld)
+    #print(jsonld)
     jsonld = json.loads(jsonld)
     table = ""
     if isinstance(jsonld, list):
