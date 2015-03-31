@@ -54,8 +54,12 @@ def iter_json(ordered_json, style):
             for i in range(0, len(v)):
                 if isinstance(v[i], str):
                     if check_if_url(v[i]):
-                        hash = encode_url(v[i])
-                        a = a + '<li><a href="/chronosapi/' + str(hash) + '">' + str(v[i]) + '</a></li>'
+                        if k in ['ext_types']:
+                            for val in v:
+                                a = a + '<li><a target="_blank" href="' + str(val) + '">' + str(val) + '</a></li>'
+                        else:
+                            hash = encode_url(v[i])
+                            a = a + '<li><a href="/chronosapi/' + str(hash) + '">' + str(v[i]) + '</a></li>'
                     else:
                         a = a + '<li>' + v[i] + '</li>'
                 elif isinstance(v[i], int) or isinstance(v, float):
