@@ -313,6 +313,17 @@
             "skos:prefLabel": "The set of subsystems needed to make a spacecraft to collect energy to operate",
             "rdfs:label": "Spacecraft_PrimaryPower.",
             "rdfs:comment": "Complex devices-subsystems used for collecting energy.",
+            "subsystems:objectives": [
+              {
+                "skos:prefLabel": "Primary energy source"
+              },
+              {
+                "skos:prefLabel": "Power control and distribution"
+              },
+              {
+                "skos:prefLabel": "Loads (bus and payload)"
+              }
+            ],
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
@@ -357,6 +368,7 @@
             "rdfs:label": "Spacecraft_BackupPower",
             "skos:prefLabel": "The set of subsystems needed to make a spacecraft to store energy from the primary power source.",
             "rdfs:comment": "Complex devices-subsystems used for storing energy.",
+            "subsystems:objectives": ["Secondary energy source", "Power control and distribution", "Loads (bus and payload)"],
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
 
         },
@@ -374,8 +386,44 @@
 
             "rdfs:label": "Spacecraft_Thermal",
             "skos:prefLabel": "Artifacts or devices used to maintain the temperature of spacecraft's subsystems and payloads into a given range, to permit nominal and survival mode for all the duration of the mission .",
-            "rdfs:comment": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events"
-
+            "rdfs:comment": "Shields, shells or any device insulation from/reflecting radiation exploiting emission and absorption events",
+            "subsystems:objectives": [
+              {
+                "skos:prefLabel": "Thermal environment"
+              },
+              {
+                "skos:prefLabel": "Solar radiation"
+              },
+              {
+                "skos:prefLabel": "Planetary radiation"
+              },
+              {
+                "skos:prefLabel": "Spacecraft heat emission"
+              },
+              {
+                "skos:prefLabel": "Thermal balance"
+              },
+              {
+                "skos:prefLabel": "Thermal analysis"
+              },
+              {
+                "skos:prefLabel": "Conductive heat exchange"
+              },
+              {
+                "skos:prefLabel": "Radiative heat exchange"
+              }
+            ],
+            "subsystems:requirements": [
+              {
+                "skos:prefLabel": "Thermal design"
+              },
+              {
+                "skos:prefLabel": "Requirements and constraints"
+              },
+              {
+                "skos:prefLabel": "Worst-case conditions"
+              }
+            ]
         },
 
         {
@@ -456,6 +504,45 @@
             "rdfs:label": "Spacecraft_Structure",
             "skos:prefLabel": "Artifacts or rigid devices used to create a supporting structure for all the others devices.",
             "rdfs:comment": "It's the skeleton and framework of the spacecraft.",
+            "subsystems:objectives": [
+              {
+                "skos:prefLabel": "Interface to launch vehicle"
+              },
+              {
+                "skos:prefLabel": "Mounting location for equipment"
+              },
+              {
+                "skos:prefLabel": "Environmental protection"
+              },
+              {
+                "skos:prefLabel": "Thermal and electrical paths"
+              },
+              {
+                "skos:prefLabel": "Propellant containers"}
+            ],
+            "subsystems:requirements": [
+              {
+                "skos:prefLabel": "Loads"
+              },
+              {
+                "skos:prefLabel": "Stiffness"
+              },
+              {
+                "skos:prefLabel": "Alignment"
+              },
+              {
+                "skos:prefLabel": "Thermal"
+              },
+              {
+                "skos:prefLabel": "Electric and electromagnetic"
+              },
+              {
+                "skos:prefLabel": "Mass"
+              },
+              {
+                "skos:prefLabel": "Accessibility"
+              }
+            ],
             "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
         },
         {
@@ -546,7 +633,47 @@
             "rdfs:label": "Spacecraft_CDH",
             "skos:prefLabel": "Command and Data Handling, it is the device that connects the other devices, it processes and deliver information.",
             "rdfs:comment": "The DH system shall: Enable HK and science data flow – Housekeeping data (Temperatures, Pressures, Voltages, Currents, Status,...) – Attitude data – Payload data (e.g., Science data) - Receive and distribute commands - Perform TM and TC protocols - Distribute timing signals - Synchronization of data – Time stamping of data - Provide data storage - Execute commands and schedules - Control subsystems and payloads - Monitor spacecraft health - Make autonomous decisions - Perform data compression.",
-            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft",
+            "subsytems:objectives": [
+              {
+                "skos:prefLabel": "Enable Housekeeping and science data flow",
+                "skos:altLabel":["Temperatures", "Pressures", "Voltages", "Currents", "Status"]
+              },
+              {
+                "skos:prefLabel": "Attitude data"
+              },
+              {
+                "skos:prefLabel": "Science data"
+              },
+              {
+                "skos:prefLabel": "Receive and distribute commands"
+              },
+              {
+                "skos:prefLabel": "Perform TM and TC protocols"
+              },
+              {
+                "skos:prefLabel": "Distribute timing signals",
+                "skos:altLabel": ["Synchronization of data", "Time stamping of data"]
+              },
+              {
+                "skos:prefLabel": "Provide data storage"
+              },
+              {
+                "skos:prefLabel": "Execute commands and schedules"
+              },
+              {
+                "skos:prefLabel": "Control subsystems and payloads"
+              },
+              {
+                "skos:prefLabel": "Monitor spacecraft health"
+              },
+              {
+                "skos:prefLabel": "Make autonomous decisions"
+              },
+              {
+                "skos:prefLabel": "Perform data compression"
+              }
+            ]
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
@@ -639,13 +766,82 @@
                     "owl:hasValue" : [
                       { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
                     ]
+                },
+                {
+                    "@type" : "http://www.w3.org/2002/07/owl#Restriction",
+                    "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
+                    "owl:hasValue" : [
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" }
+                    ]
                 }
             ],
 
             "rdfs:label": "Spacecraft_AODCS",
             "skos:prefLabel": "Attitude and Orbit Determination Control",
             "rdfs:comment": "Complex devices-subsystems used to set the direction and the position of the spacecraft, it controls flight dynamics.",
-            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft"
+            "spacecraft:isComponentOf": "http://ontology.projectchronos.eu/spacecraft/Spacecraft",
+            "subsystems:attitude": [
+              {
+                "skos:prefLabel": "Spacecraft attitude"
+              },
+              {
+                "skos:prefLabel": "Three-axis stabilized"
+              },
+              {
+                "skos:prefLabel":"Spinning"
+              },
+              {
+                "skos:prefLabel":"Sun-pointing"
+              },
+              {
+                "skos:prefLabel": "Cartwheel"
+              },
+              {
+                "skos:prefLabel": "Hybrid (dual-spin, partially de-spun)"
+              }
+            ],
+            "subsystems:disturbances": [
+              {
+                "skos:prefLabel": "External",
+                "skos:altLabel": ["Aerodynamic torques (below 500 km)", "Magnetic torques (500-35000 km)",
+                                "Gravity gradient torques (500-35000 km)", "Solar radiation torques (above 700 km)"]
+              },
+              {
+                "skos:prefLabel": "Internal",
+                "skos:altLabel": ["Mechanisms", "Fuel movement", "Astronaut movement", "Flexible appendages",
+                                   "General mass movement"]
+              }
+              ],
+            "subsytems:torquers": [
+              {
+                "skos:prefLabel": "External",
+                "skos:altLabel": [
+                  "Gas jet thrusters",
+                  "Magnetic torquers",
+                  "Gravity-gradient torque"
+                ]
+              },
+              {
+                "skos:prefLabel": "Internal",
+                "skos:altLabel": [
+                  "Momentum storage torquers",
+                  "Reaction wheels (zero or low rpm)",
+                  "Momentum wheels (5000-10000 rpm)"
+                ]
+              }
+            ],
+            "subsystems:measurements": [
+                {
+                  "skos:prefLabel": "Reference sensors (absolute measurement)",
+                  "skos:altLabel": ["Sun sensors", "Earth sensors", "Star sensors",
+                    "Radio frequency beacons", "Magnetometers", "GPS"]
+                },
+                {
+                  "skos:prefLabel": "Inertial sensors (changes only)",
+                  "skos:altLabel": ["Gyroscopes mechanical", "Gyroscopes optical" ]
+                }
+            ]
         },
         {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS_ActiveDevice",
