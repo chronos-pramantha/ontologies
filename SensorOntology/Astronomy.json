@@ -52,7 +52,7 @@
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty", 
             "rdf:domain": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject",
             "rdf:range": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject",
-            "rdfs:comment": "this property describe the generic astronomical object-object gravitational interaction",
+            "rdfs:comment": "this property describes the generic astronomical object-object gravitational interaction",
             "rdfs:label": "orbiting"
         },
         {
@@ -63,8 +63,15 @@
                 "http://ontology.projectchronos.eu/astronomy/PlanetaryBody",
                 "http://ontology.projectchronos.eu/astronomy/DwarfPlanet"
             ],
-            "rdfs:comment": "this property describe the Moon-Planet gravitational interaction",
+            "rdfs:comment": "this property describes the Moon-Planet gravitational interaction",
             "rdfs:label": "orbitsPlanet"
+        },
+        {
+            "@id": "http://ontology.projectchronos.eu/astronomy/distance",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "rdf:domain": "http://ontology.projectchronos.eu/astronomy/AstronomicalObject",
+            "rdfs:comment": "this property describes the distance of the object from the Sun (using Sun-Earth distance as 1)",
+            "rdfs:label": "distance"
         },
         {
             "@id": "http://ontology.projectchronos.eu/astronomy/Asteroid",

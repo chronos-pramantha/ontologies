@@ -172,6 +172,12 @@
             "@type" : "http://www.w3.org/2002/07/owl#ObjectProperty"
         },
         {
+            "@id": "http://ontology.projectchronos.eu/subsystems/streams",
+            "rdfs:label": "streams",
+            "rdfs:comment": "What kind of flow exists between subsystems (power flow or data flow)",
+            "@type" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+        },
+        {
             "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Detector",
             "@type" : "http://www.w3.org/2002/07/owl#Class",
             "rdfs:subClassOf" : [
@@ -191,14 +197,17 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
+                        "subsystem:streams": "data" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                        "subsystem:streams": "data" }
                     ]
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
-                    "owl:hasValue" : "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower"
+                    "owl:hasValue" : "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                    "subsystem:streams": "power"
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
@@ -255,8 +264,10 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                        "subsystem:streams": "power" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                        "subsystem:streams": "data" }
                     ]
                 }
             ],
@@ -301,11 +312,16 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" },
-                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" },
-                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS" },
-                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion" },
-                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal" }
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
+                        "subsystem:streams": "power" },
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                        "subsystem:streams": "power" },
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS",
+                        "subsystem:streams": "power" },
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion",
+                        "subsystem:streams": "power" },
+                      { "@id":"http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal",
+                        "subsystem:streams": "power" }
                     ]
                 }
             ],
@@ -350,17 +366,22 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" }
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                          "subsystem:streams": "power" }
                     ]
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                        "subsystem:streams": "power" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion",
+                        "subsystem:streams": "power" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Thermal",
+                        "subsystem:streams": "power" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
+                        "subsystem:streams": "power" }
                     ]
                 }
             ],
@@ -458,8 +479,10 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
-                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower" }
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                          "subsystem:streams": "power" },
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
+                          "subsystem:streams": "power" }
                     ]
                 }
             ],
@@ -613,19 +636,26 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
+                        "subsystem:streams": "data" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS",
+                        "subsystem:streams": "data" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Propulsion",
+                        "subsystem:streams": "data" }
                     ]
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                        "subsystem:streams": "power" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
+                        "subsystem:streams": "power" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_Communication",
+                        "subsystem:streams": "data" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_AODCS",
+                        "subsystem:streams": "data" }
                     ]
                 }
             ],
@@ -712,16 +742,20 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                          "subsystem:streams": "data" }
                     ]
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                        "subsystem:streams": "power" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
+                        "subsystem:streams": "power" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                        "subsystem:streams": "data" }
                     ]
                 }
             ],
@@ -764,15 +798,18 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireOutWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                        "subsystem:streams": "data" }
                     ]
                 },
                 {
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" },
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                        "subsystem:streams": "data" },
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                        "subsystem:streams": "power" }
                     ]
                 }
             ],
@@ -852,9 +889,12 @@
                       "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                       "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                       "owl:hasValue" : [
-                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower" },
-                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower" },
-                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_PrimaryPower",
+                          "subsystem:streams": "power" },
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_BackupPower",
+                          "subsystem:streams": "power" },
+                        { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                          "subsystem:streams": "data" }
                       ]
                 }
             ],
@@ -871,7 +911,8 @@
                     "@type" : "http://www.w3.org/2002/07/owl#Restriction",
                     "owl:onProperty" : "http://ontology.projectchronos.eu/subsystems/hasWireInWith",
                     "owl:hasValue" : [
-                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH" }
+                      { "@id": "http://ontology.projectchronos.eu/subsystems/Spacecraft_CDH",
+                        "subsystem:streams": "data" }
                     ]
               }
             ],

@@ -114,7 +114,7 @@ def chronos(name, obj):
 @app.route("/chronosapi/<url>", methods=['GET'])
 def chronosapi(url):
     """
-    Chronos APIs Explorer
+    Chronos APIs Explorer (a small client for an HATEOAS API)
     :param url: url or a Chronos API's endpoint
     :return:
     """
@@ -140,7 +140,6 @@ def chronosapi(url):
     else:
         table = get_html_table(json.dumps(jsonld))
     return render_template("chronosapi.html", table=table)
-
 
 
 @app.errorhandler(404)
