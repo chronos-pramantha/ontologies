@@ -1,2 +1,2 @@
-SECRET_KEY = 'fDertagfh34256d__erdgfdgTseT_568__hdark8'
+SECRET_KEY = '**********************'
 PROPAGATE_EXCEPTIONS = False

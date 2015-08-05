@@ -105,4 +105,4 @@ docs/_build/
 target/
 
 # config with secret
-wsgi/config.py
+config.py
