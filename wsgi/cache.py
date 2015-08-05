@@ -11,23 +11,12 @@ from wsgi.contexts import ONTOLOGIES
 CACHE = {}
 
 
-def get_o_path():
-    path = os.path.dirname(os.path.abspath(__file__))
-    path = os.path.abspath(os.path.join(path, os.pardir))
-    if platform.system() == 'Linux' or platform.system() == 'Darwin':
-        ''' linux path '''
-        path += '/SensorOntology/'
-    else:
-        '''  windows path  '''
-        path += '\\SensorOntology\\'
-
-    return path
-
-path = get_o_path()
+def get_o_path(fs):
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'SensorOntology', fs)
 
 
 def get_or_set(nm, obj=None):
-    spath = path + ONTOLOGIES[nm][1]
+    spath = get_o_path(ONTOLOGIES[nm][1])
     if not obj:
         if nm in CACHE.keys() and CACHE[nm]:
             ontology = CACHE[nm]

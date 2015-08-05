@@ -33,14 +33,14 @@ def hello():
     Returns template for the Homepage
     """
     res = {
-            "chronos": ["a generic ontology for space activities semantically linked to Wikipedia documents", "/chronos", "/documentation/chronos"],
-            "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors", "/documentation/sensors"],
-            "astronomy": ["an ontology for astronomical objects", "/astronomy", "/documentation/astronomy"],
-            "solarsystem" : ["a taxonomy for astronomical objects in the solar system", "/solarsystem", "/documentation/solarsystem"],
-            "engineering": ["an ontology for engineering concepts", "/engineering", "/documentation/engineering"],
-            "spacecraft": ["an ontology for a spacecraft and its systems", "/spacecraft", "/documentation/spacecraft"],
-            "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems", "/documentation/subsystems"]
-    }
+        "chronos": ["a generic ontology for space activities semantically linked to Wikipedia documents", "/chronos", "/documentation/chronos"],
+        "sensors": ["an ontology for detectors, device that use some kind of sensor", "/sensors", "/documentation/sensors"],
+        "astronomy": ["an ontology for astronomical objects", "/astronomy", "/documentation/astronomy"],
+        "solarsystem" : ["a taxonomy for astronomical objects in the solar system", "/solarsystem", "/documentation/solarsystem"],
+        "engineering": ["an ontology for engineering concepts", "/engineering", "/documentation/engineering"],
+        "spacecraft": ["an ontology for a spacecraft and its systems", "/spacecraft", "/documentation/spacecraft"],
+        "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems", "/documentation/subsystems"]
+}
     return render_template('index.html', content=res)
 
 
