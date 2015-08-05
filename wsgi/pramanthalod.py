@@ -7,7 +7,7 @@ from flask import request, Response, redirect, url_for, render_template
 import simplejson as json
 import requests
 
-from wsgi.cache import get_or_set
+from wsgi.cache import get_or_set, get_o_path
 from wsgi.contexts import ONTOLOGIES
 from wsgi.libs.utilities import classes_and_properties
 
@@ -85,10 +85,18 @@ def index(name):
         #
         # serve name/ontology
         #
-        ontology = get_or_set(name)
-        res = Response(response=str(ontology), content_type="application/ld+json; charset=utf-8")
-        print(res)
-        return res
+        data_format = request.args.get('format')
+        if data_format and data_format == 'jsonld':
+            ontology = get_or_set(name)
+            res = Response(response=str(ontology), content_type="application/ld+json; charset=utf-8")
+            print(res)
+            return res
+        else:
+            # serve nt
+            path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'nt', name + '.nt')
+            with open(path, 'r') as content_file:
+                content = content_file.read()
+            return Response(response=str(content), content_type="application/n-triples; charset=utf-8")
     elif name == 'documentation':
         return redirect(url_for('documentation'))
     else:
@@ -99,7 +107,7 @@ def index(name):
 def chronos(name, obj):
     """
     Serves the single object from an ontology
-    :param name: name of th eonotlogy
+    :param name: name of th ontology
     :param obj: label of the object
     :return:
     """

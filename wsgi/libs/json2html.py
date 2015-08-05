@@ -111,7 +111,7 @@ def html_convertor(ordered_json, style):
             if isinstance(ordered_json[i], str):
                 a = a + '<li>' + ordered_json[i] + '</li>'
             elif isinstance(ordered_json[i], int) or isinstance(ordered_json[i], float):
-                a = a + '<li>'+ str(ordered_json[i]) + '</li>'
+                a = a + '<li>' + str(ordered_json[i]) + '</li>'
             elif not isinstance(ordered_json[i], list):
                 html_convertor(ordered_json[i], style)
 

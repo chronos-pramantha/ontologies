@@ -8,7 +8,13 @@
 
 <ul>
 {% for k, v in content.items() %}
-     <li>{{ k.title() }} Repository: <span style="font-style:italic;"><a href="{{ v[1] }}">endpoint</a> <a href="{{ v[2] }}">documentation</a></span> {{ v[0] }} </li>
+     <li>{{ k.title() }} Repository:
+         <span style="font-style:italic;">
+             <a href="{{ v[1] }}">N-Triples endpoint</a>
+             <a href="{{ v[1] + '/?format=jsonld' }}">JSON-LD endpoint</a>
+             <a href="{{ v[2] }}">documentation</a>
+
+         </span> {{ v[0] }} </li>
 {% endfor %}
 </ul>
 

@@ -42,7 +42,7 @@ class TestOntologiesService(unittest.TestCase):
             conn = http.client.HTTPConnection(url)
             conn.request("GET", query)
             response = conn.getresponse()
-            print(response.status, response.reason)
+            print(response.status, response.reason, response.headers)
             return test_reponse(conn, response)
 
         for n in ONTOLOGIES.keys():
