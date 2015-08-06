@@ -23,7 +23,7 @@
     "defines": [
         {
             "@id": "http://ontology.projectchronos.eu/spacecraft/Spacecraft",
-            "owl:sameAs": "http://umbel.org/umbel/rc/Spacecraft",
+            "owl:sameAs": { "@id": "http://umbel.org/umbel/rc/Spacecraft" },
             "rdfs:subClassOf" : [
                 { "@id": "http://umbel.org/umbel/rc/SystemOfDevices" },
                 {

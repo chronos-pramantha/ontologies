@@ -997,7 +997,7 @@
             ],
             "owl:sameAs": [
                 {
-                "@id": "http://dbpedia.org/resource/Galatea_(moon)
+                "@id": "http://dbpedia.org/resource/Galatea_(moon)"
                 }
             ],
             "astronomy:orbitsPlanet": {
