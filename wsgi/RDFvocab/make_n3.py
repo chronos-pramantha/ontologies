@@ -1,7 +1,6 @@
 """
 This script translates JSON-LD vocabularies into N-Triples using
 http://rdf-translator.appspot.com/ REST service by Alex Stolz
--- Python2.7 --
 """
 __author__ = 'lorenzo'
 
@@ -51,7 +50,7 @@ ntpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ntriples')
 ld_json = ((readjson(os.path.join(path, filename)), filename[:-5]) for path, dirs, files in os.walk(jsonpath) for filename in files if filename.endswith(".json"))
 
 for c, f in ld_json:
-    print c
+    print f
     filename = f.lower()
     filename += '.ntriples'
     with open(os.path.join(ntpath, filename), 'wb+') as file:
