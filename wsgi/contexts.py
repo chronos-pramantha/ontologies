@@ -98,10 +98,10 @@ SOLARSYSTEM_CONTEXT = dict(
 
 ONTOLOGIES = dict(
     {
-        "chronos": ["a generic ontology for space activities", "ChronosOntology.json", CHRONOS_CONTEXT],
-        "sensors": ["an ontology for detectors, device that use some kind of sensor", "SpaceSensor_json-ld_v2.json", SENSORS_CONTEXT],
+        "chronos": ["a generic ontology for space activities", "Chronos.json", CHRONOS_CONTEXT],
+        "sensors": ["an ontology for detectors, device that use some kind of sensor", "Sensors.json", SENSORS_CONTEXT],
         "astronomy": ["an ontology for astronomical objects", "Astronomy.json", ASTRONOMY_CONTEXT],
-        "solarsystem" : ["an ontology for astronomical objects in the solar system", "SolarSystem.jsonld", SOLARSYSTEM_CONTEXT],
+        "solarsystem" : ["an ontology for astronomical objects in the solar system", "SolarSystem.json", SOLARSYSTEM_CONTEXT],
         "engineering": ["an ontology for engineering concepts", "Engineering.json", ENGINEERING_CONTEXT],
         "spacecraft": ["an ontology for a spacecraft and its systems", "Spacecraft.json", SPACECRAFT_CONTEXT],
         "subsystems": ["an ontology for subsystems in a spacecraft", "SubSystems.json", SUBSYSTEMS_CONTEXT]

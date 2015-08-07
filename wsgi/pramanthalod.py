@@ -93,7 +93,7 @@ def index(name):
             return res
         else:
             # serve nt
-            path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'nt', name + '.nt')
+            path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'RDFvocab', 'ntriples', name + '.ntriples')
             with open(path, 'r') as content_file:
                 content = content_file.read()
             return Response(response=str(content), content_type="application/n-triples; charset=utf-8")

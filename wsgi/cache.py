@@ -12,7 +12,7 @@ CACHE = {}
 
 
 def get_o_path(fs):
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'SensorOntology', fs)
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'RDFvocab', 'ld+json', fs)
 
 
 def get_or_set(nm, obj=None):
