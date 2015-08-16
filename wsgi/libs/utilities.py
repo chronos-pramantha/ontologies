@@ -46,6 +46,10 @@ def classes_and_properties(defines):
             else:
                 classes.append({ "label": label, "dump": json.dumps(c, indent=2) })
                 continue
+        elif isinstance(c['@type'], dict):
+            if c['@type']['@id'] == "http://www.w3.org/2002/07/owl#ObjectProperty":
+                properties.append({ "label": label, "dump": json.dumps(c, indent=2) })
+                continue
         else:
             if "http://www.w3.org/2002/07/owl#ObjectProperty" in c['@type']:
                 properties.append({ "label": label, "dump": json.dumps(c, indent=2) })
