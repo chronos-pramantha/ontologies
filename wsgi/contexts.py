@@ -28,7 +28,10 @@ SENSORS_CONTEXT = dict(
         "dbpedia": "http://dbpedia.org/property/",
         "owl"    : "http://www.w3.org/2002/07/owl#",
         "sensor" : "http://ontology.projectchronos.eu/sensors/",
-        "@base"  : "http://ontology.projectchronos.eu/sensors"
+        "@base"  : "http://ontology.projectchronos.eu/sensors",
+        "defines": {
+            "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+        }
     }
 )
 
@@ -41,7 +44,10 @@ ASTRONOMY_CONTEXT = dict(
         "rdf"      : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"     : "http://www.w3.org/2000/01/rdf-schema#",
         "owl"      : "http://www.w3.org/2002/07/owl#",
-        "dbpedia"  : "http://dbpedia.org/ontology/"
+        "dbpedia"  : "http://dbpedia.org/ontology/",
+        "defines": {
+            "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+        }
     }
 )
 
@@ -54,7 +60,10 @@ ENGINEERING_CONTEXT = dict(
         "rdf"        : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"       : "http://www.w3.org/2000/01/rdf-schema#",
         "owl"        : "http://www.w3.org/2002/07/owl#",
-        "dbpedia"    : "http://dbpedia.org/ontology/"
+        "dbpedia"    : "http://dbpedia.org/ontology/",
+        "defines": {
+            "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+        }
     }
 )
 
@@ -68,7 +77,10 @@ SPACECRAFT_CONTEXT = dict(
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "dbpedia": "http://dbpedia.org/ontology/"
+        "dbpedia": "http://dbpedia.org/ontology/",
+        "defines": {
+            "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+        }
     }
 )
 
@@ -82,7 +94,10 @@ SUBSYSTEMS_CONTEXT = dict(
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "dbpedia": "http://dbpedia.org/ontology/",
-        "xml": "http://www.w3.org/2001/XMLSchema#"
+        "xml": "http://www.w3.org/2001/XMLSchema#",
+        "defines": {
+            "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+        }
     }
 )
 
@@ -92,7 +107,27 @@ SOLARSYSTEM_CONTEXT = dict(
         "astronomy": "http://ontology.projectchronos.eu/astronomy/",
         "rdf"      : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"     : "http://www.w3.org/2000/01/rdf-schema#",
-        "owl"      : "http://www.w3.org/2002/07/owl#"
+        "owl"      : "http://www.w3.org/2002/07/owl#",
+        "defines": {
+            "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+        }
+    }
+)
+
+EXPLORATION_CONTEXT = dict(
+    {
+        "@base": "http://ontology.projectchronos.eu/exploration",
+        "exploration": "http://ontology.projectchronos.eu/exploration/",
+        "schema": "https://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dbpedia": "http://dbpedia.org/ontology/",
+        "cyc": "http://sw.opencyc.org/2012/05/10/concept/en/",
+        "defines": {
+            "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+        }
     }
 )
 
@@ -104,7 +139,8 @@ ONTOLOGIES = dict(
         "solarsystem" : ["an ontology for astronomical objects in the solar system", "SolarSystem.json", SOLARSYSTEM_CONTEXT],
         "engineering": ["an ontology for engineering concepts", "Engineering.json", ENGINEERING_CONTEXT],
         "spacecraft": ["an ontology for a spacecraft and its systems", "Spacecraft.json", SPACECRAFT_CONTEXT],
-        "subsystems": ["an ontology for subsystems in a spacecraft", "SubSystems.json", SUBSYSTEMS_CONTEXT]
+        "subsystems": ["an ontology for subsystems in a spacecraft", "SubSystems.json", SUBSYSTEMS_CONTEXT],
+        "exploration": ["an ontology for space exploration and mission design", "Exploration.json", SUBSYSTEMS_CONTEXT]
     }
 
 )

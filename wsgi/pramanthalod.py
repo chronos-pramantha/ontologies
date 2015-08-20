@@ -39,7 +39,8 @@ def hello():
         "solarsystem" : ["a taxonomy for astronomical objects in the solar system", "/solarsystem", "/documentation/solarsystem"],
         "engineering": ["an ontology for engineering concepts", "/engineering", "/documentation/engineering"],
         "spacecraft": ["an ontology for a spacecraft and its systems", "/spacecraft", "/documentation/spacecraft"],
-        "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems", "/documentation/subsystems"]
+        "subsystems": ["an ontology for subsystems in a spacecraft", "/subsystems", "/documentation/subsystems"],
+        "exploration": ["an ontology for space exploration and mission design", "/exploration", "/documentation/exploration"]
 }
     return render_template('index.html', content=res)
 
