@@ -38,4 +38,36 @@ def check_if_url(url):
     return True
 
 
+def rdf_translate(params):
+    """
+    Translate
+    :param params: parameters in the request
+    :return: body of the response
+    """
+    import pycurl
+    from urllib.parse import urlencode
+    c = pycurl.Curl()
+    url = 'http://rdf-translator.appspot.com/convert/json-ld/nt/content'
+    c.setopt(c.URL, url)
+    # if request is GET
+    #if params: c.setopt(c.URL, url + '?' + urlencode(params))
+
+    # if request is POST
+    post_data = {'content': params}
+    # Form data must be provided already urlencoded.
+    postfields = urlencode(post_data)
+    # Sets request method to POST,
+    # Content-Type header to application/x-www-form-urlencoded
+    # and data to send in request body.
+    c.setopt(c.POSTFIELDS, postfields)
+
+    from io import BytesIO
+    buffer = BytesIO()
+
+    c.setopt(c.WRITEDATA, buffer)
+    c.perform()
+    c.close()
+    return buffer.getvalue().decode('utf-8')
+
+
 

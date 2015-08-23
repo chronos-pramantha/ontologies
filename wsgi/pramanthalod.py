@@ -114,8 +114,18 @@ def chronos(name, obj):
     """
     name = name.lower()
     if name in ONTOLOGIES.keys():
-        obj = get_or_set(name, obj)
-        return Response(response=str(obj), content_type="application/ld+json; charset=utf-8")
+        data_format = request.args.get('format')
+        if data_format and data_format == 'jsonld':
+            obj = get_or_set(name, obj)
+            return Response(response=str(obj), content_type="application/ld+json; charset=utf-8")
+        else:
+            # use rdf-translator
+            # return n-triples
+            from wsgi.libs.utils import rdf_translate
+            obj = get_or_set(name, obj)
+            print(obj)
+            content = rdf_translate(obj)
+            return Response(response=str(content), content_type="application/n-triples; charset=utf-8")
     return wrong_object()
 
 
