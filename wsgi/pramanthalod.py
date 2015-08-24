@@ -21,7 +21,7 @@ CHRONOS_APIS = "http://chronosapi-chronoslod.rhcloud.com/"
 if 'OPENSHIFT_DATA_DIR' in os.environ:
     #store = os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'newsletter.save')
     host = "http://ontology.projectchronos.eu/"
-    app.config['DEBUG'] = True
+    app.config['DEBUG'] = False
 else:
     #store = os.path.join(os.path.dirname(__file__), 'newsletter.save')
     host = "http://127.0.0.1:5000/"
