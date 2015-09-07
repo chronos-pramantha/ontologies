@@ -28,6 +28,7 @@ SENSORS_CONTEXT = dict(
         "dbpedia": "http://dbpedia.org/property/",
         "owl"    : "http://www.w3.org/2002/07/owl#",
         "sensor" : "http://ontology.projectchronos.eu/sensors/",
+        "chronos": "http://ontology.projectchronos.eu/chronos/",
         "@base"  : "http://ontology.projectchronos.eu/sensors",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -44,6 +45,7 @@ ASTRONOMY_CONTEXT = dict(
         "rdf"      : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"     : "http://www.w3.org/2000/01/rdf-schema#",
         "owl"      : "http://www.w3.org/2002/07/owl#",
+        "chronos": "http://ontology.projectchronos.eu/chronos/",
         "dbpedia"  : "http://dbpedia.org/ontology/",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -77,6 +79,7 @@ SPACECRAFT_CONTEXT = dict(
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "chronos": "http://ontology.projectchronos.eu/chronos/",
         "dbpedia": "http://dbpedia.org/ontology/",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -94,6 +97,7 @@ SUBSYSTEMS_CONTEXT = dict(
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "dbpedia": "http://dbpedia.org/ontology/",
+        "chronos": "http://ontology.projectchronos.eu/chronos/",
         "xml": "http://www.w3.org/2001/XMLSchema#",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -108,6 +112,7 @@ SOLARSYSTEM_CONTEXT = dict(
         "rdf"      : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"     : "http://www.w3.org/2000/01/rdf-schema#",
         "owl"      : "http://www.w3.org/2002/07/owl#",
+        "chronos": "http://ontology.projectchronos.eu/chronos/",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
         }
@@ -122,6 +127,7 @@ EXPLORATION_CONTEXT = dict(
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "chronos": "http://ontology.projectchronos.eu/chronos/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "dbpedia": "http://dbpedia.org/ontology/",
         "cyc": "http://sw.opencyc.org/2012/05/10/concept/en/",
