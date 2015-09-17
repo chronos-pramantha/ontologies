@@ -108,7 +108,7 @@ def index(name):
 def chronos(name, obj):
     """
     Serves the single object from an ontology
-    :param name: name of th ontology
+    :param name: name of the ontology
     :param obj: label of the object
     :return:
     """
