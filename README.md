@@ -1,5 +1,9 @@
 This backend is serving at http://ontology.projectchronos.eu
 
+## TO-DO
+
+* implement RDf-lib local translation for single entity look-up (instead of using remote service)
+
 
 ## About
 This repo is part of the Chronos' Cloud:
