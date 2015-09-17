@@ -25,8 +25,8 @@ def classes_and_properties(defines):
     for c in defines:
         # check @type
         label = None
-        if 'rdfs:label' in c.keys():
-            label = c['rdfs:label']
+        if 'rdf:label' in c.keys():
+            label = c['rdf:label']
         else:
             if 'skos:prefLabel' in c.keys():
                 label = c['skos:prefLabel']
