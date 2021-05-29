@@ -1,0 +1,3 @@
+[submodule "src/src/RDFvocab"]
+	path = src/RDFvocab
+	url = git@github.com:chronos-pramantha/RDFvocab.git

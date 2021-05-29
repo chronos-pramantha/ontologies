@@ -12,8 +12,8 @@ CHRONOS_CONTEXT = dict(
         "schema" : "http://schema.org/",
         "dbpedia": "http://dbpedia.org/property/",
         "owl"    : "http://www.w3.org/2002/07/owl#",
-        "chronos": "http://ontology.projectchronos.eu/chronos/",
-        "@base"  : "http://ontology.projectchronos.eu/chronos",
+        "chronos": "http://ontology.pramantha.net/chronos/",
+        "@base"  : "http://ontology.pramantha.net/chronos",
         "defines": {
             "@reverse": "rdfs:isDefinedBy"
         }
@@ -27,9 +27,9 @@ SENSORS_CONTEXT = dict(
         "schema" : "http://schema.org/",
         "dbpedia": "http://dbpedia.org/property/",
         "owl"    : "http://www.w3.org/2002/07/owl#",
-        "sensor" : "http://ontology.projectchronos.eu/sensors/",
-        "chronos": "http://ontology.projectchronos.eu/chronos/",
-        "@base"  : "http://ontology.projectchronos.eu/sensors",
+        "sensor" : "http://ontology.pramantha.net/sensors/",
+        "chronos": "http://ontology.pramantha.net/chronos/",
+        "@base"  : "http://ontology.pramantha.net/sensors",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
         }
@@ -38,14 +38,14 @@ SENSORS_CONTEXT = dict(
 
 ASTRONOMY_CONTEXT = dict(
     {
-        "@base"    : "http://ontology.projectchronos.eu/astronomy",
-        "astronomy": "http://ontology.projectchronos.eu/astronomy/",
+        "@base"    : "http://ontology.pramantha.net/astronomy",
+        "astronomy": "http://ontology.pramantha.net/astronomy/",
         "schema"   : "https://schema.org/",
         "skos"     : "http://www.w3.org/2004/02/skos/core#",
         "rdf"      : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"     : "http://www.w3.org/2000/01/rdf-schema#",
         "owl"      : "http://www.w3.org/2002/07/owl#",
-        "chronos": "http://ontology.projectchronos.eu/chronos/",
+        "chronos": "http://ontology.pramantha.net/chronos/",
         "dbpedia"  : "http://dbpedia.org/ontology/",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -55,8 +55,8 @@ ASTRONOMY_CONTEXT = dict(
 
 ENGINEERING_CONTEXT = dict(
     {
-        "@base"      : "http://ontology.projectchronos.eu/engineering",
-        "engineering": "http://ontology.projectchronos.eu/engineering/",
+        "@base"      : "http://ontology.pramantha.net/engineering",
+        "engineering": "http://ontology.pramantha.net/engineering/",
         "schema"     : "https://schema.org/",
         "skos"       : "http://www.w3.org/2004/02/skos/core#",
         "rdf"        : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -71,15 +71,15 @@ ENGINEERING_CONTEXT = dict(
 
 SPACECRAFT_CONTEXT = dict(
     {
-        "engineering": "http://ontology.projectchronos.eu/engineering/",
-        "@base": "http://ontology.projectchronos.eu/spacecraft",
-        "spacecraft": "http://ontology.projectchronos.eu/spacecraft/",
+        "engineering": "http://ontology.pramantha.net/engineering/",
+        "@base": "http://ontology.pramantha.net/spacecraft",
+        "spacecraft": "http://ontology.pramantha.net/spacecraft/",
         "schema": "https://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "chronos": "http://ontology.projectchronos.eu/chronos/",
+        "chronos": "http://ontology.pramantha.net/chronos/",
         "dbpedia": "http://dbpedia.org/ontology/",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -89,15 +89,15 @@ SPACECRAFT_CONTEXT = dict(
 
 SUBSYSTEMS_CONTEXT = dict(
     {
-        "@base": "http://ontology.projectchronos.eu/subsystems",
-        "spacecraft": "http://ontology.projectchronos.eu/spacecraft/",
-        "subsystems": "http://ontology.projectchronos.eu/subsystems/",
+        "@base": "http://ontology.pramantha.net/subsystems",
+        "spacecraft": "http://ontology.pramantha.net/spacecraft/",
+        "subsystems": "http://ontology.pramantha.net/subsystems/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "dbpedia": "http://dbpedia.org/ontology/",
-        "chronos": "http://ontology.projectchronos.eu/chronos/",
+        "chronos": "http://ontology.pramantha.net/chronos/",
         "xml": "http://www.w3.org/2001/XMLSchema#",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -107,12 +107,12 @@ SUBSYSTEMS_CONTEXT = dict(
 
 SOLARSYSTEM_CONTEXT = dict(
     {
-        "@base"    : "http://ontology.projectchronos.eu/solarsystem",
-        "astronomy": "http://ontology.projectchronos.eu/astronomy/",
+        "@base"    : "http://ontology.pramantha.net/solarsystem",
+        "astronomy": "http://ontology.pramantha.net/astronomy/",
         "rdf"      : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs"     : "http://www.w3.org/2000/01/rdf-schema#",
         "owl"      : "http://www.w3.org/2002/07/owl#",
-        "chronos": "http://ontology.projectchronos.eu/chronos/",
+        "chronos": "http://ontology.pramantha.net/chronos/",
         "defines": {
             "@reverse": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
         }
@@ -121,13 +121,13 @@ SOLARSYSTEM_CONTEXT = dict(
 
 EXPLORATION_CONTEXT = dict(
     {
-        "@base": "http://ontology.projectchronos.eu/exploration",
-        "exploration": "http://ontology.projectchronos.eu/exploration/",
+        "@base": "http://ontology.pramantha.net/exploration",
+        "exploration": "http://ontology.pramantha.net/exploration/",
         "schema": "https://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "chronos": "http://ontology.projectchronos.eu/chronos/",
+        "chronos": "http://ontology.pramantha.net/chronos/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "dbpedia": "http://dbpedia.org/ontology/",
         "cyc": "http://sw.opencyc.org/2012/05/10/concept/en/",

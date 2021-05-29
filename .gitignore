@@ -106,3 +106,4 @@ target/
 
 # config with secret
 config.py
+.vscode

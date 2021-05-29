@@ -5,7 +5,7 @@ import platform
 
 import simplejson as json
 
-from wsgi.contexts import ONTOLOGIES
+from src.contexts import ONTOLOGIES
 
 
 CACHE = {}
@@ -32,10 +32,10 @@ def get_or_set(nm, obj=None):
             result = None
             with open(str(spath), "r", encoding="utf8") as jsonld:
                 defines = json.loads(jsonld.read())["defines"]
-                print("http://ontology.projectchronos.eu/" + nm + "/" + obj)
+                print("http://ontology.pramantha.net/" + nm + "/" + obj)
             for d in defines:
                 if "@id" in d:
-                    if d["@id"] == "http://ontology.projectchronos.eu/" + nm + "/" + obj:
+                    if d["@id"] == "http://ontology.pramantha.net/" + nm + "/" + obj:
                         d["@context"] = ONTOLOGIES[nm][2]
                         CACHE[obj] = d
                         result = CACHE[obj]

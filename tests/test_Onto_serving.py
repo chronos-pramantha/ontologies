@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 
 class TestOntologiesService(unittest.TestCase):
     def test_isonline(self):
-        from wsgi.contexts import ONTOLOGIES
+        from src.contexts import ONTOLOGIES
 
         def test_reponse(conn, response):
             if int(response.status) == 200:
@@ -36,7 +36,7 @@ class TestOntologiesService(unittest.TestCase):
                 response = conn.getresponse()
                 return test_reponse(conn, response)
 
-            url = "ontology.projectchronos.eu"
+            url = "ontology.pramantha.net"
             query = "/" + name
             print(url, query)
             conn = http.client.HTTPConnection(url)

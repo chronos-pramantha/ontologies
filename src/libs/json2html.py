@@ -16,7 +16,7 @@ import json
 from collections import OrderedDict
 from html.parser import HTMLParser
 
-from wsgi.libs.utils import encode_url, check_if_url
+from src.libs.utils import encode_url, check_if_url
 
 a = ''
 

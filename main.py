@@ -1,29 +1,30 @@
 __author__ = 'lorenzo'
 
 import os
+from os.path import dirname, join
 
 from flask import Flask
 from flask import request, Response, redirect, url_for, render_template
 import simplejson as json
 import requests
 
-from wsgi.cache import get_or_set, get_o_path
-from wsgi.contexts import ONTOLOGIES
-from wsgi.libs.utilities import classes_and_properties
+from src.cache import get_or_set, get_o_path
+from src.contexts import ONTOLOGIES
+from src.libs.utilities import classes_and_properties
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=join(dirname(__file__), 'src', 'templates'))
 app.config.from_object('config')
 
 # url of Chronos APIs
 CHRONOS_APIS = "http://chronosapi-chronoslod.rhcloud.com/"
 
-if 'OPENSHIFT_DATA_DIR' in os.environ:
-    #store = os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'newsletter.save')
-    host = "http://ontology.projectchronos.eu/"
+if os.getenv('GAE_ENV', '').startswith('standard'):
+  # Production in the standard environment
+    host = "http://ontology.pramantha.net/"
     app.config['DEBUG'] = False
 else:
-    #store = os.path.join(os.path.dirname(__file__), 'newsletter.save')
+  # Local execution
     host = "http://127.0.0.1:5000/"
     app.config['DEBUG'] = True
 
@@ -121,7 +122,7 @@ def chronos(name, obj):
         else:
             # use rdf-translator
             # return n-triples
-            from wsgi.libs.utils import rdf_translate
+            from src.libs.utils import rdf_translate
             obj = get_or_set(name, obj)
             print(obj)
             content = rdf_translate(obj)
@@ -137,8 +138,8 @@ def chronosapi(url):
     :param url: url or a Chronos API's endpoint
     :return:
     """
-    from wsgi.libs.json2html import get_html_table
-    from wsgi.libs.utils import decode_url, check_if_url
+    from src.libs.json2html import get_html_table
+    from src.libs.utils import decode_url, check_if_url
 
     if url is None:
         url = CHRONOS_APIS

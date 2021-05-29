@@ -1,4 +1,4 @@
-This backend is serving at http://ontology.projectchronos.eu
+This backend is serving at http://ontology.pramantha.net
 
 ## TO-DO
 
@@ -11,4 +11,4 @@ This repo is part of the Chronos' Cloud:
 * [Homepage](http://www.projectchronos.eu)  | [clouService](https://github.com/SpaceAppsXploration/clouService)
 * [SPARQL and Hypermedia](http://hypermedia.projectchronos.eu) | [rdfendpoints](https://github.com/SpaceAppsXploration/rdfendpoints)
 * [Scientific & Technical Information](http://taxonomy.projectchronos.eu)  | [pramantha-nodejs-backend](https://github.com/SpaceAppsXploration/pramantha-nodejs-backend)
-* [RDF Vocabularies](http://ontology.projectchronos.eu)  | [RDFvocab](https://github.com/SpaceAppsXploration/RDFvocab)  
+* [RDF Vocabularies](http://ontology.pramantha.net)  | [RDFvocab](https://github.com/SpaceAppsXploration/RDFvocab)  
