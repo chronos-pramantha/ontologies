@@ -6,5 +6,5 @@ setup(name='ChronosLOD',
       author='lorenzo',
       author_email='lorenzo@projectchronos.org',
       url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=['Flask==0.10.1', 'simplejson'],
+      install_requires=['Flask==1.0', 'simplejson'],
      )
