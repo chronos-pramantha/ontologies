@@ -104,6 +104,4 @@ docs/_build/
 # PyBuilder
 target/
 
-# config with secret
-config.py
 .vscode
