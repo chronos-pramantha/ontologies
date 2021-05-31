@@ -4,9 +4,9 @@ import simplejson as json
 def check_type_in_list(listed_types, looking_for):
     """ checks if the object is type class or property """
     if looking_for == 'property':
-        look_for = "http://www.w3.org/2002/07/owl#ObjectProperty"
+        look_for = "https://www.w3.org/2002/07/owl#ObjectProperty"
     elif looking_for == 'class':
-        look_for = "http://www.w3.org/2002/07/owl#Class"
+        look_for = "https://www.w3.org/2002/07/owl#Class"
     else:
         raise AttributeError('Wrong looking_for parameter')
     
@@ -47,14 +47,14 @@ def classes_and_properties(defines):
                 classes.append({ "label": label, "dump": json.dumps(c, indent=2) })
                 continue
         elif isinstance(c['@type'], dict):
-            if c['@type']['@id'] == "http://www.w3.org/2002/07/owl#ObjectProperty":
+            if c['@type']['@id'] == "https://www.w3.org/2002/07/owl#ObjectProperty":
                 properties.append({ "label": label, "dump": json.dumps(c, indent=2) })
                 continue
         else:
-            if "http://www.w3.org/2002/07/owl#ObjectProperty" in c['@type']:
+            if "https://www.w3.org/2002/07/owl#ObjectProperty" in c['@type']:
                 properties.append({ "label": label, "dump": json.dumps(c, indent=2) })
                 continue
-            elif "http://www.w3.org/2002/07/owl#Class" in c['@type']:
+            elif "https://www.w3.org/2002/07/owl#Class" in c['@type']:
                 classes.append({ "label": label, "dump": json.dumps(c, indent=2) })
                 continue
             else:

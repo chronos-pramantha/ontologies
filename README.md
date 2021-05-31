@@ -1,4 +1,6 @@
-This backend is serving at http://ontologies.pramantha.net
+This backend is serving at https://ontologies.pramantha.net
+
+This repo contains submodules, to clone use: `git submodule update --init --recursive --remote`
 
 
 ## About

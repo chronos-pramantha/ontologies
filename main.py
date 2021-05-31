@@ -21,7 +21,7 @@ CHRONOS_APIS = "http://chronosapi-chronoslod.rhcloud.com/"
 
 if os.getenv('GAE_ENV', '').startswith('standard'):
   # Production in the standard environment
-    host = "http://ontologies.pramantha.net/"
+    host = "https://ontologies.pramantha.net/"
     app.config['DEBUG'] = False
 else:
   # Local execution
@@ -95,7 +95,7 @@ def index(name):
             return res
         else:
             # serve nt
-            path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'RDFvocab', 'ntriples', name + '.ntriples')
+            path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'RDFvocab', 'ntriples', name + '.ntriples')
             with open(path, 'r') as content_file:
                 content = content_file.read()
             return Response(response=str(content), content_type="application/n-triples; charset=utf-8")
