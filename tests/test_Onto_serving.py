@@ -36,7 +36,7 @@ class TestOntologiesService(unittest.TestCase):
                 response = conn.getresponse()
                 return test_reponse(conn, response)
 
-            url = "ontology.pramantha.net"
+            url = "ontologies.pramantha.net"
             query = "/" + name
             print(url, query)
             conn = http.client.HTTPConnection(url)

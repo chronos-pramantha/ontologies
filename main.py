@@ -21,7 +21,7 @@ CHRONOS_APIS = "http://chronosapi-chronoslod.rhcloud.com/"
 
 if os.getenv('GAE_ENV', '').startswith('standard'):
   # Production in the standard environment
-    host = "http://ontology.pramantha.net/"
+    host = "http://ontologies.pramantha.net/"
     app.config['DEBUG'] = False
 else:
   # Local execution
